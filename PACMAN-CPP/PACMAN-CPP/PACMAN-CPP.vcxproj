@@ -132,12 +132,14 @@
   <ItemGroup>
     <ClInclude Include="MenuPrincipal.h" />
     <ClInclude Include="MusicaMenu.h" />
+    <ClInclude Include="Nivel1.h" />
     <ClInclude Include="SeleccionNiveles.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MenuPrincipal.cpp" />
     <ClCompile Include="MusicaMenu.cpp" />
+    <ClCompile Include="Nivel1.cpp" />
     <ClCompile Include="SeleccionNiveles.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

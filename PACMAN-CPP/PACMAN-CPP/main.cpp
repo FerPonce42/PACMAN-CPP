@@ -2,12 +2,14 @@
 #include "MenuPrincipal.h"
 #include "SeleccionNiveles.h"
 #include "MusicaMenu.h"
+#include "Nivel1.h"
 
 int main() {
-    sf::RenderWindow ventana(sf::VideoMode(1920, 1080), "PACMAN-CPP");
+    sf::RenderWindow ventana(sf::VideoMode(1920, 1080), "Undead Frenzy");
 
     MenuPrincipal menu(ventana.getSize().x, ventana.getSize().y);
     SeleccionNiveles menuNiveles(ventana.getSize().x, ventana.getSize().y);
+    Nivel1 nivel1(ventana, ventana.getSize().x, ventana.getSize().y); // Pasamos la ventana al constructor de Nivel1
 
     Musica musica;
     musica.cargarMusica();
@@ -17,12 +19,17 @@ int main() {
 
     bool enMenu = true;
     bool enMenuNiveles = false;
+    bool enNivel1 = false;
 
     while (ventana.isOpen()) {
         sf::Event evento;
         while (ventana.pollEvent(evento)) {
             if (evento.type == sf::Event::Closed) {
                 ventana.close();
+            }
+
+            if (enNivel1) {
+                nivel1.manejarEventos();
             }
 
             if (evento.type == sf::Event::KeyReleased) {
@@ -49,6 +56,8 @@ int main() {
                         if (opcionSeleccionada == 1) {
                             enMenu = false;
                             enMenuNiveles = true;
+                            enNivel1 = false; // Aseguramos que no estemos en el nivel 1
+                            // Eliminamos la línea que detiene la música del menú
                         }
                         else if (opcionSeleccionada == 4) {
                             ventana.close();
@@ -58,6 +67,12 @@ int main() {
                         if (menuNiveles.obtenerNivelSeleccionado() == 4) {
                             enMenu = true;
                             enMenuNiveles = false;
+                            enNivel1 = false; // Aseguramos que no estemos en el nivel 1
+                            // Eliminamos la línea que detiene la música del menú
+                        }
+                        else if (menuNiveles.obtenerNivelSeleccionado() == 1) {
+                            enMenuNiveles = false;
+                            enNivel1 = true; // Cambiamos a true cuando seleccionamos el nivel 1
                         }
                     }
                 }
@@ -71,6 +86,12 @@ int main() {
         }
         else if (enMenuNiveles) {
             menuNiveles.dibujar(ventana);
+        }
+
+        if (enNivel1) {
+            nivel1.mostrar(); // Mostramos el nivel 1
+            nivel1.actualizar();
+            musica.detener(); // Detenemos la música del menú al abrir el nivel 1
         }
 
         ventana.display();

@@ -1,18 +1,20 @@
 #include <SFML/Graphics.hpp>
 #include "MenuPrincipal.h"
 #include "SeleccionNiveles.h"
-#include "MusicaMenu.h"
+#include "Musica.h"
 #include "Nivel1.h"
+#include "Nivel2.h" // Agregamos la inclusión del header para el nivel 2
 
 int main() {
-    sf::RenderWindow ventana(sf::VideoMode(1920, 1080), "Undead Frenzy");
+    sf::RenderWindow ventana(sf::VideoMode(1920, 1080), "PACMAN-CPP");
 
     MenuPrincipal menu(ventana.getSize().x, ventana.getSize().y);
     SeleccionNiveles menuNiveles(ventana.getSize().x, ventana.getSize().y);
-    Nivel1 nivel1(ventana, ventana.getSize().x, ventana.getSize().y); // Pasamos la ventana al constructor de Nivel1
+    Nivel1 nivel1(ventana, ventana.getSize().x, ventana.getSize().y);
+    Nivel2 nivel2(ventana, ventana.getSize().x, ventana.getSize().y); // Creamos un objeto para el nivel 2
 
     Musica musica;
-    musica.cargarMusica();
+    musica.cargarMusicaMenu();
     musica.setVolume(50);
     musica.setLoop(true);
     musica.reproducir();
@@ -20,6 +22,7 @@ int main() {
     bool enMenu = true;
     bool enMenuNiveles = false;
     bool enNivel1 = false;
+    bool enNivel2 = false; // Agregamos una variable para el nivel 2
 
     while (ventana.isOpen()) {
         sf::Event evento;
@@ -30,6 +33,9 @@ int main() {
 
             if (enNivel1) {
                 nivel1.manejarEventos();
+            }
+            else if (enNivel2) { // Manejamos eventos para el nivel 2 si estamos en él
+                nivel2.manejarEventos();
             }
 
             if (evento.type == sf::Event::KeyReleased) {
@@ -56,8 +62,8 @@ int main() {
                         if (opcionSeleccionada == 1) {
                             enMenu = false;
                             enMenuNiveles = true;
-                            enNivel1 = false; // Aseguramos que no estemos en el nivel 1
-                            // Eliminamos la línea que detiene la música del menú
+                            enNivel1 = false;
+                            enNivel2 = false; // Aseguramos que no estemos en el nivel 2
                         }
                         else if (opcionSeleccionada == 4) {
                             ventana.close();
@@ -67,12 +73,26 @@ int main() {
                         if (menuNiveles.obtenerNivelSeleccionado() == 4) {
                             enMenu = true;
                             enMenuNiveles = false;
-                            enNivel1 = false; // Aseguramos que no estemos en el nivel 1
-                            // Eliminamos la línea que detiene la música del menú
+                            enNivel1 = false;
+                            enNivel2 = false; // Aseguramos que no estemos en el nivel 2
                         }
                         else if (menuNiveles.obtenerNivelSeleccionado() == 1) {
                             enMenuNiveles = false;
-                            enNivel1 = true; // Cambiamos a true cuando seleccionamos el nivel 1
+                            enNivel1 = true;
+                            enNivel2 = false; // Aseguramos que no estemos en el nivel 2
+                            musica.detener();
+                            musica.cargarMusicaNivel1();
+                            musica.setLoop(true);
+                            musica.reproducir();
+                        }
+                        else if (menuNiveles.obtenerNivelSeleccionado() == 2) {
+                            enMenuNiveles = false;
+                            enNivel1 = false;
+                            enNivel2 = true; // Cambiamos a true cuando seleccionamos el nivel 2
+                            musica.detener();
+                            musica.cargarMusicaNivel2(); // Cargamos la música del nivel 2
+                            musica.setLoop(true);
+                            musica.reproducir(); // Reproducimos la música del nivel 2
                         }
                     }
                 }
@@ -89,9 +109,12 @@ int main() {
         }
 
         if (enNivel1) {
-            nivel1.mostrar(); // Mostramos el nivel 1
+            nivel1.mostrar();
             nivel1.actualizar();
-            musica.detener(); // Detenemos la música del menú al abrir el nivel 1
+        }
+        else if (enNivel2) { // Mostramos y actualizamos el nivel 2 si estamos en él
+            nivel2.mostrar();
+            nivel2.actualizar();
         }
 
         ventana.display();

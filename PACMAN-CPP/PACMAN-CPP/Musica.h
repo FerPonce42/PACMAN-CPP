@@ -10,7 +10,8 @@ public:
 
     void cargarMusicaMenu();
     void cargarMusicaNivel1();
-    void cargarMusicaNivel2(); // Nuevo método para cargar la música del nivel 2
+    void cargarMusicaNivel2();
+    void cargarMusicaNivel3(); 
     void reproducir();
     void detener();
     void pausar();
@@ -22,4 +23,4 @@ private:
     sf::Music musica;
 };
 
-#endif // MUSICA_H
+#endif 

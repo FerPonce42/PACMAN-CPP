@@ -134,6 +134,7 @@
     <ClInclude Include="Musica.h" />
     <ClInclude Include="Nivel1.h" />
     <ClInclude Include="Nivel2.h" />
+    <ClInclude Include="Nivel3.h" />
     <ClInclude Include="SeleccionNiveles.h" />
   </ItemGroup>
   <ItemGroup>
@@ -142,6 +143,7 @@
     <ClCompile Include="Musica.cpp" />
     <ClCompile Include="Nivel1.cpp" />
     <ClCompile Include="Nivel2.cpp" />
+    <ClCompile Include="Nivel3.cpp" />
     <ClCompile Include="SeleccionNiveles.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

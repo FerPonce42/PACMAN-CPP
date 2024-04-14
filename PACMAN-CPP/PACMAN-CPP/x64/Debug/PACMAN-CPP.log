@@ -1,35 +1,30 @@
-﻿  main.cpp
+﻿  MenuPrincipal.cpp
   Musica.cpp
-C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(11,62): warning C4244: 'argumento': conversión de 'T' a 'float'; posible pérdida de datos
-C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(11,62): warning C4244:         with
-C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(11,62): warning C4244:         [
-C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(11,62): warning C4244:             T=unsigned int
-C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(11,62): warning C4244:         ]
-C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(11,41): warning C4244: 'argumento': conversión de 'T' a 'float'; posible pérdida de datos
-C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(11,41): warning C4244:         with
-C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(11,41): warning C4244:         [
-C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(11,41): warning C4244:             T=unsigned int
-C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(11,41): warning C4244:         ]
-C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(12,72): warning C4244: 'argumento': conversión de 'T' a 'float'; posible pérdida de datos
-C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(12,72): warning C4244:         with
-C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(12,72): warning C4244:         [
-C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(12,72): warning C4244:             T=unsigned int
-C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(12,72): warning C4244:         ]
-C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(12,51): warning C4244: 'argumento': conversión de 'T' a 'float'; posible pérdida de datos
-C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(12,51): warning C4244:         with
-C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(12,51): warning C4244:         [
-C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(12,51): warning C4244:             T=unsigned int
-C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(12,51): warning C4244:         ]
-C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(13,66): warning C4244: 'argumento': conversión de 'T' a 'float'; posible pérdida de datos
-C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(13,66): warning C4244:         with
-C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(13,66): warning C4244:         [
-C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(13,66): warning C4244:             T=unsigned int
-C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(13,66): warning C4244:         ]
-C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(13,45): warning C4244: 'argumento': conversión de 'T' a 'float'; posible pérdida de datos
-C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(13,45): warning C4244:         with
-C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(13,45): warning C4244:         [
-C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(13,45): warning C4244:             T=unsigned int
-C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(13,45): warning C4244:         ]
+  Nivel1.cpp
+  Nivel2.cpp
+  Nivel3.cpp
+  SeleccionNiveles.cpp
+  main.cpp
+C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(12,62): warning C4244: 'argumento': conversión de 'T' a 'float'; posible pérdida de datos
+C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(12,62): warning C4244:         with
+C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(12,62): warning C4244:         [
+C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(12,62): warning C4244:             T=unsigned int
+C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(12,62): warning C4244:         ]
+C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(12,41): warning C4244: 'argumento': conversión de 'T' a 'float'; posible pérdida de datos
+C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(12,41): warning C4244:         with
+C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(12,41): warning C4244:         [
+C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(12,41): warning C4244:             T=unsigned int
+C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(12,41): warning C4244:         ]
+C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(13,72): warning C4244: 'argumento': conversión de 'T' a 'float'; posible pérdida de datos
+C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(13,72): warning C4244:         with
+C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(13,72): warning C4244:         [
+C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(13,72): warning C4244:             T=unsigned int
+C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(13,72): warning C4244:         ]
+C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(13,51): warning C4244: 'argumento': conversión de 'T' a 'float'; posible pérdida de datos
+C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(13,51): warning C4244:         with
+C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(13,51): warning C4244:         [
+C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(13,51): warning C4244:             T=unsigned int
+C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(13,51): warning C4244:         ]
 C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(14,66): warning C4244: 'argumento': conversión de 'T' a 'float'; posible pérdida de datos
 C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(14,66): warning C4244:         with
 C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(14,66): warning C4244:         [
@@ -40,7 +35,25 @@ C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(14,4
 C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(14,45): warning C4244:         [
 C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(14,45): warning C4244:             T=unsigned int
 C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(14,45): warning C4244:         ]
-  Nivel1.cpp
-  Nivel2.cpp
+C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(15,66): warning C4244: 'argumento': conversión de 'T' a 'float'; posible pérdida de datos
+C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(15,66): warning C4244:         with
+C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(15,66): warning C4244:         [
+C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(15,66): warning C4244:             T=unsigned int
+C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(15,66): warning C4244:         ]
+C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(15,45): warning C4244: 'argumento': conversión de 'T' a 'float'; posible pérdida de datos
+C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(15,45): warning C4244:         with
+C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(15,45): warning C4244:         [
+C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(15,45): warning C4244:             T=unsigned int
+C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(15,45): warning C4244:         ]
+C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(16,66): warning C4244: 'argumento': conversión de 'T' a 'float'; posible pérdida de datos
+C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(16,66): warning C4244:         with
+C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(16,66): warning C4244:         [
+C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(16,66): warning C4244:             T=unsigned int
+C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(16,66): warning C4244:         ]
+C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(16,45): warning C4244: 'argumento': conversión de 'T' a 'float'; posible pérdida de datos
+C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(16,45): warning C4244:         with
+C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(16,45): warning C4244:         [
+C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(16,45): warning C4244:             T=unsigned int
+C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(16,45): warning C4244:         ]
   Generando código...
   PACMAN-CPP.vcxproj -> C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\x64\Debug\PACMAN-CPP.exe

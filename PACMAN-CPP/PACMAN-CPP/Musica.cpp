@@ -23,6 +23,12 @@ void Musica::cargarMusicaNivel2() {
     }
 }
 
+void Musica::cargarMusicaNivel3() {
+    if (!musica.openFromFile("Nivel3/musicanivel3.mp3")) {
+        std::cerr << "Error al cargar la música del nivel 3." << std::endl;
+    }
+}
+
 void Musica::reproducir() {
     musica.setLoop(true);
     musica.play();

@@ -1,9 +1,7 @@
 #pragma once
-#ifndef NIVEL1_H
-#define NIVEL1_H
-
 #include <SFML/Graphics.hpp>
-#include "Musica.h" 
+#include "Jugador.h"
+#include "Musica.h"
 
 class Nivel1 {
 public:
@@ -15,10 +13,8 @@ public:
 
 private:
     sf::RenderWindow& ventana;
-    Musica musicaNivel1; 
+    Musica musicaNivel1;
     sf::Texture fondoTextura;
     sf::Sprite fondoSprite;
-    
+    Jugador jugador;
 };
-
-#endif 

@@ -7,8 +7,10 @@ public:
 
     void mover(sf::Vector2f direccion);
     void dibujar(sf::RenderWindow& ventana);
+    void cambiarTextura(const std::string& archivoTextura);
 
 private:
-    sf::RectangleShape forma;
+    sf::Texture textura;
+    sf::Sprite sprite;
     float velocidad;
 };

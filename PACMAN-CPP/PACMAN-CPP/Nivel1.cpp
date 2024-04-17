@@ -14,26 +14,29 @@ Nivel1::Nivel1(sf::RenderWindow& ventana, float ancho, float alto) : ventana(ven
 
 void Nivel1::mostrar() {
     ventana.draw(fondoSprite);
-    jugador.dibujar(ventana); 
+    jugador.dibujar(ventana);
     musicaNivel1.reproducir();
 }
 
 void Nivel1::actualizar() {
-    
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
-        jugador.mover(sf::Vector2f(0, -1)); 
+        jugador.mover(sf::Vector2f(0, -1));
+        jugador.cambiarTextura("arriba.png");
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
         jugador.mover(sf::Vector2f(0, 1));
+        jugador.cambiarTextura("abajo.png");
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
-        jugador.mover(sf::Vector2f(-1, 0)); 
+        jugador.mover(sf::Vector2f(-1, 0));
+        jugador.cambiarTextura("izquierda.png");
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
-        jugador.mover(sf::Vector2f(1, 0)); 
+        jugador.mover(sf::Vector2f(1, 0));
+        jugador.cambiarTextura("derecha.png");
     }
 }
 
 void Nivel1::manejarEventos() {
-    
+
 }

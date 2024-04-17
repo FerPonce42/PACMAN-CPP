@@ -2,15 +2,29 @@
 #include <iostream>
 
 Jugador::Jugador(float x, float y, float velocidad) : velocidad(velocidad) {
-    forma.setSize(sf::Vector2f(40, 40)); 
-    forma.setPosition(x, y);
-    forma.setFillColor(sf::Color::Yellow);
+    if (!textura.loadFromFile("Nivel1/derecha.png")) {
+        
+    }
+
+    sprite.setTexture(textura);
+    sprite.setPosition(x, y);
+
+   
+    sprite.setScale(2.0f, 2.0f); // TAMAÑO DEL JUGADORR
 }
 
 void Jugador::mover(sf::Vector2f direccion) {
-    forma.move(direccion * velocidad);
+    sprite.move(direccion * velocidad);
 }
 
 void Jugador::dibujar(sf::RenderWindow& ventana) {
-    ventana.draw(forma);
+    ventana.draw(sprite);
+}
+
+void Jugador::cambiarTextura(const std::string& archivoTextura) {
+    if (!textura.loadFromFile("Nivel1/" + archivoTextura)) {
+        
+    }
+
+    sprite.setTexture(textura);
 }

@@ -10,6 +10,7 @@ public:
     void mostrar();
     void actualizar();
     void manejarEventos();
+    bool posicionValida(sf::Vector2f posicion);
 
 private:
     sf::RenderWindow& ventana;
@@ -17,4 +18,9 @@ private:
     sf::Texture fondoTextura;
     sf::Sprite fondoSprite;
     Jugador jugador;
+
+   
+    const int anchoMapa = 30; 
+    const int altoMapa = 12; 
+    int mapa[12][30]; 
 };

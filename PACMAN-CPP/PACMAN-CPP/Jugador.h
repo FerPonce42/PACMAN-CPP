@@ -8,9 +8,14 @@ public:
     void mover(sf::Vector2f direccion);
     void dibujar(sf::RenderWindow& ventana);
     void cambiarTextura(const std::string& archivoTextura);
+    void setDireccion(sf::Vector2f nuevaDireccion); // Método para establecer la dirección del jugador
+
+    // Método para obtener la posición del jugador
+    sf::Vector2f getPosicion() const;
 
 private:
     sf::Texture textura;
     sf::Sprite sprite;
     float velocidad;
+    sf::Vector2f direccion;
 };

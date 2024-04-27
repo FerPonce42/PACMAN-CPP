@@ -23,4 +23,8 @@ private:
     const int anchoMapa = 30; 
     const int altoMapa = 12; 
     int mapa[12][30]; 
+    float anchoCelda; // Ancho de cada celda del mapa
+    float altoCelda; // Alto de cada celda del mapa
+    float posXInicio; // Posición de inicio en X del mapa
+    float posYInicio; // Posición de inicio en Y del mapa
 };

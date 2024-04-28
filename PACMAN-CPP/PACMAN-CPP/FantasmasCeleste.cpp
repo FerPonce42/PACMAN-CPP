@@ -1,0 +1,2 @@
+#include "FantasmasCeleste.h"
+//MAS ADELANTE. (HASTA APRENDER HERENCIA Y POLIMORFISMO)

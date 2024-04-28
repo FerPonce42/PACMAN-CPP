@@ -130,6 +130,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="FantasmaNaranja.h" />
+    <ClInclude Include="FantasmaPadre.h" />
+    <ClInclude Include="FantasmaRojo.h" />
+    <ClInclude Include="FantasmaRosa.h" />
+    <ClInclude Include="FantasmasCeleste.h" />
     <ClInclude Include="MenuPrincipal.h" />
     <ClInclude Include="Musica.h" />
     <ClInclude Include="Nivel1.h" />
@@ -139,6 +144,11 @@
     <ClInclude Include="SeleccionNiveles.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="FantasmaNaranja.cpp" />
+    <ClCompile Include="FantasmaPadre.cpp" />
+    <ClCompile Include="FantasmaRojo.cpp" />
+    <ClCompile Include="FantasmaRosa.cpp" />
+    <ClCompile Include="FantasmasCeleste.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MenuPrincipal.cpp" />
     <ClCompile Include="Musica.cpp" />

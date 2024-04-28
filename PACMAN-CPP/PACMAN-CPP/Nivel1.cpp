@@ -1,4 +1,4 @@
-#include "Nivel1.h"
+ï»¿#include "Nivel1.h"
 #include <iostream>
 
 Nivel1::Nivel1(sf::RenderWindow& ventana, float ancho, float alto) : ventana(ventana), jugador(ancho / 2, alto / 2, 5.0f) {
@@ -41,19 +41,19 @@ Nivel1::Nivel1(sf::RenderWindow& ventana, float ancho, float alto) : ventana(ven
 }
 
 void Nivel1::mostrar() {
-    // Calcular el tamaño de cada celda del mapa
-    anchoCelda = ventana.getSize().x / (anchoMapa * 2); // Reducir la escala a la cuarta parte
-    altoCelda = ventana.getSize().y / (altoMapa * 2.5); // Reducir la escala a la cuarta parte
+    // TAMAÃ‘O DEL MAPA
+    anchoCelda = ventana.getSize().x / (anchoMapa * 2); 
+    altoCelda = ventana.getSize().y / (altoMapa * 2.5); 
 
-    // Calcular la posición de inicio del mapa para centrarlo
-    posXInicio = (ventana.getSize().x - (anchoCelda * anchoMapa)) / 2; // Ajustar para centrar en el medio de la pantalla
-    posYInicio = (ventana.getSize().y - (altoCelda * altoMapa)) / 2; // Ajustar para centrar en el medio de la pantalla
+    // CENTRAR MAPA
+    posXInicio = (ventana.getSize().x - (anchoCelda * anchoMapa)) / 2; 
+    posYInicio = (ventana.getSize().y - (altoCelda * altoMapa)) / 2; 
 
     // Dibujar el mapa y el jugador
     for (int i = 0; i < altoMapa; ++i) {
         for (int j = 0; j < anchoMapa; ++j) {
             if (mapa[i][j] == 1) {
-                // Dibujar una celda con colisión
+                // Dibujar una celda con colision
                 sf::RectangleShape celda(sf::Vector2f(anchoCelda, altoCelda));
                 celda.setPosition(posXInicio + j * anchoCelda, posYInicio + i * altoCelda);
                 celda.setFillColor(sf::Color::Blue);
@@ -62,19 +62,18 @@ void Nivel1::mostrar() {
         }
     }
 
-    // Dibujar al jugador en su posición actual
+    // Dibujar al jugador en su posicion actual
     jugador.dibujar(ventana);
 
-    // Resto del código de mostrar() permanece igual
     ventana.draw(fondoSprite);
     musicaNivel1.reproducir();
 }
 
 void Nivel1::actualizar() {
-    // Obtener la posición actual del jugador
+    // Obtener la posicion actual del jugador
     sf::Vector2f posicionActual = jugador.getPosicion();
 
-    // Verificar si el jugador intenta moverse y la próxima posición es válida
+    // Verificar si el jugador intenta moverse y la proxima posiciï¿½n es valida
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
         jugador.mover(sf::Vector2f(0, -1), mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio);
         jugador.cambiarTextura("arriba.png");
@@ -94,20 +93,20 @@ void Nivel1::actualizar() {
 }
 
 void Nivel1::manejarEventos() {
-    // Implementa el manejo de eventos aquí
+   
 }
 
 bool Nivel1::posicionValida(sf::Vector2f posicion) {
-    // Convertir la posición en la ventana a la posición en la matriz
+    // Convertir la posicion en la ventana a la posicion en la matriz
     int fila = static_cast<int>((posicion.y - posYInicio) / altoCelda);
     int columna = static_cast<int>((posicion.x - posXInicio) / anchoCelda);
 
-    // Verificar si la posición está dentro de los límites del mapa
+    // Verificar si la posiciï¿½n esta dentro de los limites del mapa
     if (fila >= 0 && fila < altoMapa && columna >= 0 && columna < anchoMapa) {
-        // Verificar si la posición en la matriz es un espacio libre (0)
+        // Verificar si la posicion en la matriz es un espacio libre (0)
         return mapa[fila][columna] == 0;
     }
 
-    // La posición está fuera de los límites del mapa
+    // La posiciï¿½n estï¿½ fuera de los limites del mapa
     return false;
 }

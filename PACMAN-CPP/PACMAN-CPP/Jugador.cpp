@@ -3,7 +3,6 @@
 
 Jugador::Jugador(float x, float y, float velocidad) : velocidad(velocidad) {
     if (!textura.loadFromFile("Nivel1/derecha.png")) {
-        // Manejar el error si no se puede cargar la textura
         std::cerr << "Error al cargar la textura del jugador." << std::endl;
     }
 
@@ -37,7 +36,6 @@ void Jugador::dibujar(sf::RenderWindow& ventana) {
 
 void Jugador::cambiarTextura(const std::string& archivoTextura) {
     if (!textura.loadFromFile("Nivel1/" + archivoTextura)) {
-        // Manejar el error si no se puede cargar la nueva textura
         std::cerr << "Error al cargar la nueva textura del jugador." << std::endl;
     }
 

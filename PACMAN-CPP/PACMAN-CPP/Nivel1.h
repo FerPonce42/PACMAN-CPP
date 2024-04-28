@@ -19,10 +19,10 @@ private:
     sf::Sprite fondoSprite;
     Jugador jugador;
 
-   
-    const int anchoMapa = 30; 
-    const int altoMapa = 12; 
-    int mapa[12][30]; 
+
+    const int anchoMapa = 30;
+    const int altoMapa = 12;
+    int** mapa;
     float anchoCelda; // Ancho de cada celda del mapa
     float altoCelda; // Alto de cada celda del mapa
     float posXInicio; // Posición de inicio en X del mapa

@@ -9,6 +9,11 @@ Nivel1::Nivel1(sf::RenderWindow& ventana, float ancho, float alto) : ventana(ven
     fondoSprite.setTexture(fondoTextura);
     fondoSprite.setScale(ancho / fondoSprite.getGlobalBounds().width, alto / fondoSprite.getGlobalBounds().height);
 
+    // Mapa del nivel
+    mapa = new int* [altoMapa];
+    for (int i = 0; i < altoMapa; ++i) {
+        mapa[i] = new int[anchoMapa];
+    }
 
     int miMapa[12][30] = {
         {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
@@ -24,7 +29,6 @@ Nivel1::Nivel1(sf::RenderWindow& ventana, float ancho, float alto) : ventana(ven
         {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1},
         {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}
     };
-
 
     // Copiar el mapa personalizado al mapa de la clase
     for (int i = 0; i < altoMapa; ++i) {
@@ -55,9 +59,6 @@ void Nivel1::mostrar() {
                 celda.setFillColor(sf::Color::Blue);
                 ventana.draw(celda);
             }
-            else if (mapa[i][j] == 0) {
-                // Si la celda es un espacio libre, no hacemos nada, ya que el jugador se dibujará en esa posición
-            }
         }
     }
 
@@ -69,38 +70,33 @@ void Nivel1::mostrar() {
     musicaNivel1.reproducir();
 }
 
-
-
 void Nivel1::actualizar() {
     // Obtener la posición actual del jugador
     sf::Vector2f posicionActual = jugador.getPosicion();
 
-    // Verificar si el jugador intenta moverse hacia arriba y la próxima posición es válida
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::W) && posicionValida(sf::Vector2f(posicionActual.x, posicionActual.y - 1))) {
-        jugador.mover(sf::Vector2f(0, -1));
+    // Verificar si el jugador intenta moverse y la próxima posición es válida
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
+        jugador.mover(sf::Vector2f(0, -1), mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio);
         jugador.cambiarTextura("arriba.png");
     }
-
-    // Verificar si el jugador intenta moverse hacia abajo y la próxima posición es válida
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::S) && posicionValida(sf::Vector2f(posicionActual.x, posicionActual.y + 1))) {
-        jugador.mover(sf::Vector2f(0, 1));
+    else if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
+        jugador.mover(sf::Vector2f(0, 1), mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio);
         jugador.cambiarTextura("abajo.png");
     }
-
-    // Verificar si el jugador intenta moverse hacia la izquierda y la próxima posición es válida
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::A) && posicionValida(sf::Vector2f(posicionActual.x - 1, posicionActual.y))) {
-        jugador.mover(sf::Vector2f(-1, 0));
+    else if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
+        jugador.mover(sf::Vector2f(-1, 0), mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio);
         jugador.cambiarTextura("izquierda.png");
     }
-
-    // Verificar si el jugador intenta moverse hacia la derecha y la próxima posición es válida
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::D) && posicionValida(sf::Vector2f(posicionActual.x + 1, posicionActual.y))) {
-        jugador.mover(sf::Vector2f(1, 0));
+    else if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
+        jugador.mover(sf::Vector2f(1, 0), mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio);
         jugador.cambiarTextura("derecha.png");
     }
 }
 
-// Método para verificar si una posición en la matriz es válida (0 significa espacio libre)
+void Nivel1::manejarEventos() {
+    // Implementa el manejo de eventos aquí
+}
+
 bool Nivel1::posicionValida(sf::Vector2f posicion) {
     // Convertir la posición en la ventana a la posición en la matriz
     int fila = static_cast<int>((posicion.y - posYInicio) / altoCelda);
@@ -115,9 +111,3 @@ bool Nivel1::posicionValida(sf::Vector2f posicion) {
     // La posición está fuera de los límites del mapa
     return false;
 }
-
-
-void Nivel1::manejarEventos() {
-    // Implementa el manejo de eventos aquí
-}
-

@@ -42,14 +42,17 @@ Nivel1::Nivel1(sf::RenderWindow& ventana, float ancho, float alto) : ventana(ven
 
 void Nivel1::mostrar() {
     // TAMAÑO DEL MAPA
-    anchoCelda = ventana.getSize().x / (anchoMapa * 2); 
-    altoCelda = ventana.getSize().y / (altoMapa * 2.5); 
+    anchoCelda = ventana.getSize().x / (anchoMapa * 2);
+    altoCelda = ventana.getSize().y / (altoMapa * 2.5);
 
     // CENTRAR MAPA
-    posXInicio = (ventana.getSize().x - (anchoCelda * anchoMapa)) / 2; 
-    posYInicio = (ventana.getSize().y - (altoCelda * altoMapa)) / 2; 
+    posXInicio = (ventana.getSize().x - (anchoCelda * anchoMapa)) / 2;
+    posYInicio = (ventana.getSize().y - (altoCelda * altoMapa)) / 2;
 
-    // Dibujar el mapa y el jugador
+    // Dibujar al jugador en su posicion actual
+    jugador.dibujar(ventana);
+
+    // Dibujar el mapa
     for (int i = 0; i < altoMapa; ++i) {
         for (int j = 0; j < anchoMapa; ++j) {
             if (mapa[i][j] == 1) {
@@ -62,9 +65,6 @@ void Nivel1::mostrar() {
         }
     }
 
-    // Dibujar al jugador en su posicion actual
-    jugador.dibujar(ventana);
-
     ventana.draw(fondoSprite);
     musicaNivel1.reproducir();
 }
@@ -73,7 +73,7 @@ void Nivel1::actualizar() {
     // Obtener la posicion actual del jugador
     sf::Vector2f posicionActual = jugador.getPosicion();
 
-    // Verificar si el jugador intenta moverse y la proxima posici�n es valida
+    // Verificar si el jugador intenta moverse y la proxima posición es valida
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
         jugador.mover(sf::Vector2f(0, -1), mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio);
         jugador.cambiarTextura("arriba.png");
@@ -93,7 +93,7 @@ void Nivel1::actualizar() {
 }
 
 void Nivel1::manejarEventos() {
-   
+
 }
 
 bool Nivel1::posicionValida(sf::Vector2f posicion) {

@@ -8,7 +8,7 @@ public:
     void mover(sf::Vector2f direccion, int** mapa, int anchoMapa, int altoMapa, float anchoCelda, float altoCelda, float posXInicio, float posYInicio);
     void dibujar(sf::RenderWindow& ventana);
     void cambiarTextura(const std::string& archivoTextura);
-    void setDireccion(sf::Vector2f nuevaDireccion); 
+    void setDireccion(sf::Vector2f nuevaDireccion);
     sf::Vector2f getPosicion() const;
 
 private:

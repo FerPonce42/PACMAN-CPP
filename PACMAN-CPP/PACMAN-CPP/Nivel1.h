@@ -22,7 +22,7 @@ private:
     const int altoMapa = 12;
     int** mapa;
     float anchoCelda;
-    float altoCelda; 
-    float posXInicio; 
-    float posYInicio; 
+    float altoCelda;
+    float posXInicio;
+    float posYInicio;
 };

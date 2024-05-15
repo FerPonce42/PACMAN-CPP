@@ -12,21 +12,23 @@ Jugador::Jugador(float x, float y, float velocidad) : velocidad(velocidad) {
     sprite.setScale(1.0f, 1.0f); // TAMAÑO DEL JUGADOR
 }
 
-void Jugador::mover(sf::Vector2f direccion, int** mapa, int anchoMapa, int altoMapa, float anchoCelda, float altoCelda, float posXInicio, float posYInicio) {
+void Jugador::mover(sf::Vector2f direccion, const std::vector<sf::Sprite>& objetos) {
     // Calculamos la posición a la que intenta moverse el jugador
     sf::Vector2f nuevaPosicion = sprite.getPosition() + direccion * velocidad;
 
-    // Convertir la posición en la ventana a la posición en la matriz del mapa
-    int fila = static_cast<int>((nuevaPosicion.y - posYInicio) / altoCelda);
-    int columna = static_cast<int>((nuevaPosicion.x - posXInicio) / anchoCelda);
-
-    // Verificar si la nueva posición está dentro de los límites del mapa
-    if (fila >= 0 && fila < altoMapa && columna >= 0 && columna < anchoMapa) {
-        // Verificar si la nueva posición es un espacio libre en el mapa (valor 0)
-        if (mapa[fila][columna] == 0) {
-            // Movemos al jugador a la nueva posición
-            sprite.move(direccion * velocidad);
+    // Verificar colisiones con los objetos
+    bool colision = false;
+    for (const auto& objeto : objetos) {
+        if (sprite.getGlobalBounds().intersects(objeto.getGlobalBounds())) {
+            colision = true;
+            break;
         }
+    }
+
+    // Verificar si la nueva posición no colisiona con ningún objeto
+    if (!colision) {
+        // Movemos al jugador a la nueva posición
+        sprite.move(direccion * velocidad);
     }
 }
 

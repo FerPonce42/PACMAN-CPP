@@ -18,6 +18,7 @@ private:
     sf::Texture fondoTextura;
     sf::Sprite fondoSprite;
     Jugador jugador;
+    std::vector<sf::Sprite> objetos;
     const int anchoMapa = 30;
     const int altoMapa = 12;
     int** mapa;
@@ -25,4 +26,6 @@ private:
     float altoCelda;
     float posXInicio;
     float posYInicio;
+
+    void inicializarMapa();
 };

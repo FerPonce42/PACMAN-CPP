@@ -9,6 +9,13 @@ Nivel1::Nivel1(sf::RenderWindow& ventana, float ancho, float alto) : ventana(ven
     fondoSprite.setTexture(fondoTextura);
     fondoSprite.setScale(ancho / fondoSprite.getGlobalBounds().width, alto / fondoSprite.getGlobalBounds().height);
 
+    // Inicializar el mapa
+    inicializarMapa();
+
+    musicaNivel1.cargarMusicaNivel1();
+}
+
+void Nivel1::inicializarMapa() {
     // Mapa del nivel
     mapa = new int* [altoMapa];
     for (int i = 0; i < altoMapa; ++i) {
@@ -36,8 +43,6 @@ Nivel1::Nivel1(sf::RenderWindow& ventana, float ancho, float alto) : ventana(ven
             mapa[i][j] = miMapa[i][j];
         }
     }
-
-    musicaNivel1.cargarMusicaNivel1();
 }
 
 void Nivel1::mostrar() {
@@ -75,19 +80,19 @@ void Nivel1::actualizar() {
 
     // Verificar si el jugador intenta moverse y la proxima posición es valida
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
-        jugador.mover(sf::Vector2f(0, -1), mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio);
+        jugador.mover(sf::Vector2f(0, -1), objetos);
         jugador.cambiarTextura("arriba.png");
     }
     else if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
-        jugador.mover(sf::Vector2f(0, 1), mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio);
+        jugador.mover(sf::Vector2f(0, 1), objetos);
         jugador.cambiarTextura("abajo.png");
     }
     else if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
-        jugador.mover(sf::Vector2f(-1, 0), mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio);
+        jugador.mover(sf::Vector2f(-1, 0), objetos);
         jugador.cambiarTextura("izquierda.png");
     }
     else if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
-        jugador.mover(sf::Vector2f(1, 0), mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio);
+        jugador.mover(sf::Vector2f(1, 0), objetos);
         jugador.cambiarTextura("derecha.png");
     }
 }
@@ -101,12 +106,12 @@ bool Nivel1::posicionValida(sf::Vector2f posicion) {
     int fila = static_cast<int>((posicion.y - posYInicio) / altoCelda);
     int columna = static_cast<int>((posicion.x - posXInicio) / anchoCelda);
 
-    // Verificar si la posici�n esta dentro de los limites del mapa
+    // Verificar si la posición está dentro de los límites del mapa
     if (fila >= 0 && fila < altoMapa && columna >= 0 && columna < anchoMapa) {
-        // Verificar si la posicion en la matriz es un espacio libre (0)
+        // Verificar si la posición en la matriz es un espacio libre (0)
         return mapa[fila][columna] == 0;
     }
 
-    // La posici�n est� fuera de los limites del mapa
+    // La posición está fuera de los límites del mapa
     return false;
 }

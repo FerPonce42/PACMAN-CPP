@@ -1,21 +1,25 @@
-#include "Jugador.h"
-#include <iostream>
+#include "Jugador.h" 
+#include <iostream> 
 
+// Constructor de la clase Jugador
 Jugador::Jugador(float x, float y, float velocidad) : velocidad(velocidad) {
+    // Carga la textura del jugador desde un archivo
     if (!textura.loadFromFile("Nivel1/derecha.png")) {
         std::cerr << "Error al cargar la textura del jugador." << std::endl;
     }
 
+    // Configura el sprite del jugador con la textura cargada
     sprite.setTexture(textura);
-    sprite.setPosition(x, y);
-    sprite.setScale(1.0f, 1.0f); // TAMAÑO DEL JUGADOR
+    sprite.setPosition(x, y); // Establece la posición inicial del jugador
+    sprite.setScale(0.8f, 0.8f); // Escala el tamaño del jugador
 }
 
+// Método para verificar si una posición propuesta es válida en el mapa
 bool Jugador::posicionValida(sf::Vector2f nuevaPosicion, int** mapa, int anchoMapa, int altoMapa, float anchoCelda, float altoCelda, float posXInicio, float posYInicio) {
-    float jugadorAncho = sprite.getGlobalBounds().width;
-    float jugadorAlto = sprite.getGlobalBounds().height;
+    float jugadorAncho = sprite.getGlobalBounds().width; // Ancho del sprite del jugador
+    float jugadorAlto = sprite.getGlobalBounds().height; // Alto del sprite del jugador
 
-    std::vector<sf::Vector2f> puntos;
+    std::vector<sf::Vector2f> puntos; // Vector para almacenar puntos de colisión
 
     // Esquinas del jugador
     puntos.push_back(nuevaPosicion);
@@ -33,43 +37,57 @@ bool Jugador::posicionValida(sf::Vector2f nuevaPosicion, int** mapa, int anchoMa
         puntos.push_back({ nuevaPosicion.x + jugadorAncho, y });
     }
 
-    // Verificar cada punto
+    // Verificar cada punto en el mapa
     for (auto& punto : puntos) {
-        int columna = static_cast<int>((punto.x - posXInicio) / anchoCelda);
-        int fila = static_cast<int>((punto.y - posYInicio) / altoCelda);
+        int columna = static_cast<int>((punto.x - posXInicio) / anchoCelda); // Columna en el mapa
+        int fila = static_cast<int>((punto.y - posYInicio) / altoCelda); // Fila en el mapa
 
+        // Verifica si el punto está fuera de los límites del mapa o colisiona con un obstáculo
         if (fila < 0 || fila >= altoMapa || columna < 0 || columna >= anchoMapa || mapa[fila][columna] != 0) {
-            return false;
+            return false; // La posición no es válida
         }
     }
 
-    return true;
+    return true; // La posición es válida
 }
 
+// Método para mover al jugador en una dirección dada
 void Jugador::mover(sf::Vector2f direccion, int** mapa, int anchoMapa, int altoMapa, float anchoCelda, float altoCelda, float posXInicio, float posYInicio) {
-    sf::Vector2f nuevaPosicion = sprite.getPosition() + direccion * velocidad;
+    sf::Vector2f nuevaPosicion = sprite.getPosition() + direccion * velocidad; // Calcula la nueva posición del jugador
 
+    // Verifica si la nueva posición es válida en el mapa
     if (posicionValida(nuevaPosicion, mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio)) {
-        sprite.setPosition(nuevaPosicion);
+        sprite.setPosition(nuevaPosicion); // Actualiza la posición del jugador
     }
 }
 
+// Método para dibujar al jugador en una ventana dada
 void Jugador::dibujar(sf::RenderWindow& ventana) {
-    ventana.draw(sprite);
+    ventana.draw(sprite); // Dibuja el sprite del jugador en la ventana
 }
 
+// Método para cambiar la textura del jugador
 void Jugador::cambiarTextura(const std::string& archivoTextura) {
+    // Carga una nueva textura desde un archivo
     if (!textura.loadFromFile("Nivel1/" + archivoTextura)) {
         std::cerr << "Error al cargar la nueva textura del jugador." << std::endl;
     }
 
+    // Establece la nueva textura en el sprite del jugador
     sprite.setTexture(textura);
 }
 
+// Método para establecer la dirección del jugador
 void Jugador::setDireccion(sf::Vector2f nuevaDireccion) {
-    direccion = nuevaDireccion;
+    direccion = nuevaDireccion; // Actualiza la dirección del jugador
 }
 
+// Método para obtener la posición del jugador
 sf::Vector2f Jugador::getPosicion() const {
-    return sprite.getPosition();
+    return sprite.getPosition(); // Devuelve la posición actual del jugador
+}
+
+// Método para obtener la dirección del jugador
+sf::Vector2f Jugador::getDireccion() const {
+    return direccion; // Devuelve la dirección actual del jugador
 }

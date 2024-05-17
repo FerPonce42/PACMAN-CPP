@@ -1,18 +1,25 @@
-﻿#include "Nivel1.h"
-#include <iostream>
+﻿#include "Nivel1.h" 
+#include <iostream> 
 
-Nivel1::Nivel1(sf::RenderWindow& ventana, float ancho, float alto) : ventana(ventana), jugador(ancho / 2, alto / 2, 5.0f) {
+// Constructor de la clase Nivel1 que inicializa la ventana y crea un jugador en el centro de la ventana con una velocidad predeterminada
+Nivel1::Nivel1(sf::RenderWindow& ventana, float ancho, float alto) : ventana(ventana), jugador(ancho / 2, alto / 2, 1.8f) {
+    // Carga la textura del fondo del nivel desde un archivo
     if (!fondoTextura.loadFromFile("Nivel1/FondoNivel1.png")) {
         std::cerr << "Error al cargar la imagen de fondo." << std::endl;
     }
 
+    // Configura el sprite del fondo con la textura cargada y escala para que se ajuste a la ventana
     fondoSprite.setTexture(fondoTextura);
     fondoSprite.setScale(ancho / fondoSprite.getGlobalBounds().width, alto / fondoSprite.getGlobalBounds().height);
 
+    // Inicializa el mapa del nivel
     inicializarMapa();
+
+    // Carga la música del nivel
     musicaNivel1.cargarMusicaNivel1();
 }
 
+// Método privado para inicializar el mapa del nivel
 void Nivel1::inicializarMapa() {
     mapa = new int* [altoMapa];
     for (int i = 0; i < altoMapa; ++i) {
@@ -34,6 +41,7 @@ void Nivel1::inicializarMapa() {
         {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}
     };
 
+    // Copia el mapa predeterminado en el mapa del nivel
     for (int i = 0; i < altoMapa; ++i) {
         for (int j = 0; j < anchoMapa; ++j) {
             mapa[i][j] = miMapa[i][j];
@@ -41,14 +49,18 @@ void Nivel1::inicializarMapa() {
     }
 }
 
+// Método para mostrar el nivel en la ventana
 void Nivel1::mostrar() {
-    anchoCelda = ventana.getSize().x / (anchoMapa * 1.6);
-    altoCelda = ventana.getSize().y / (altoMapa * 2.4);
+    // Calcula el tamaño de cada celda del mapa y la posición inicial del mapa en la ventana
+    anchoCelda = ventana.getSize().x / (anchoMapa * 1.8);
+    altoCelda = ventana.getSize().y / (altoMapa * 2.6);
     posXInicio = (ventana.getSize().x - (anchoCelda * anchoMapa)) / 2;
     posYInicio = (ventana.getSize().y - (altoCelda * altoMapa)) / 2;
 
+    // Dibuja el fondo del nivel en la ventana
     ventana.draw(fondoSprite);
 
+    // Dibuja las celdas del mapa en la ventana
     for (int i = 0; i < altoMapa; ++i) {
         for (int j = 0; j < anchoMapa; ++j) {
             if (mapa[i][j] == 1) {
@@ -60,38 +72,50 @@ void Nivel1::mostrar() {
         }
     }
 
+    // Dibuja al jugador en la ventana
     jugador.dibujar(ventana);
+
+    // Reproduce la música del nivel
     musicaNivel1.reproducir();
 }
 
+// Método para actualizar la lógica del nivel
 void Nivel1::actualizar() {
+    // Verifica las teclas presionadas para cambiar la dirección del jugador y su textura correspondiente
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
-        jugador.mover(sf::Vector2f(0, -1), mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio);
+        jugador.setDireccion(sf::Vector2f(0, -1));
         jugador.cambiarTextura("arriba.png");
     }
     else if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
-        jugador.mover(sf::Vector2f(0, 1), mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio);
+        jugador.setDireccion(sf::Vector2f(0, 1));
         jugador.cambiarTextura("abajo.png");
     }
     else if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
-        jugador.mover(sf::Vector2f(-1, 0), mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio);
+        jugador.setDireccion(sf::Vector2f(-1, 0));
         jugador.cambiarTextura("izquierda.png");
     }
     else if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
-        jugador.mover(sf::Vector2f(1, 0), mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio);
+        jugador.setDireccion(sf::Vector2f(1, 0));
         jugador.cambiarTextura("derecha.png");
     }
+
+    // Mover al jugador en la dirección actual
+    jugador.mover(jugador.getDireccion(), mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio);
 }
 
+
+
+// Método para manejar eventos de la ventana
 void Nivel1::manejarEventos() {
-    // Manejo de eventos
+    // Manejo de eventos (actualmente vacío)
 }
 
-
+// Método para verificar si una posición dada es válida en el nivel
 bool Nivel1::posicionValida(sf::Vector2f posicion) {
-    int fila = static_cast<int>((posicion.y - posYInicio) / altoCelda);
-    int columna = static_cast<int>((posicion.x - posXInicio) / anchoCelda);
+    int fila = static_cast<int>((posicion.y - posYInicio) / altoCelda); // Calcula la fila en el mapa
+    int columna = static_cast<int>((posicion.x - posXInicio) / anchoCelda); // Calcula la columna en el mapa
 
+    // Verifica si la posición está dentro de los límites del mapa y si la celda es transitable (no hay obstáculo)
     if (fila >= 0 && fila < altoMapa && columna >= 0 && columna < anchoMapa) {
         return mapa[fila][columna] == 0;
     }

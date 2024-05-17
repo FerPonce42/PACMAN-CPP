@@ -15,16 +15,28 @@ bool Jugador::posicionValida(sf::Vector2f nuevaPosicion, int** mapa, int anchoMa
     float jugadorAncho = sprite.getGlobalBounds().width;
     float jugadorAlto = sprite.getGlobalBounds().height;
 
-    sf::Vector2f esquinas[4] = {
-        nuevaPosicion,
-        {nuevaPosicion.x + jugadorAncho, nuevaPosicion.y},
-        {nuevaPosicion.x, nuevaPosicion.y + jugadorAlto},
-        {nuevaPosicion.x + jugadorAncho, nuevaPosicion.y + jugadorAlto}
-    };
+    std::vector<sf::Vector2f> puntos;
 
-    for (auto& esquina : esquinas) {
-        int columna = static_cast<int>((esquina.x - posXInicio) / anchoCelda);
-        int fila = static_cast<int>((esquina.y - posYInicio) / altoCelda);
+    // Esquinas del jugador
+    puntos.push_back(nuevaPosicion);
+    puntos.push_back({ nuevaPosicion.x + jugadorAncho, nuevaPosicion.y });
+    puntos.push_back({ nuevaPosicion.x, nuevaPosicion.y + jugadorAlto });
+    puntos.push_back({ nuevaPosicion.x + jugadorAncho, nuevaPosicion.y + jugadorAlto });
+
+    // Puntos intermedios en los lados del jugador
+    for (float x = nuevaPosicion.x + 1; x < nuevaPosicion.x + jugadorAncho; x += anchoCelda / 2) {
+        puntos.push_back({ x, nuevaPosicion.y });
+        puntos.push_back({ x, nuevaPosicion.y + jugadorAlto });
+    }
+    for (float y = nuevaPosicion.y + 1; y < nuevaPosicion.y + jugadorAlto; y += altoCelda / 2) {
+        puntos.push_back({ nuevaPosicion.x, y });
+        puntos.push_back({ nuevaPosicion.x + jugadorAncho, y });
+    }
+
+    // Verificar cada punto
+    for (auto& punto : puntos) {
+        int columna = static_cast<int>((punto.x - posXInicio) / anchoCelda);
+        int fila = static_cast<int>((punto.y - posYInicio) / altoCelda);
 
         if (fila < 0 || fila >= altoMapa || columna < 0 || columna >= anchoMapa || mapa[fila][columna] != 0) {
             return false;

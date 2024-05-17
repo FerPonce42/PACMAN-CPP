@@ -1,10 +1,4 @@
-﻿  Jugador.cpp
-  Nivel1.cpp
-C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\Nivel1.cpp(45,38): warning C4244: '=': conversión de 'T' a 'float'; posible pérdida de datos
-C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\Nivel1.cpp(45,38): warning C4244:         with
-C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\Nivel1.cpp(45,38): warning C4244:         [
-C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\Nivel1.cpp(45,38): warning C4244:             T=unsigned int
-C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\Nivel1.cpp(45,38): warning C4244:         ]
+﻿  Nivel1.cpp
+C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\Nivel1.cpp(45,38): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
 C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\Nivel1.cpp(46,37): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-  Generando código...
   PACMAN-CPP.vcxproj -> C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\x64\Debug\PACMAN-CPP.exe

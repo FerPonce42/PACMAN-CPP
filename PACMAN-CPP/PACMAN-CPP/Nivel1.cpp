@@ -28,9 +28,9 @@ void Nivel1::inicializarMapa() {
         {1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1},
         {1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1},
         {1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1},
-        {1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-        {1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1},
-        {1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+        {1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 1},
+        {1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1},
+        {1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1},
         {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}
     };
 
@@ -42,8 +42,8 @@ void Nivel1::inicializarMapa() {
 }
 
 void Nivel1::mostrar() {
-    anchoCelda = ventana.getSize().x / (anchoMapa * 2);
-    altoCelda = ventana.getSize().y / (altoMapa * 2.5);
+    anchoCelda = ventana.getSize().x / (anchoMapa * 1.6);
+    altoCelda = ventana.getSize().y / (altoMapa * 2.4);
     posXInicio = (ventana.getSize().x - (anchoCelda * anchoMapa)) / 2;
     posYInicio = (ventana.getSize().y - (altoCelda * altoMapa)) / 2;
 
@@ -86,6 +86,7 @@ void Nivel1::actualizar() {
 void Nivel1::manejarEventos() {
     // Manejo de eventos
 }
+
 
 bool Nivel1::posicionValida(sf::Vector2f posicion) {
     int fila = static_cast<int>((posicion.y - posYInicio) / altoCelda);

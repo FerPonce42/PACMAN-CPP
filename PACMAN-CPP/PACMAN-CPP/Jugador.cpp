@@ -8,27 +8,37 @@ Jugador::Jugador(float x, float y, float velocidad) : velocidad(velocidad) {
 
     sprite.setTexture(textura);
     sprite.setPosition(x, y);
-
     sprite.setScale(1.0f, 1.0f); // TAMAÑO DEL JUGADOR
 }
 
-void Jugador::mover(sf::Vector2f direccion, const std::vector<sf::Sprite>& objetos) {
-    // Calculamos la posición a la que intenta moverse el jugador
-    sf::Vector2f nuevaPosicion = sprite.getPosition() + direccion * velocidad;
+bool Jugador::posicionValida(sf::Vector2f nuevaPosicion, int** mapa, int anchoMapa, int altoMapa, float anchoCelda, float altoCelda, float posXInicio, float posYInicio) {
+    float jugadorAncho = sprite.getGlobalBounds().width;
+    float jugadorAlto = sprite.getGlobalBounds().height;
 
-    // Verificar colisiones con los objetos
-    bool colision = false;
-    for (const auto& objeto : objetos) {
-        if (sprite.getGlobalBounds().intersects(objeto.getGlobalBounds())) {
-            colision = true;
-            break;
+    sf::Vector2f esquinas[4] = {
+        nuevaPosicion,
+        {nuevaPosicion.x + jugadorAncho, nuevaPosicion.y},
+        {nuevaPosicion.x, nuevaPosicion.y + jugadorAlto},
+        {nuevaPosicion.x + jugadorAncho, nuevaPosicion.y + jugadorAlto}
+    };
+
+    for (auto& esquina : esquinas) {
+        int columna = static_cast<int>((esquina.x - posXInicio) / anchoCelda);
+        int fila = static_cast<int>((esquina.y - posYInicio) / altoCelda);
+
+        if (fila < 0 || fila >= altoMapa || columna < 0 || columna >= anchoMapa || mapa[fila][columna] != 0) {
+            return false;
         }
     }
 
-    // Verificar si la nueva posición no colisiona con ningún objeto
-    if (!colision) {
-        // Movemos al jugador a la nueva posición
-        sprite.move(direccion * velocidad);
+    return true;
+}
+
+void Jugador::mover(sf::Vector2f direccion, int** mapa, int anchoMapa, int altoMapa, float anchoCelda, float altoCelda, float posXInicio, float posYInicio) {
+    sf::Vector2f nuevaPosicion = sprite.getPosition() + direccion * velocidad;
+
+    if (posicionValida(nuevaPosicion, mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio)) {
+        sprite.setPosition(nuevaPosicion);
     }
 }
 

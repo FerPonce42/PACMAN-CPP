@@ -1,8 +1,9 @@
-﻿#include "Nivel1.h" 
-#include <iostream> 
+﻿#include "Nivel1.h"
+#include <iostream>
 
 // Constructor de la clase Nivel1 que inicializa la ventana y crea un jugador en el centro de la ventana con una velocidad predeterminada
-Nivel1::Nivel1(sf::RenderWindow& ventana, float ancho, float alto) : ventana(ventana), jugador(ancho / 2, alto / 2, 1.8f) {
+Nivel1::Nivel1(sf::RenderWindow& ventana, float ancho, float alto)
+    : ventana(ventana), jugador(ancho / 2, alto / 2, 1.8f), fantasmaRojo("Nivel1/fantasma.png", ancho / 4, alto / 4, 1.5f) {
     // Carga la textura del fondo del nivel desde un archivo
     if (!fondoTextura.loadFromFile("Nivel1/FondoNivel1.png")) {
         std::cerr << "Error al cargar la imagen de fondo." << std::endl;
@@ -18,6 +19,7 @@ Nivel1::Nivel1(sf::RenderWindow& ventana, float ancho, float alto) : ventana(ven
     // Carga la música del nivel
     musicaNivel1.cargarMusicaNivel1();
 }
+
 
 // Método privado para inicializar el mapa del nivel
 void Nivel1::inicializarMapa() {
@@ -75,9 +77,14 @@ void Nivel1::mostrar() {
     // Dibuja al jugador en la ventana
     jugador.dibujar(ventana);
 
+    // Dibuja al fantasma en la ventana
+    fantasmaRojo.dibujar(ventana);
+
     // Reproduce la música del nivel
     musicaNivel1.reproducir();
 }
+
+
 
 // Método para actualizar la lógica del nivel
 void Nivel1::actualizar() {
@@ -101,6 +108,8 @@ void Nivel1::actualizar() {
 
     // Mover al jugador en la dirección actual
     jugador.mover(jugador.getDireccion(), mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio);
+
+
 }
 
 

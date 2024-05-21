@@ -1,4 +1,4 @@
-#include "FantasmaRojo.h"
+ï»¿#include "FantasmaRojo.h"
 #include <iostream>
 #include <cmath>
 
@@ -9,43 +9,43 @@ FantasmaRojo::FantasmaRojo(const std::string& rutaTextura, float posX, float pos
         std::cerr << "Error al cargar la textura del fantasma." << std::endl;
     }
     sprite.setTexture(textura);
-    sprite.setPosition(posX, posY);
+    sprite.setPosition(740, 500);
 }
 
-// Método para dibujar al fantasma en la ventana
+// Mï¿½todo para dibujar al fantasma en la ventana
 void FantasmaRojo::dibujar(sf::RenderWindow& ventana) {
     ventana.draw(sprite);
 }
 
-// Método para mover al fantasma basado en el mapa, la posición del jugador y otros parámetros
 void FantasmaRojo::mover(int** mapa, int anchoMapa, int altoMapa, float anchoCelda, float altoCelda, float posXInicio, float posYInicio, sf::Vector2f posJugador) {
     sf::Vector2f posicionActual = sprite.getPosition();
 
-    // Calcular la dirección hacia el jugador
+    // Calcular la direcciÃ³n hacia el jugador
     sf::Vector2f direccionJugador = posJugador - posicionActual;
     float distancia = std::sqrt(direccionJugador.x * direccionJugador.x + direccionJugador.y * direccionJugador.y);
     if (distancia != 0) {
-        direccion = direccionJugador / distancia; // Normalizar la dirección
+        direccion = direccionJugador / distancia; // Normalizar la direcciÃ³n
     }
     else {
         direccion = sf::Vector2f(0, 0);
     }
 
-    // Calcular la nueva posición del fantasma
+    // Calcular la nueva posiciÃ³n del fantasma
     sf::Vector2f nuevaPosicion = posicionActual + direccion * velocidad;
 
-    // Verificar si la nueva posición es válida en el mapa
+    // Verificar si la nueva posiciÃ³n es vÃ¡lida en el mapa
     if (posicionValida(nuevaPosicion, mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio)) {
         sprite.setPosition(nuevaPosicion);
     }
 }
 
-// Método para obtener la posición actual del fantasma
+
+// Mï¿½todo para obtener la posiciï¿½n actual del fantasma
 sf::Vector2f FantasmaRojo::getPosicion() const {
     return sprite.getPosition();
 }
 
-// Método para determinar si una posición es válida en el mapa
+// Mï¿½todo para determinar si una posiciï¿½n es vï¿½lida en el mapa
 bool FantasmaRojo::posicionValida(sf::Vector2f posicion, int** mapa, int anchoMapa, int altoMapa, float anchoCelda, float altoCelda, float posXInicio, float posYInicio) {
     int fila = static_cast<int>((posicion.y - posYInicio) / altoCelda);
     int columna = static_cast<int>((posicion.x - posXInicio) / anchoCelda);

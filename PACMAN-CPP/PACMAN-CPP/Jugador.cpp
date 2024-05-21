@@ -10,7 +10,7 @@ Jugador::Jugador(float x, float y, float velocidad) : velocidad(velocidad) {
 
     // Configura el sprite del jugador con la textura cargada
     sprite.setTexture(textura);
-    sprite.setPosition(x, y); // Establece la posición inicial del jugador
+    sprite.setPosition(900, 540); // Establece la posición inicial del jugador
     sprite.setScale(0.8f, 0.8f); // Escala el tamaño del jugador
 }
 

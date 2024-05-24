@@ -87,7 +87,6 @@ void Nivel1::mostrar() {
 
 
 void Nivel1::actualizar() {
-    // Actualiza la lógica del jugador
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
         jugador.setDireccion(sf::Vector2f(0, -1));
         jugador.cambiarTextura("arriba.png");
@@ -105,12 +104,10 @@ void Nivel1::actualizar() {
         jugador.cambiarTextura("derecha.png");
     }
 
-    // Mueve al jugador en la dirección actual
     jugador.mover(jugador.getDireccion(), mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio);
-
-    // Actualiza la posición del fantasma rojo
     fantasmaRojo.mover(mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio, jugador.getPosicion());
 }
+
 
 
 

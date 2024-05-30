@@ -1,14 +1,5 @@
 ﻿  FantasmaRojo.cpp
-C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\FantasmaRojo.cpp(50,16): warning C4244: 'inicializando': conversión de 'T' a 'int'; posible pérdida de datos
-C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\FantasmaRojo.cpp(50,16): warning C4244:         with
-C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\FantasmaRojo.cpp(50,16): warning C4244:         [
-C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\FantasmaRojo.cpp(50,16): warning C4244:             T=float
-C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\FantasmaRojo.cpp(50,16): warning C4244:         ]
-C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\FantasmaRojo.cpp(51,16): warning C4244: 'inicializando': conversión de 'T' a 'int'; posible pérdida de datos
-C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\FantasmaRojo.cpp(51,16): warning C4244:         with
-C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\FantasmaRojo.cpp(51,16): warning C4244:         [
-C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\FantasmaRojo.cpp(51,16): warning C4244:             T=float
-C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\FantasmaRojo.cpp(51,16): warning C4244:         ]
+  Jugador.cpp
   Nivel1.cpp
 C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\Nivel1.cpp(57,38): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
 C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\Nivel1.cpp(58,37): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos

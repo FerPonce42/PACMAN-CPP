@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 #include <SFML/Graphics.hpp>
 #include "Jugador.h"
@@ -10,22 +10,22 @@ public:
     // Constructor de la clase Nivel1 que recibe una referencia a la ventana SFML, el ancho y el alto de la ventana
     Nivel1(sf::RenderWindow& ventana, float ancho, float alto);
 
-    // Método para mostrar el nivel en la ventana
+    // Mï¿½todo para mostrar el nivel en la ventana
     void mostrar();
 
-    // Método para actualizar la lógica del nivel
+    // Mï¿½todo para actualizar la lï¿½gica del nivel
     void actualizar();
 
-    // Método para manejar eventos de la ventana
+    // Mï¿½todo para manejar eventos de la ventana
     void manejarEventos();
 
-    // Método para verificar si una posición dada es válida en el nivel
+    // Mï¿½todo para verificar si una posiciï¿½n dada es vï¿½lida en el nivel
     bool posicionValida(sf::Vector2f posicion);
 
 
 private:
     sf::RenderWindow& ventana; // Referencia a la ventana SFML
-    Musica musicaNivel1; // Objeto de la clase Musica para reproducir música en el nivel
+    Musica musicaNivel1; // Objeto de la clase Musica para reproducir mï¿½sica en el nivel
     sf::Texture fondoTextura; // Textura para el fondo del nivel
     sf::Sprite fondoSprite; // Sprite para el fondo del nivel
     Jugador jugador; // Objeto de la clase Jugador para representar al jugador en el nivel
@@ -36,9 +36,9 @@ private:
     int** mapa; // Mapa del nivel representado como una matriz de enteros
     float anchoCelda; // Ancho de cada celda en el mapa
     float altoCelda; // Alto de cada celda en el mapa
-    float posXInicio; // Posición inicial en el eje X del jugador
-    float posYInicio; // Posición inicial en el eje Y del jugador
+    float posXInicio; // Posiciï¿½n inicial en el eje X del jugador
+    float posYInicio; // Posiciï¿½n inicial en el eje Y del jugador
 
-    // Método privado para inicializar el mapa del nivel
+    // Mï¿½todo privado para inicializar el mapa del nivel
     void inicializarMapa();
 };

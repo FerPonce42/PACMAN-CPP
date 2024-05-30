@@ -141,7 +141,6 @@
     <ClInclude Include="Nivel2.h" />
     <ClInclude Include="Nivel3.h" />
     <ClInclude Include="Jugador.h" />
-    <ClInclude Include="Pathfinding.h" />
     <ClInclude Include="SeleccionNiveles.h" />
   </ItemGroup>
   <ItemGroup>
@@ -157,7 +156,6 @@
     <ClCompile Include="Nivel2.cpp" />
     <ClCompile Include="Nivel3.cpp" />
     <ClCompile Include="Jugador.cpp" />
-    <ClCompile Include="Pathfinding.cpp" />
     <ClCompile Include="SeleccionNiveles.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

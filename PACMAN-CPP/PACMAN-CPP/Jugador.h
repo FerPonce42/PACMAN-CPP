@@ -1,4 +1,4 @@
-#pragma once 
+ï»¿#pragma once 
 #include <SFML/Graphics.hpp> 
 
 class Jugador {
@@ -6,30 +6,30 @@ public:
     // Constructor de la clase Jugador
     Jugador(float x, float y, float velocidad);
 
-    // Método para mover al jugador en una dirección dada
+    // Mï¿½todo para mover al jugador en una direcciï¿½n dada
     void mover(sf::Vector2f direccion, int** mapa, int anchoMapa, int altoMapa, float anchoCelda, float altoCelda, float posXInicio, float posYInicio);
 
-    // Método para dibujar al jugador en una ventana dada
+    // Mï¿½todo para dibujar al jugador en una ventana dada
     void dibujar(sf::RenderWindow& ventana);
 
-    // Método para cambiar la textura del jugador
+    // Mï¿½todo para cambiar la textura del jugador
     void cambiarTextura(const std::string& archivoTextura);
 
-    // Método para establecer la dirección del jugador
+    // Mï¿½todo para establecer la direcciï¿½n del jugador
     void setDireccion(sf::Vector2f nuevaDireccion);
 
-    // Método para obtener la posición del jugador
+    // Mï¿½todo para obtener la posiciï¿½n del jugador
     sf::Vector2f getPosicion() const;
 
-    // Método para obtener la dirección del jugador
+    // Mï¿½todo para obtener la direcciï¿½n del jugador
     sf::Vector2f getDireccion() const;
 
 private:
     sf::Texture textura; // Textura del jugador
     sf::Sprite sprite; // Sprite del jugador
     float velocidad; // Velocidad de movimiento del jugador
-    sf::Vector2f direccion; // Dirección de movimiento del jugador
+    sf::Vector2f direccion; // Direcciï¿½n de movimiento del jugador
 
-    // Método privado para verificar si la posición propuesta es válida en el mapa
+    // Mï¿½todo privado para verificar si la posiciï¿½n propuesta es vï¿½lida en el mapa
     bool posicionValida(sf::Vector2f nuevaPosicion, int** mapa, int anchoMapa, int altoMapa, float anchoCelda, float altoCelda, float posXInicio, float posYInicio);
 };

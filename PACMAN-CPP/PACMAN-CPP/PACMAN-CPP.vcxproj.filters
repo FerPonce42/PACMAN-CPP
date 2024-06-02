@@ -51,6 +51,9 @@
     <ClInclude Include="FantasmaNaranja.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="Animacion.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MenuPrincipal.cpp">
@@ -90,6 +93,9 @@
       <Filter>Archivos de origen</Filter>
     </ClCompile>
     <ClCompile Include="FantasmaNaranja.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="Animacion.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>

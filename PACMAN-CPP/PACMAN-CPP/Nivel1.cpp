@@ -87,28 +87,24 @@ void Nivel1::mostrar() {
 
 
 void Nivel1::actualizar() {
-    // Actualiza la lógica del jugador
+    float deltaTime = 1.0f / 60.0f;  // Asume 60 FPS para simplificar, deberías calcular el deltaTime real
+
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
         jugador.setDireccion(sf::Vector2f(0, -1));
-        jugador.cambiarTextura("arriba.png");
     }
     else if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
         jugador.setDireccion(sf::Vector2f(0, 1));
-        jugador.cambiarTextura("abajo.png");
     }
     else if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
         jugador.setDireccion(sf::Vector2f(-1, 0));
-        jugador.cambiarTextura("izquierda.png");
     }
     else if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
         jugador.setDireccion(sf::Vector2f(1, 0));
-        jugador.cambiarTextura("derecha.png");
     }
 
-    // Mueve al jugador en la dirección actual
     jugador.mover(jugador.getDireccion(), mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio);
+    jugador.actualizarAnimacion(deltaTime);
 
-    // Actualiza la posición del fantasma rojo
     fantasmaRojo.mover(mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio, jugador.getPosicion());
 }
 

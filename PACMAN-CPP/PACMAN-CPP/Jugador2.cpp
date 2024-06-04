@@ -2,7 +2,7 @@
 #include <iostream>
 
 Jugador2::Jugador2(float x, float y, float velocidad)
-    : velocidad(velocidad), direccion(0, 0) {
+    : velocidad(velocidad), direccion(0, 0), vidas(3) {
     animacion = new Animacion(0.1f);  // Tiempo entre frames
     animacion->agregarFrame("Nivel3/Jugador2/derecha1.png");
     animacion->agregarFrame("Nivel3/Jugador2/derecha2.png");
@@ -10,6 +10,24 @@ Jugador2::Jugador2(float x, float y, float velocidad)
 
     sprite.setPosition(1150, 550); //JUGADOR 2 PACMAN
     sprite.setScale(0.8f, 0.8f);
+}
+
+int Jugador2::getVidas() const {
+    return vidas;
+}
+void Jugador2::dibujarVidas(sf::RenderWindow& ventana) {
+    sf::Font font;
+    if (!font.loadFromFile("Nivel3/fuentenivel3.ttf")) {
+
+    }
+    sf::Text textoVidas;
+    textoVidas.setFont(font);
+    textoVidas.setString(std::to_string(vidas));
+    textoVidas.setCharacterSize(40);
+    textoVidas.setFillColor(sf::Color::White);
+    textoVidas.setPosition(200, 900);
+
+    ventana.draw(textoVidas);
 }
 
 bool Jugador2::posicionValida(sf::Vector2f nuevaPosicion, int** mapa, int anchoMapa, int altoMapa, float anchoCelda, float altoCelda, float posXInicio, float posYInicio) {

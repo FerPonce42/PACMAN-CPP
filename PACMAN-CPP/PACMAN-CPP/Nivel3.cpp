@@ -1,4 +1,4 @@
-#include "Nivel3.h"
+ï»¿#include "Nivel3.h"
 #include <iostream>
 
 // Constructor de la clase Nivel3 que inicializa la ventana y crea los jugadores en el centro de la ventana con una velocidad predeterminada
@@ -16,11 +16,11 @@ Nivel3::Nivel3(sf::RenderWindow& ventana, float ancho, float alto)
     // Inicializa el mapa del nivel
     inicializarMapa();
 
-    // Carga la música del nivel
+    // Carga la mï¿½sica del nivel
     musicaNivel3.cargarMusicaNivel3();
 }
 
-// Método privado para inicializar el mapa del nivel
+// Mï¿½todo privado para inicializar el mapa del nivel
 void Nivel3::inicializarMapa() {
     mapa = new int* [altoMapa];
     for (int i = 0; i < altoMapa; ++i) {
@@ -51,9 +51,9 @@ void Nivel3::inicializarMapa() {
     }
 }
 
-// Método para mostrar el nivel en la ventana
+// Mï¿½todo para mostrar el nivel en la ventana
 void Nivel3::mostrar() {
-    // Calcula el tamaño de cada celda del mapa y la posición inicial del mapa en la ventana
+    // Calcula el tamaï¿½o de cada celda del mapa y la posiciï¿½n inicial del mapa en la ventana
     anchoCelda = ventana.getSize().x / (anchoMapa * 1.8);
     altoCelda = ventana.getSize().y / (altoMapa * 2.6);
     posXInicio = (ventana.getSize().x - (anchoCelda * anchoMapa)) / 2;
@@ -76,14 +76,16 @@ void Nivel3::mostrar() {
 
     // Dibuja a los jugadores en la ventana
     jugador1.dibujar(ventana);
-    jugador2.dibujar(ventana);
+    jugador1.dibujarVidas(ventana);
 
-    // Reproduce la música del nivel
+    jugador2.dibujar(ventana);
+    jugador2.dibujarVidas(ventana);
+    // Reproduce la mï¿½sica del nivel
     musicaNivel3.reproducir();
 }
 
 void Nivel3::actualizar() {
-    float deltaTime = 1.0f / 60.0f;  // Asume 60 FPS para simplificar, deberías calcular el deltaTime real
+    float deltaTime = 1.0f / 60.0f;  // Asume 60 FPS para simplificar, deberï¿½as calcular el deltaTime real
 
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
         jugador1.setDireccion(sf::Vector2f(0, -1));
@@ -118,17 +120,17 @@ void Nivel3::actualizar() {
     jugador2.actualizarAnimacion(deltaTime);
 }
 
-// Método para manejar eventos de la ventana
+// Mï¿½todo para manejar eventos de la ventana
 void Nivel3::manejarEventos() {
-    // Manejo de eventos (actualmente vacío)
+    // Manejo de eventos (actualmente vacï¿½o)
 }
 
-// Método para verificar si una posición dada es válida en el nivel
+// Mï¿½todo para verificar si una posiciï¿½n dada es vï¿½lida en el nivel
 bool Nivel3::posicionValida(sf::Vector2f posicion) {
     int fila = static_cast<int>((posicion.y - posYInicio) / altoCelda); // Calcula la fila en el mapa
     int columna = static_cast<int>((posicion.x - posXInicio) / anchoCelda); // Calcula la columna en el mapa
 
-    // Verifica si la posición está dentro de los límites del mapa y si la celda es transitable (no hay obstáculo)
+    // Verifica si la posiciï¿½n estï¿½ dentro de los lï¿½mites del mapa y si la celda es transitable (no hay obstï¿½culo)
     if (fila >= 0 && fila < altoMapa && columna >= 0 && columna < anchoMapa) {
         return mapa[fila][columna] == 0;
     }

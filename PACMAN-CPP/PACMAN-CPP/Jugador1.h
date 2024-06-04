@@ -12,12 +12,15 @@ public:
     sf::Vector2f getPosicion() const;
     sf::Vector2f getDireccion() const;
     void actualizarAnimacion(float deltaTime);
+    int getVidas() const;
+    void dibujarVidas(sf::RenderWindow& ventana); 
 
 private:
     sf::Sprite sprite;
     float velocidad;
     sf::Vector2f direccion;
     Animacion* animacion;
+    int vidas; 
 
     bool posicionValida(sf::Vector2f nuevaPosicion, int** mapa, int anchoMapa, int altoMapa, float anchoCelda, float altoCelda, float posXInicio, float posYInicio);
 };

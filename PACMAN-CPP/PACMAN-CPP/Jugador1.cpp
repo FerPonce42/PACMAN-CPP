@@ -1,8 +1,8 @@
-#include "Jugador1.h"
+ï»¿#include "Jugador1.h"
 #include <iostream>
 
 Jugador1::Jugador1(float x, float y, float velocidad)
-    : velocidad(velocidad), direccion(0, 0) {
+    : velocidad(velocidad), direccion(0, 0), vidas(100) { // Inicializa vidas a 100
     animacion = new Animacion(0.1f);  // Tiempo entre frames
     animacion->agregarFrame("Nivel3/Jugador1/derecha1.png");
     animacion->agregarFrame("Nivel3/Jugador1/derecha2.png");
@@ -10,6 +10,24 @@ Jugador1::Jugador1(float x, float y, float velocidad)
 
     sprite.setPosition(860, 510); //JUGADOR 1 FANTASMA
     sprite.setScale(0.8f, 0.8f);
+}
+
+int Jugador1::getVidas() const {
+    return vidas;
+}
+void Jugador1::dibujarVidas(sf::RenderWindow& ventana) {
+    sf::Font font;
+    if (!font.loadFromFile("Nivel3/fuentenivel3.ttf")) {
+     
+    }
+    sf::Text textoVidas;
+    textoVidas.setFont(font);
+    textoVidas.setString(std::to_string(vidas));
+    textoVidas.setCharacterSize(40);
+    textoVidas.setFillColor(sf::Color::White);
+    textoVidas.setPosition(200, 825);
+
+    ventana.draw(textoVidas);
 }
 
 bool Jugador1::posicionValida(sf::Vector2f nuevaPosicion, int** mapa, int anchoMapa, int altoMapa, float anchoCelda, float altoCelda, float posXInicio, float posYInicio) {
@@ -58,7 +76,7 @@ void Jugador1::dibujar(sf::RenderWindow& ventana) {
 
 void Jugador1::setDireccion(sf::Vector2f nuevaDireccion) {
     direccion = nuevaDireccion;
-    // Cambiar animaciones basadas en la dirección
+    // Cambiar animaciones basadas en la direcciï¿½n
     delete animacion;
     animacion = new Animacion(0.1f);  // Tiempo entre frames
 

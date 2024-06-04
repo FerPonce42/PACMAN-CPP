@@ -136,6 +136,8 @@
     <ClInclude Include="FantasmaRojo.h" />
     <ClInclude Include="FantasmaRosa.h" />
     <ClInclude Include="FantasmasCeleste.h" />
+    <ClInclude Include="Jugador1.h" />
+    <ClInclude Include="Jugador2.h" />
     <ClInclude Include="MenuPrincipal.h" />
     <ClInclude Include="Musica.h" />
     <ClInclude Include="Nivel1.h" />
@@ -151,6 +153,8 @@
     <ClCompile Include="FantasmaRojo.cpp" />
     <ClCompile Include="FantasmaRosa.cpp" />
     <ClCompile Include="FantasmasCeleste.cpp" />
+    <ClCompile Include="Jugador1.cpp" />
+    <ClCompile Include="Jugador2.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MenuPrincipal.cpp" />
     <ClCompile Include="Musica.cpp" />

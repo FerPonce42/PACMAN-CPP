@@ -54,6 +54,12 @@
     <ClInclude Include="Animacion.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="Jugador2.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="Jugador1.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MenuPrincipal.cpp">
@@ -96,6 +102,12 @@
       <Filter>Archivos de origen</Filter>
     </ClCompile>
     <ClCompile Include="Animacion.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="Jugador2.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="Jugador1.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>

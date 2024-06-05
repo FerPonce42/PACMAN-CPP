@@ -2,7 +2,7 @@
 #include <iostream>
 
 Jugador2::Jugador2(float x, float y, float velocidad)
-    : velocidad(velocidad), direccion(0, 0), vidas(3) {
+    : velocidad(velocidad), direccion(0, 0), vidas(3), posicionInicial(x, y) { // Inicializa la posición inicial
     animacion = new Animacion(0.1f);  // Tiempo entre frames
     animacion->agregarFrame("Nivel3/Jugador2/derecha1.png");
     animacion->agregarFrame("Nivel3/Jugador2/derecha2.png");
@@ -15,10 +15,11 @@ Jugador2::Jugador2(float x, float y, float velocidad)
 int Jugador2::getVidas() const {
     return vidas;
 }
+
 void Jugador2::dibujarVidas(sf::RenderWindow& ventana) {
     sf::Font font;
     if (!font.loadFromFile("Nivel3/fuentenivel3.ttf")) {
-
+        
     }
     sf::Text textoVidas;
     textoVidas.setFont(font);
@@ -30,6 +31,17 @@ void Jugador2::dibujarVidas(sf::RenderWindow& ventana) {
     ventana.draw(textoVidas);
 }
 
+void Jugador2::reducirVida() {
+    vidas--;
+}
+
+void Jugador2::setPosicionInicial() {
+    sprite.setPosition(1150, 550);
+}
+
+sf::Sprite& Jugador2::getSprite() {
+    return sprite;
+}
 bool Jugador2::posicionValida(sf::Vector2f nuevaPosicion, int** mapa, int anchoMapa, int altoMapa, float anchoCelda, float altoCelda, float posXInicio, float posYInicio) {
     float jugadorAncho = sprite.getGlobalBounds().width;
     float jugadorAlto = sprite.getGlobalBounds().height;

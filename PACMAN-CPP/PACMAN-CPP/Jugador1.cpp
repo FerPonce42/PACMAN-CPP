@@ -2,7 +2,7 @@
 #include <iostream>
 
 Jugador1::Jugador1(float x, float y, float velocidad)
-    : velocidad(velocidad), direccion(0, 0), vidas(100) { // Inicializa vidas a 100
+    : velocidad(velocidad), direccion(0, 0), vidas(100), posicionInicial(x, y) { // Inicializa la posición inicial
     animacion = new Animacion(0.1f);  // Tiempo entre frames
     animacion->agregarFrame("Nivel3/Jugador1/derecha1.png");
     animacion->agregarFrame("Nivel3/Jugador1/derecha2.png");
@@ -15,10 +15,11 @@ Jugador1::Jugador1(float x, float y, float velocidad)
 int Jugador1::getVidas() const {
     return vidas;
 }
+
 void Jugador1::dibujarVidas(sf::RenderWindow& ventana) {
     sf::Font font;
     if (!font.loadFromFile("Nivel3/fuentenivel3.ttf")) {
-     
+        
     }
     sf::Text textoVidas;
     textoVidas.setFont(font);
@@ -28,6 +29,18 @@ void Jugador1::dibujarVidas(sf::RenderWindow& ventana) {
     textoVidas.setPosition(200, 825);
 
     ventana.draw(textoVidas);
+}
+
+void Jugador1::reducirVida() {
+    vidas--;
+}
+
+void Jugador1::setPosicionInicial() {
+    sprite.setPosition(860, 510);
+}
+
+sf::Sprite& Jugador1::getSprite() {
+    return sprite;
 }
 
 bool Jugador1::posicionValida(sf::Vector2f nuevaPosicion, int** mapa, int anchoMapa, int altoMapa, float anchoCelda, float altoCelda, float posXInicio, float posYInicio) {

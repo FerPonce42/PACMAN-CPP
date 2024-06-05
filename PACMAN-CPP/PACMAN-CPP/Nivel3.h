@@ -12,6 +12,7 @@ public:
     void actualizar();
     void manejarEventos();
     bool posicionValida(sf::Vector2f posicion);
+    void verificarColisiones();
 
 private:
     sf::RenderWindow& ventana;

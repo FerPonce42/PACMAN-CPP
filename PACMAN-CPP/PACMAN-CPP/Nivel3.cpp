@@ -83,6 +83,14 @@ void Nivel3::mostrar() {
     // Reproduce la m�sica del nivel
     musicaNivel3.reproducir();
 }
+void Nivel3::verificarColisiones() {
+    if (jugador1.getSprite().getGlobalBounds().intersects(jugador2.getSprite().getGlobalBounds())) {
+        jugador2.reducirVida();
+        jugador1.setPosicionInicial();
+        jugador2.setPosicionInicial();
+    }
+}
+
 
 void Nivel3::actualizar() {
     float deltaTime = 1.0f / 60.0f;  // Asume 60 FPS para simplificar, deber�as calcular el deltaTime real
@@ -118,6 +126,8 @@ void Nivel3::actualizar() {
 
     jugador2.mover(jugador2.getDireccion(), mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio);
     jugador2.actualizarAnimacion(deltaTime);
+
+    verificarColisiones();//COLISIONES ENTRE (JUGADOR1)FANTASMA Y (JUGADOR2)PACMAN
 }
 
 // M�todo para manejar eventos de la ventana

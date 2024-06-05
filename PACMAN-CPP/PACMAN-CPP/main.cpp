@@ -4,7 +4,8 @@
 #include "Musica.h"
 #include "Nivel1.h"
 #include "Nivel2.h"
-#include "Nivel3.h" 
+#include "Nivel3.h"
+#include "Pausa.h"  // Asegúrate de incluir la cabecera de Pausa
 
 int main() {
     sf::RenderWindow ventana(sf::VideoMode(1920, 1080), "PACMAN-CPP");
@@ -13,7 +14,9 @@ int main() {
     SeleccionNiveles menuNiveles(ventana.getSize().x, ventana.getSize().y);
     Nivel1 nivel1(ventana, ventana.getSize().x, ventana.getSize().y);
     Nivel2 nivel2(ventana, ventana.getSize().x, ventana.getSize().y);
-    Nivel3 nivel3(ventana, ventana.getSize().x, ventana.getSize().y); 
+    Nivel3 nivel3(ventana, ventana.getSize().x, ventana.getSize().y);
+
+    Pausa pausa(ventana);  // Instancia de Pausa
 
     Musica musica;
     musica.cargarMusicaMenu();
@@ -25,7 +28,7 @@ int main() {
     bool enMenuNiveles = false;
     bool enNivel1 = false;
     bool enNivel2 = false;
-    bool enNivel3 = false; 
+    bool enNivel3 = false;
 
     while (ventana.isOpen()) {
         sf::Event evento;
@@ -40,7 +43,7 @@ int main() {
             else if (enNivel2) {
                 nivel2.manejarEventos();
             }
-            else if (enNivel3) { 
+            else if (enNivel3) {
                 nivel3.manejarEventos();
             }
 
@@ -70,7 +73,7 @@ int main() {
                             enMenuNiveles = true;
                             enNivel1 = false;
                             enNivel2 = false;
-                            enNivel3 = false; 
+                            enNivel3 = false;
                         }
                         else if (opcionSeleccionada == 4) {
                             ventana.close();
@@ -82,13 +85,13 @@ int main() {
                             enMenuNiveles = false;
                             enNivel1 = false;
                             enNivel2 = false;
-                            enNivel3 = false; 
+                            enNivel3 = false;
                         }
                         else if (menuNiveles.obtenerNivelSeleccionado() == 1) {
                             enMenuNiveles = false;
                             enNivel1 = true;
                             enNivel2 = false;
-                            enNivel3 = false; 
+                            enNivel3 = false;
                             musica.detener();
                             musica.cargarMusicaNivel1();
                             musica.setLoop(true);
@@ -98,7 +101,7 @@ int main() {
                             enMenuNiveles = false;
                             enNivel1 = false;
                             enNivel2 = true;
-                            enNivel3 = false; 
+                            enNivel3 = false;
                             musica.detener();
                             musica.cargarMusicaNivel2();
                             musica.setLoop(true);
@@ -108,11 +111,29 @@ int main() {
                             enMenuNiveles = false;
                             enNivel1 = false;
                             enNivel2 = false;
-                            enNivel3 = true; 
+                            enNivel3 = true;
                             musica.detener();
-                            musica.cargarMusicaNivel3(); 
+                            musica.cargarMusicaNivel3();
                             musica.setLoop(true);
-                            musica.reproducir(); 
+                            musica.reproducir();
+                        }
+                    }
+                }
+
+                if (evento.key.code == sf::Keyboard::Space) {
+                    if (enNivel1 || enNivel2 || enNivel3) {
+                        int resultadoPausa = pausa.mostrar();
+                        if (resultadoPausa == 1) {
+                            // Opción de regresar al menú principal
+                            enMenu = true;
+                            enMenuNiveles = false;
+                            enNivel1 = false;
+                            enNivel2 = false;
+                            enNivel3 = false;
+                            musica.detener();
+                            musica.cargarMusicaMenu();
+                            musica.setLoop(true);
+                            musica.reproducir();
                         }
                     }
                 }
@@ -136,7 +157,7 @@ int main() {
             nivel2.mostrar();
             nivel2.actualizar();
         }
-        else if (enNivel3) { 
+        else if (enNivel3) {
             nivel3.mostrar();
             nivel3.actualizar();
         }

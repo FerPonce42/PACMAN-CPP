@@ -8,7 +8,7 @@ Jugador2::Jugador2(float x, float y, float velocidad)
     animacion->agregarFrame("Nivel3/Jugador2/derecha2.png");
     animacion->agregarFrame("Nivel3/Jugador2/derecha3.png");
 
-    sprite.setPosition(1150, 550); //JUGADOR 2 PACMAN
+    sprite.setPosition(1140, 550); //JUGADOR 2 PACMAN
     sprite.setScale(0.8f, 0.8f);
 }
 

@@ -86,6 +86,9 @@ void Nivel3::mostrar() {
 void Nivel3::verificarColisiones() {
     if (jugador1.getSprite().getGlobalBounds().intersects(jugador2.getSprite().getGlobalBounds())) {
         jugador2.reducirVida();
+        if (jugador2.getVidas() <= 0) {
+            jugador1.mostrarVentanaGanador(ventana, 1); // Jugador 1 ganó
+        }
         jugador1.setPosicionInicial();
         jugador2.setPosicionInicial();
     }

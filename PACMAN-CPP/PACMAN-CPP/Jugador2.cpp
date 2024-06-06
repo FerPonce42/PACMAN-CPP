@@ -42,6 +42,13 @@ void Jugador2::setPosicionInicial() {
 sf::Sprite& Jugador2::getSprite() {
     return sprite;
 }
+
+void Jugador2::mostrarVentanaGanador(sf::RenderWindow& mainWindow, int ganador) {
+    Ganador ventanaGanador(mainWindow, ganador);
+    int opcion = ventanaGanador.mostrar();
+
+}
+
 bool Jugador2::posicionValida(sf::Vector2f nuevaPosicion, int** mapa, int anchoMapa, int altoMapa, float anchoCelda, float altoCelda, float posXInicio, float posYInicio) {
     float jugadorAncho = sprite.getGlobalBounds().width;
     float jugadorAlto = sprite.getGlobalBounds().height;

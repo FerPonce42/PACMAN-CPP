@@ -1,6 +1,7 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 #include "Animacion.h"
+#include "Ganador.h"
 
 class Jugador2 {
 public:
@@ -17,6 +18,7 @@ public:
     void reducirVida(); 
     void setPosicionInicial();
     sf::Sprite& getSprite(); 
+    void mostrarVentanaGanador(sf::RenderWindow& mainWindow, int ganador);
 
 private:
     sf::Sprite sprite;

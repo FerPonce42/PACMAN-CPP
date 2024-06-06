@@ -5,6 +5,7 @@
 #include "Musica.h"
 #include "FantasmaRojo.h"
 
+
 class Nivel1 {
 public:
     Nivel1(sf::RenderWindow& ventana, float ancho, float alto);

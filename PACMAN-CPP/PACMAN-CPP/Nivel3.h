@@ -4,6 +4,8 @@
 #include "Jugador1.h"
 #include "Jugador2.h"
 #include "Musica.h"
+#include "Ganador.h"
+
 
 class Nivel3 {
 public:

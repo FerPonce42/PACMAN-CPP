@@ -1,4 +1,15 @@
-﻿  Pausa.cpp
+﻿  Ganador.cpp
+  Jugador1.cpp
+  Jugador2.cpp
+  Musica.cpp
+  Nivel1.cpp
+C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\Nivel1.cpp(57,38): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\Nivel1.cpp(58,37): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+  Nivel2.cpp
+  Nivel3.cpp
+C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\Nivel3.cpp(57,38): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\Nivel3.cpp(58,37): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+  Pausa.cpp
   main.cpp
 C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(13,62): warning C4244: 'argumento': conversión de 'T' a 'float'; posible pérdida de datos
 C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(13,62): warning C4244:         with

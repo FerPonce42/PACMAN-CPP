@@ -3,6 +3,66 @@
   "WorkspaceRootPath": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Ganador.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|solutionrelative:PACMAN-CPP\\Ganador.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Pausa.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|solutionrelative:PACMAN-CPP\\Pausa.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Nivel3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|solutionrelative:PACMAN-CPP\\Nivel3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Nivel2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|solutionrelative:PACMAN-CPP\\Nivel2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Nivel1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|solutionrelative:PACMAN-CPP\\Nivel1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Musica.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|solutionrelative:PACMAN-CPP\\Musica.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Jugador2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|solutionrelative:PACMAN-CPP\\Jugador2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Jugador1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|solutionrelative:PACMAN-CPP\\Jugador1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Jugador1.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|solutionrelative:PACMAN-CPP\\Jugador1.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Jugador2.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|solutionrelative:PACMAN-CPP\\Jugador2.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Nivel2.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|solutionrelative:PACMAN-CPP\\Nivel2.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Nivel3.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|solutionrelative:PACMAN-CPP\\Nivel3.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Jugador.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|solutionrelative:PACMAN-CPP\\Jugador.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Ganador.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|solutionrelative:PACMAN-CPP\\Ganador.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Nivel1.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|solutionrelative:PACMAN-CPP\\Nivel1.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Pausa.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|solutionrelative:PACMAN-CPP\\Pausa.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -11,20 +71,8 @@
       "RelativeMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|solutionrelative:PACMAN-CPP\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Pausa.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|solutionrelative:PACMAN-CPP\\Pausa.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Nivel1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|solutionrelative:PACMAN-CPP\\Nivel1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\SeleccionNiveles.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|solutionrelative:PACMAN-CPP\\SeleccionNiveles.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Nivel3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|solutionrelative:PACMAN-CPP\\Nivel3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\MenuPrincipal.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -37,42 +85,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\MenuPrincipal.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|solutionrelative:PACMAN-CPP\\MenuPrincipal.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Nivel2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|solutionrelative:PACMAN-CPP\\Nivel2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Jugador2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|solutionrelative:PACMAN-CPP\\Jugador2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Jugador1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|solutionrelative:PACMAN-CPP\\Jugador1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Nivel3.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|solutionrelative:PACMAN-CPP\\Nivel3.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Jugador2.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|solutionrelative:PACMAN-CPP\\Jugador2.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Jugador1.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|solutionrelative:PACMAN-CPP\\Jugador1.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Jugador.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|solutionrelative:PACMAN-CPP\\Jugador.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Nivel1.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|solutionrelative:PACMAN-CPP\\Nivel1.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Nivel2.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|solutionrelative:PACMAN-CPP\\Nivel2.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Jugador.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -115,10 +127,6 @@
       "RelativeMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|solutionrelative:PACMAN-CPP\\FantasmasCeleste.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Musica.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|solutionrelative:PACMAN-CPP\\Musica.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\FantasmaRosa.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|solutionrelative:PACMAN-CPP\\FantasmaRosa.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -138,348 +146,83 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Pausa.cpp",
-              "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Pausa.cpp",
-              "RelativeDocumentMoniker": "PACMAN-CPP\\Pausa.cpp",
-              "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Pausa.cpp",
-              "RelativeToolTip": "PACMAN-CPP\\Pausa.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFYAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-06-05T22:20:00.11Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Pausa.h",
-              "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Pausa.h",
-              "RelativeDocumentMoniker": "PACMAN-CPP\\Pausa.h",
-              "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Pausa.h",
-              "RelativeToolTip": "PACMAN-CPP\\Pausa.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-06-05T22:19:38.169Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Nivel3.cpp",
-              "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Nivel3.cpp",
-              "RelativeDocumentMoniker": "PACMAN-CPP\\Nivel3.cpp",
-              "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Nivel3.cpp",
-              "RelativeToolTip": "PACMAN-CPP\\Nivel3.cpp",
-              "ViewState": "AQIAAGwAAAAAAAAAAAAAAIIAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-04-14T16:50:16.687Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Nivel1.cpp",
-              "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Nivel1.cpp",
-              "RelativeDocumentMoniker": "PACMAN-CPP\\Nivel1.cpp",
-              "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Nivel1.cpp",
-              "RelativeToolTip": "PACMAN-CPP\\Nivel1.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-04-10T22:02:24.286Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Nivel2.cpp",
-              "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Nivel2.cpp",
-              "RelativeDocumentMoniker": "PACMAN-CPP\\Nivel2.cpp",
-              "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Nivel2.cpp",
-              "RelativeToolTip": "PACMAN-CPP\\Nivel2.cpp",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAABwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-04-14T16:50:02.046Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "MenuPrincipal.cpp",
-              "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\MenuPrincipal.cpp",
-              "RelativeDocumentMoniker": "PACMAN-CPP\\MenuPrincipal.cpp",
-              "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\MenuPrincipal.cpp",
-              "RelativeToolTip": "PACMAN-CPP\\MenuPrincipal.cpp",
-              "ViewState": "AQIAADwAAAAAAAAAAAAAAFgAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-03-27T21:42:02.056Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "main.cpp",
-              "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\main.cpp",
-              "RelativeDocumentMoniker": "PACMAN-CPP\\main.cpp",
-              "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\main.cpp",
-              "RelativeToolTip": "PACMAN-CPP\\main.cpp",
-              "ViewState": "AQIAAJAAAAAAAAAAAAAAAKMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-03-27T21:41:59.719Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "Animacion.h",
-              "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Animacion.h",
-              "RelativeDocumentMoniker": "PACMAN-CPP\\Animacion.h",
-              "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Animacion.h",
-              "RelativeToolTip": "PACMAN-CPP\\Animacion.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-06-02T07:17:12.662Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MenuPrincipal.h",
-              "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\MenuPrincipal.h",
-              "RelativeDocumentMoniker": "PACMAN-CPP\\MenuPrincipal.h",
-              "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\MenuPrincipal.h",
-              "RelativeToolTip": "PACMAN-CPP\\MenuPrincipal.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-03-27T21:41:01.007Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "SeleccionNiveles.cpp",
-              "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\SeleccionNiveles.cpp",
-              "RelativeDocumentMoniker": "PACMAN-CPP\\SeleccionNiveles.cpp",
-              "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\SeleccionNiveles.cpp",
-              "RelativeToolTip": "PACMAN-CPP\\SeleccionNiveles.cpp",
-              "ViewState": "AQIAADMAAAAAAAAAAAAAADwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-03-27T21:49:35.078Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Jugador.cpp",
-              "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Jugador.cpp",
-              "RelativeDocumentMoniker": "PACMAN-CPP\\Jugador.cpp",
-              "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Jugador.cpp",
-              "RelativeToolTip": "PACMAN-CPP\\Jugador.cpp",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-04-16T15:50:29.537Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Nivel1.h",
-              "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Nivel1.h",
-              "RelativeDocumentMoniker": "PACMAN-CPP\\Nivel1.h",
-              "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Nivel1.h",
-              "RelativeToolTip": "PACMAN-CPP\\Nivel1.h",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAA4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-04-01T23:25:24.595Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Nivel2.h",
-              "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Nivel2.h",
-              "RelativeDocumentMoniker": "PACMAN-CPP\\Nivel2.h",
-              "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Nivel2.h",
-              "RelativeToolTip": "PACMAN-CPP\\Nivel2.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-04-14T16:25:18.133Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
               "Title": "Jugador1.cpp",
               "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Jugador1.cpp",
               "RelativeDocumentMoniker": "PACMAN-CPP\\Jugador1.cpp",
               "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Jugador1.cpp",
               "RelativeToolTip": "PACMAN-CPP\\Jugador1.cpp",
-              "ViewState": "AQIAACQAAAAAAAAAAAAAAA4AAAAgAAAA",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAADAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-06-04T01:18:28.208Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Jugador1.h",
-              "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Jugador1.h",
-              "RelativeDocumentMoniker": "PACMAN-CPP\\Jugador1.h",
-              "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Jugador1.h",
-              "RelativeToolTip": "PACMAN-CPP\\Jugador1.h",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAIwBoAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-06-04T01:17:41.509Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 9,
               "Title": "Jugador2.h",
               "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Jugador2.h",
               "RelativeDocumentMoniker": "PACMAN-CPP\\Jugador2.h",
               "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Jugador2.h",
               "RelativeToolTip": "PACMAN-CPP\\Jugador2.h",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAIwBoAAAAiAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-06-04T00:36:50.854Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 2,
+              "Title": "Nivel3.cpp",
+              "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Nivel3.cpp",
+              "RelativeDocumentMoniker": "PACMAN-CPP\\Nivel3.cpp",
+              "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Nivel3.cpp",
+              "RelativeToolTip": "PACMAN-CPP\\Nivel3.cpp",
+              "ViewState": "AQIAAE4AAAAAAAAAAAAAAF8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-14T16:50:16.687Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Nivel1.cpp",
+              "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Nivel1.cpp",
+              "RelativeDocumentMoniker": "PACMAN-CPP\\Nivel1.cpp",
+              "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Nivel1.cpp",
+              "RelativeToolTip": "PACMAN-CPP\\Nivel1.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-10T22:02:24.286Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Jugador1.h",
+              "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Jugador1.h",
+              "RelativeDocumentMoniker": "PACMAN-CPP\\Jugador1.h",
+              "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Jugador1.h",
+              "RelativeToolTip": "PACMAN-CPP\\Jugador1.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-04T01:17:41.509Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Jugador2.cpp",
               "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Jugador2.cpp",
               "RelativeDocumentMoniker": "PACMAN-CPP\\Jugador2.cpp",
               "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Jugador2.cpp",
               "RelativeToolTip": "PACMAN-CPP\\Jugador2.cpp",
-              "ViewState": "AQIAAHUAAAAAAAAAAAAAACsAAAABAAAA",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAADIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-06-04T01:20:17.73Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Nivel3.h",
-              "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Nivel3.h",
-              "RelativeDocumentMoniker": "PACMAN-CPP\\Nivel3.h",
-              "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Nivel3.h",
-              "RelativeToolTip": "PACMAN-CPP\\Nivel3.h",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAABoAAAAPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-04-14T16:42:04.397Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Jugador.h",
-              "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Jugador.h",
-              "RelativeDocumentMoniker": "PACMAN-CPP\\Jugador.h",
-              "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Jugador.h",
-              "RelativeToolTip": "PACMAN-CPP\\Jugador.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-04-16T15:50:21.106Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "FantasmaRojo.cpp",
-              "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\FantasmaRojo.cpp",
-              "RelativeDocumentMoniker": "PACMAN-CPP\\FantasmaRojo.cpp",
-              "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\FantasmaRojo.cpp",
-              "RelativeToolTip": "PACMAN-CPP\\FantasmaRojo.cpp",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAsAAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-04-28T22:45:00.974Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "FantasmaRojo.h",
-              "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\FantasmaRojo.h",
-              "RelativeDocumentMoniker": "PACMAN-CPP\\FantasmaRojo.h",
-              "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\FantasmaRojo.h",
-              "RelativeToolTip": "PACMAN-CPP\\FantasmaRojo.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-04-28T22:39:33.826Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "FantasmaRosa.h",
-              "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\FantasmaRosa.h",
-              "RelativeDocumentMoniker": "PACMAN-CPP\\FantasmaRosa.h",
-              "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\FantasmaRosa.h",
-              "RelativeToolTip": "PACMAN-CPP\\FantasmaRosa.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-04-28T22:39:41.369Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "FantasmaPadre.h",
-              "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\FantasmaPadre.h",
-              "RelativeDocumentMoniker": "PACMAN-CPP\\FantasmaPadre.h",
-              "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\FantasmaPadre.h",
-              "RelativeToolTip": "PACMAN-CPP\\FantasmaPadre.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-04-28T22:38:54.787Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "FantasmaNaranja.h",
-              "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\FantasmaNaranja.h",
-              "RelativeDocumentMoniker": "PACMAN-CPP\\FantasmaNaranja.h",
-              "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\FantasmaNaranja.h",
-              "RelativeToolTip": "PACMAN-CPP\\FantasmaNaranja.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-04-28T22:39:49.313Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "FantasmasCeleste.h",
-              "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\FantasmasCeleste.h",
-              "RelativeDocumentMoniker": "PACMAN-CPP\\FantasmasCeleste.h",
-              "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\FantasmasCeleste.h",
-              "RelativeToolTip": "PACMAN-CPP\\FantasmasCeleste.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-04-28T22:39:26.307Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "Musica.h",
-              "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Musica.h",
-              "RelativeDocumentMoniker": "PACMAN-CPP\\Musica.h",
-              "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Musica.h",
-              "RelativeToolTip": "PACMAN-CPP\\Musica.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAIwAkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-03-27T21:41:44.085Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "FantasmaPadre.cpp",
-              "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\FantasmaPadre.cpp",
-              "RelativeDocumentMoniker": "PACMAN-CPP\\FantasmaPadre.cpp",
-              "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\FantasmaPadre.cpp",
-              "RelativeToolTip": "PACMAN-CPP\\FantasmaPadre.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-04-28T22:44:58.908Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "FantasmasCeleste.cpp",
-              "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\FantasmasCeleste.cpp",
-              "RelativeDocumentMoniker": "PACMAN-CPP\\FantasmasCeleste.cpp",
-              "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\FantasmasCeleste.cpp",
-              "RelativeToolTip": "PACMAN-CPP\\FantasmasCeleste.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-04-28T22:45:04.087Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 5,
               "Title": "Musica.cpp",
               "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Musica.cpp",
               "RelativeDocumentMoniker": "PACMAN-CPP\\Musica.cpp",
@@ -491,7 +234,296 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Nivel2.cpp",
+              "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Nivel2.cpp",
+              "RelativeDocumentMoniker": "PACMAN-CPP\\Nivel2.cpp",
+              "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Nivel2.cpp",
+              "RelativeToolTip": "PACMAN-CPP\\Nivel2.cpp",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAABwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-14T16:50:02.046Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Pausa.cpp",
+              "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Pausa.cpp",
+              "RelativeDocumentMoniker": "PACMAN-CPP\\Pausa.cpp",
+              "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Pausa.cpp",
+              "RelativeToolTip": "PACMAN-CPP\\Pausa.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-05T22:20:00.11Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Ganador.cpp",
+              "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Ganador.cpp",
+              "RelativeDocumentMoniker": "PACMAN-CPP\\Ganador.cpp",
+              "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Ganador.cpp",
+              "RelativeToolTip": "PACMAN-CPP\\Ganador.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-05T23:55:57.213Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Nivel2.h",
+              "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Nivel2.h",
+              "RelativeDocumentMoniker": "PACMAN-CPP\\Nivel2.h",
+              "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Nivel2.h",
+              "RelativeToolTip": "PACMAN-CPP\\Nivel2.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-04-14T16:25:18.133Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Nivel3.h",
+              "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Nivel3.h",
+              "RelativeDocumentMoniker": "PACMAN-CPP\\Nivel3.h",
+              "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Nivel3.h",
+              "RelativeToolTip": "PACMAN-CPP\\Nivel3.h",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAACMAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-04-14T16:42:04.397Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Jugador.cpp",
+              "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Jugador.cpp",
+              "RelativeDocumentMoniker": "PACMAN-CPP\\Jugador.cpp",
+              "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Jugador.cpp",
+              "RelativeToolTip": "PACMAN-CPP\\Jugador.cpp",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-16T15:50:29.537Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Ganador.h",
+              "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Ganador.h",
+              "RelativeDocumentMoniker": "PACMAN-CPP\\Ganador.h",
+              "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Ganador.h",
+              "RelativeToolTip": "PACMAN-CPP\\Ganador.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAABcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-05T23:54:00.014Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Nivel1.h",
+              "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Nivel1.h",
+              "RelativeDocumentMoniker": "PACMAN-CPP\\Nivel1.h",
+              "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Nivel1.h",
+              "RelativeToolTip": "PACMAN-CPP\\Nivel1.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-04-01T23:25:24.595Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Pausa.h",
+              "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Pausa.h",
+              "RelativeDocumentMoniker": "PACMAN-CPP\\Pausa.h",
+              "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Pausa.h",
+              "RelativeToolTip": "PACMAN-CPP\\Pausa.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-05T22:19:38.169Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "SeleccionNiveles.cpp",
+              "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\SeleccionNiveles.cpp",
+              "RelativeDocumentMoniker": "PACMAN-CPP\\SeleccionNiveles.cpp",
+              "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\SeleccionNiveles.cpp",
+              "RelativeToolTip": "PACMAN-CPP\\SeleccionNiveles.cpp",
+              "ViewState": "AQIAADMAAAAAAAAAAAAAADwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-03-27T21:49:35.078Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "MenuPrincipal.h",
+              "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\MenuPrincipal.h",
+              "RelativeDocumentMoniker": "PACMAN-CPP\\MenuPrincipal.h",
+              "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\MenuPrincipal.h",
+              "RelativeToolTip": "PACMAN-CPP\\MenuPrincipal.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-03-27T21:41:01.007Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Animacion.h",
+              "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Animacion.h",
+              "RelativeDocumentMoniker": "PACMAN-CPP\\Animacion.h",
+              "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Animacion.h",
+              "RelativeToolTip": "PACMAN-CPP\\Animacion.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-02T07:17:12.662Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\main.cpp",
+              "RelativeDocumentMoniker": "PACMAN-CPP\\main.cpp",
+              "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\main.cpp",
+              "RelativeToolTip": "PACMAN-CPP\\main.cpp",
+              "ViewState": "AQIAAJAAAAAAAAAAAAAAAKMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-03-27T21:41:59.719Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "MenuPrincipal.cpp",
+              "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\MenuPrincipal.cpp",
+              "RelativeDocumentMoniker": "PACMAN-CPP\\MenuPrincipal.cpp",
+              "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\MenuPrincipal.cpp",
+              "RelativeToolTip": "PACMAN-CPP\\MenuPrincipal.cpp",
+              "ViewState": "AQIAADwAAAAAAAAAAAAAAFgAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-03-27T21:42:02.056Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Jugador.h",
+              "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Jugador.h",
+              "RelativeDocumentMoniker": "PACMAN-CPP\\Jugador.h",
+              "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Jugador.h",
+              "RelativeToolTip": "PACMAN-CPP\\Jugador.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-04-16T15:50:21.106Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "FantasmaRojo.cpp",
+              "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\FantasmaRojo.cpp",
+              "RelativeDocumentMoniker": "PACMAN-CPP\\FantasmaRojo.cpp",
+              "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\FantasmaRojo.cpp",
+              "RelativeToolTip": "PACMAN-CPP\\FantasmaRojo.cpp",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAsAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-28T22:45:00.974Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "FantasmaRojo.h",
+              "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\FantasmaRojo.h",
+              "RelativeDocumentMoniker": "PACMAN-CPP\\FantasmaRojo.h",
+              "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\FantasmaRojo.h",
+              "RelativeToolTip": "PACMAN-CPP\\FantasmaRojo.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-04-28T22:39:33.826Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "FantasmaRosa.h",
+              "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\FantasmaRosa.h",
+              "RelativeDocumentMoniker": "PACMAN-CPP\\FantasmaRosa.h",
+              "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\FantasmaRosa.h",
+              "RelativeToolTip": "PACMAN-CPP\\FantasmaRosa.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-04-28T22:39:41.369Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "FantasmaPadre.h",
+              "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\FantasmaPadre.h",
+              "RelativeDocumentMoniker": "PACMAN-CPP\\FantasmaPadre.h",
+              "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\FantasmaPadre.h",
+              "RelativeToolTip": "PACMAN-CPP\\FantasmaPadre.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-04-28T22:38:54.787Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "FantasmaNaranja.h",
+              "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\FantasmaNaranja.h",
+              "RelativeDocumentMoniker": "PACMAN-CPP\\FantasmaNaranja.h",
+              "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\FantasmaNaranja.h",
+              "RelativeToolTip": "PACMAN-CPP\\FantasmaNaranja.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-04-28T22:39:49.313Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 29,
+              "Title": "FantasmasCeleste.h",
+              "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\FantasmasCeleste.h",
+              "RelativeDocumentMoniker": "PACMAN-CPP\\FantasmasCeleste.h",
+              "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\FantasmasCeleste.h",
+              "RelativeToolTip": "PACMAN-CPP\\FantasmasCeleste.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-04-28T22:39:26.307Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Musica.h",
+              "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Musica.h",
+              "RelativeDocumentMoniker": "PACMAN-CPP\\Musica.h",
+              "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Musica.h",
+              "RelativeToolTip": "PACMAN-CPP\\Musica.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAIwAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-03-27T21:41:44.085Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "FantasmaPadre.cpp",
+              "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\FantasmaPadre.cpp",
+              "RelativeDocumentMoniker": "PACMAN-CPP\\FantasmaPadre.cpp",
+              "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\FantasmaPadre.cpp",
+              "RelativeToolTip": "PACMAN-CPP\\FantasmaPadre.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-28T22:44:58.908Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "FantasmasCeleste.cpp",
+              "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\FantasmasCeleste.cpp",
+              "RelativeDocumentMoniker": "PACMAN-CPP\\FantasmasCeleste.cpp",
+              "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\FantasmasCeleste.cpp",
+              "RelativeToolTip": "PACMAN-CPP\\FantasmasCeleste.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-28T22:45:04.087Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
               "Title": "FantasmaRosa.cpp",
               "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\FantasmaRosa.cpp",
               "RelativeDocumentMoniker": "PACMAN-CPP\\FantasmaRosa.cpp",
@@ -503,7 +535,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 32,
               "Title": "FantasmaNaranja.cpp",
               "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\FantasmaNaranja.cpp",
               "RelativeDocumentMoniker": "PACMAN-CPP\\FantasmaNaranja.cpp",
@@ -515,7 +547,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 33,
               "Title": "SeleccionNiveles.h",
               "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\SeleccionNiveles.h",
               "RelativeDocumentMoniker": "PACMAN-CPP\\SeleccionNiveles.h",

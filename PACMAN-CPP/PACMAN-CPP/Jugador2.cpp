@@ -2,7 +2,7 @@
 #include <iostream>
 
 Jugador2::Jugador2(float x, float y, float velocidad)
-    : velocidad(velocidad), direccion(0, 0), vidas(3), posicionInicial(x, y) { // Inicializa la posición inicial
+    : velocidad(velocidad), direccion(0, 0), vidas(3), posicionInicial(x, y), puntaje(0) { // Inicializa la posición inicial
     animacion = new Animacion(0.1f);  // Tiempo entre frames
     animacion->agregarFrame("Nivel3/Jugador2/derecha1.png");
     animacion->agregarFrame("Nivel3/Jugador2/derecha2.png");
@@ -11,6 +11,15 @@ Jugador2::Jugador2(float x, float y, float velocidad)
     sprite.setPosition(1140, 550); //JUGADOR 2 PACMAN
     sprite.setScale(0.8f, 0.8f);
 }
+
+void Jugador2::aumentarPuntaje(int puntos) {
+    puntaje += puntos;
+}
+
+int Jugador2::getPuntaje() const {
+    return puntaje;
+}
+
 
 int Jugador2::getVidas() const {
     return vidas;
@@ -36,7 +45,7 @@ void Jugador2::reducirVida() {
 }
 
 void Jugador2::setPosicionInicial() {
-    sprite.setPosition(1150, 550);
+    sprite.setPosition(1140, 550);
 }
 
 sf::Sprite& Jugador2::getSprite() {

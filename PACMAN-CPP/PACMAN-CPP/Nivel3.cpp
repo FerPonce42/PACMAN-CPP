@@ -1,9 +1,12 @@
 ﻿#include "Nivel3.h"
 #include <iostream>
 
+#include "Nivel3.h"
+#include <iostream>
+
 // Constructor de la clase Nivel3 que inicializa la ventana y crea los jugadores en el centro de la ventana con una velocidad predeterminada
 Nivel3::Nivel3(sf::RenderWindow& ventana, float ancho, float alto)
-    : ventana(ventana), jugador1(ancho / 2, alto / 2, 1.8f), jugador2(ancho / 2, alto / 2 + 50, 1.8f) {
+    : ventana(ventana), jugador1(ancho / 2, alto / 2, 1.8f), jugador2(ancho / 2, alto / 2 + 50, 1.8f), pelotas(nullptr) {
     // Carga la textura del fondo del nivel desde un archivo
     if (!fondoTextura.loadFromFile("Nivel3/FondoNivel3.png")) {
         std::cerr << "Error al cargar la imagen de fondo." << std::endl;
@@ -16,8 +19,26 @@ Nivel3::Nivel3(sf::RenderWindow& ventana, float ancho, float alto)
     // Inicializa el mapa del nivel
     inicializarMapa();
 
-    // Carga la m�sica del nivel
+    // Calcula el tamaño de cada celda del mapa y la posición inicial del mapa en la ventana
+    anchoCelda = ventana.getSize().x / (anchoMapa * 1.8);
+    altoCelda = ventana.getSize().y / (altoMapa * 2.6);
+    posXInicio = (ventana.getSize().x - (anchoCelda * anchoMapa)) / 2;
+    posYInicio = (ventana.getSize().y - (altoCelda * altoMapa)) / 2;
+
+    // Inicializa las bolitas
+    pelotas = new Pelotas(mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio);
+
+    // Carga la música del nivel
     musicaNivel3.cargarMusicaNivel3();
+}
+
+// Destructor para liberar memoria
+Nivel3::~Nivel3() {
+    for (int i = 0; i < altoMapa; ++i) {
+        delete[] mapa[i];
+    }
+    delete[] mapa;
+    delete pelotas;
 }
 
 // M�todo privado para inicializar el mapa del nivel
@@ -73,7 +94,8 @@ void Nivel3::mostrar() {
             }
         }
     }
-
+    // Dibuja las bolitas
+    pelotas->dibujar(ventana);
     // Dibuja a los jugadores en la ventana
     jugador1.dibujar(ventana);
     jugador1.dibujarVidas(ventana);
@@ -91,6 +113,10 @@ void Nivel3::verificarColisiones() {
         }
         jugador1.setPosicionInicial();
         jugador2.setPosicionInicial();
+    }
+    // Verificar colisiones de jugador2 con las bolitas
+    if (pelotas->verificarColision(jugador2.getSprite())) {
+        jugador2.aumentarPuntaje(10);  // Aumentar puntaje en 10
     }
 }
 
@@ -130,7 +156,7 @@ void Nivel3::actualizar() {
     jugador2.mover(jugador2.getDireccion(), mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio);
     jugador2.actualizarAnimacion(deltaTime);
 
-    verificarColisiones();//COLISIONES ENTRE (JUGADOR1)FANTASMA Y (JUGADOR2)PACMAN
+    verificarColisiones();//COLISIONES ENTRE (JUGADOR1)FANTASMA Y (JUGADOR2)PACMAN Y BOLITAS
 }
 
 // M�todo para manejar eventos de la ventana

@@ -15,10 +15,12 @@ public:
     void actualizarAnimacion(float deltaTime);
     int getVidas() const;
     void dibujarVidas(sf::RenderWindow& ventana);
-    void reducirVida(); 
+    void reducirVida();
     void setPosicionInicial();
-    sf::Sprite& getSprite(); 
+    sf::Sprite& getSprite();
     void mostrarVentanaGanador(sf::RenderWindow& mainWindow, int ganador);
+    void aumentarPuntaje(int puntos);  // Nuevo método
+    int getPuntaje() const;  // Nuevo método
 
 private:
     sf::Sprite sprite;
@@ -26,7 +28,8 @@ private:
     sf::Vector2f direccion;
     Animacion* animacion;
     int vidas;
-    sf::Vector2f posicionInicial; 
+    sf::Vector2f posicionInicial;
+    int puntaje;  // Nueva variable
 
     bool posicionValida(sf::Vector2f nuevaPosicion, int** mapa, int anchoMapa, int altoMapa, float anchoCelda, float altoCelda, float posXInicio, float posYInicio);
 };

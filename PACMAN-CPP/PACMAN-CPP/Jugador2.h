@@ -21,6 +21,7 @@ public:
     void mostrarVentanaGanador(sf::RenderWindow& mainWindow, int ganador);
     void aumentarPuntaje(int puntos);  // Nuevo método
     int getPuntaje() const;  // Nuevo método
+    void dibujarPuntaje(sf::RenderWindow& ventana);
 
 private:
     sf::Sprite sprite;

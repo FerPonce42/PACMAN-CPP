@@ -102,6 +102,7 @@ void Nivel3::mostrar() {
 
     jugador2.dibujar(ventana);
     jugador2.dibujarVidas(ventana);
+    jugador2.dibujarPuntaje(ventana);  // Dibuja el puntaje del Jugador 2
     // Reproduce la m�sica del nivel
     musicaNivel3.reproducir();
 }

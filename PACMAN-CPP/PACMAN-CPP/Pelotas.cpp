@@ -2,7 +2,7 @@
 #include <iostream>
 
 Pelotas::Pelotas(int** mapa, int anchoMapa, int altoMapa, float anchoCelda, float altoCelda, float posXInicio, float posYInicio) {
-    radioBolita = std::min(anchoCelda, altoCelda) / 4;
+    radioBolita = std::min(anchoCelda, altoCelda) / 8;
 
     for (int i = 0; i < altoMapa; ++i) {
         for (int j = 0; j < anchoMapa; ++j) {

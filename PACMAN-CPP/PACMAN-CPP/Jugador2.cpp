@@ -57,6 +57,21 @@ void Jugador2::mostrarVentanaGanador(sf::RenderWindow& mainWindow, int ganador) 
     int opcion = ventanaGanador.mostrar();
 
 }
+void Jugador2::dibujarPuntaje(sf::RenderWindow& ventana) {
+    sf::Font font;
+    if (!font.loadFromFile("Nivel3/fuentenivel3.ttf")) {
+        // Manejo de errores
+    }
+    sf::Text textoPuntaje;
+    textoPuntaje.setFont(font);
+    textoPuntaje.setString(std::to_string(puntaje));
+    textoPuntaje.setCharacterSize(50);
+    textoPuntaje.setFillColor(sf::Color::White);
+    textoPuntaje.setPosition(250, 85); // Ajusta la posición según tus necesidades
+
+    ventana.draw(textoPuntaje);
+}
+
 
 bool Jugador2::posicionValida(sf::Vector2f nuevaPosicion, int** mapa, int anchoMapa, int altoMapa, float anchoCelda, float altoCelda, float posXInicio, float posYInicio) {
     float jugadorAncho = sprite.getGlobalBounds().width;

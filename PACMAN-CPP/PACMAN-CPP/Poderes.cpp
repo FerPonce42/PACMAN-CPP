@@ -36,7 +36,7 @@ bool Poderes::verificarColision(sf::Sprite& sprite) {
 
 void Poderes::activarPoder() {
     poderActivo = true;
-    relojPoder.restart(); // Reinicia el reloj
+    relojPoder.restart(); // Reiniciar el reloj cuando se activa el poder
 }
 
 bool Poderes::estaActivo() const {

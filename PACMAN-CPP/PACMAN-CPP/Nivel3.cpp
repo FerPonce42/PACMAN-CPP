@@ -18,7 +18,15 @@ Nivel3::Nivel3(sf::RenderWindow& ventana, float ancho, float alto)
     posYInicio = (ventana.getSize().y - (altoCelda * altoMapa)) / 2;
 
     pelotas = new Pelotas(mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio);
-    poderes = new Poderes(mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio);  // Inicializa poderes
+    poderes = new Poderes(mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio);
+
+    if (!font.loadFromFile("Nivel3/fuentenivel3.ttf")) {
+        std::cerr << "Error al cargar la fuente." << std::endl;
+    }
+    textoContador.setFont(font);
+    textoContador.setCharacterSize(40);
+    textoContador.setFillColor(sf::Color::White);
+    textoContador.setPosition(250, 900);
 
     musicaNivel3.cargarMusicaNivel3();
 }
@@ -29,7 +37,7 @@ Nivel3::~Nivel3() {
     }
     delete[] mapa;
     delete pelotas;
-    delete poderes;  // Liberar memoria de poderes
+    delete poderes;
 }
 
 // M�todo privado para inicializar el mapa del nivel
@@ -95,6 +103,26 @@ void Nivel3::mostrar() {
     jugador2.dibujar(ventana);
     jugador2.dibujarVidas(ventana);
     jugador2.dibujarPuntaje(ventana);  // Dibuja el puntaje del Jugador 2
+
+    if (poderes->estaActivo()) {
+        // Obtener el tiempo transcurrido desde que se activó el poder
+        float tiempoTranscurrido = relojContador.getElapsedTime().asSeconds();
+
+        // Calcular los segundos restantes (iniciando en 5)
+        int segundosRestantes = 5 - static_cast<int>(tiempoTranscurrido);
+
+        // Si los segundos restantes son menores o iguales a 0, reiniciar el contador
+        if (segundosRestantes <= 0) {
+            relojContador.restart();
+            segundosRestantes = 5;
+        }
+
+        // Actualizar el texto del contador
+        textoContador.setString(std::to_string(segundosRestantes) + "s");
+        ventana.draw(textoContador);
+    }
+
+
     // Reproduce la m�sica del nivel
     musicaNivel3.reproducir();
 }
@@ -122,7 +150,6 @@ void Nivel3::verificarColisiones() {
                 jugador2.mostrarVentanaGanador(ventana, 2); // Jugador 2 ganó
             }
             jugador1.setPosicionInicial();
-            jugador2.setPosicionInicial();
         }
         else {
             jugador2.reducirVida();
@@ -130,11 +157,10 @@ void Nivel3::verificarColisiones() {
                 jugador1.mostrarVentanaGanador(ventana, 1); // Jugador 1 ganó
             }
             jugador1.setPosicionInicial();
-            jugador2.setPosicionInicial();
+            jugador2.setPosicionInicial(); // Solo en este caso, cuando el jugador 2 mata al jugador 1, ambos regresan a su posición inicial
         }
     }
 }
-
 
 
 void Nivel3::actualizar() {

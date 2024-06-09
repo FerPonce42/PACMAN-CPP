@@ -36,5 +36,9 @@ private:
     float posXInicio;
     float posYInicio;
 
+    sf::Font font;
+    sf::Text textoContador;
+    sf::Clock relojContador; // Añadido para el temporizador del poder
+
     void inicializarMapa();
 };

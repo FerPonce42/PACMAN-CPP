@@ -1,44 +1,35 @@
 ﻿#include "Nivel3.h"
 #include <iostream>
 
-#include "Nivel3.h"
-#include <iostream>
-
-// Constructor de la clase Nivel3 que inicializa la ventana y crea los jugadores en el centro de la ventana con una velocidad predeterminada
 Nivel3::Nivel3(sf::RenderWindow& ventana, float ancho, float alto)
-    : ventana(ventana), jugador1(ancho / 2, alto / 2, 1.8f), jugador2(ancho / 2, alto / 2 + 50, 1.8f), pelotas(nullptr) {
-    // Carga la textura del fondo del nivel desde un archivo
+    : ventana(ventana), jugador1(ancho / 2, alto / 2, 1.8f), jugador2(ancho / 2, alto / 2 + 50, 1.8f), pelotas(nullptr), poderes(nullptr) {
     if (!fondoTextura.loadFromFile("Nivel3/FondoNivel3.png")) {
         std::cerr << "Error al cargar la imagen de fondo." << std::endl;
     }
 
-    // Configura el sprite del fondo con la textura cargada y escala para que se ajuste a la ventana
     fondoSprite.setTexture(fondoTextura);
     fondoSprite.setScale(ancho / fondoSprite.getGlobalBounds().width, alto / fondoSprite.getGlobalBounds().height);
 
-    // Inicializa el mapa del nivel
     inicializarMapa();
 
-    // Calcula el tamaño de cada celda del mapa y la posición inicial del mapa en la ventana
     anchoCelda = ventana.getSize().x / (anchoMapa * 1.8);
     altoCelda = ventana.getSize().y / (altoMapa * 2.6);
     posXInicio = (ventana.getSize().x - (anchoCelda * anchoMapa)) / 2;
     posYInicio = (ventana.getSize().y - (altoCelda * altoMapa)) / 2;
 
-    // Inicializa las bolitas
     pelotas = new Pelotas(mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio);
+    poderes = new Poderes(mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio);  // Inicializa poderes
 
-    // Carga la música del nivel
     musicaNivel3.cargarMusicaNivel3();
 }
 
-// Destructor para liberar memoria
 Nivel3::~Nivel3() {
     for (int i = 0; i < altoMapa; ++i) {
         delete[] mapa[i];
     }
     delete[] mapa;
     delete pelotas;
+    delete poderes;  // Liberar memoria de poderes
 }
 
 // M�todo privado para inicializar el mapa del nivel
@@ -55,8 +46,8 @@ void Nivel3::inicializarMapa() {
         {1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1},//4 LIXTO CALISTO
         {1, 0, 1, 0, 1, 2, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 2, 1, 0, 1, 2, 1, 0, 1, 2, 1, 0, 0, 0, 1},//5
         {1, 1, 1, 0, 1, 2, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 2, 1, 0, 1, 1, 0, 0, 1, 2, 1, 0, 1, 1, 1},//6
-        {1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 2, 1, 0, 0, 0, 1},//7
-        {1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1},//8
+        {1, 3, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 2, 1, 0, 0, 3, 1},//7
+        {1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 1, 0, 0, 1, 3, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1},//8
         {1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1},//9
         {1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 1},//10
         {1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},//11
@@ -96,7 +87,8 @@ void Nivel3::mostrar() {
     }
     // Dibuja las bolitas
     pelotas->dibujar(ventana);
-    // Dibuja a los jugadores en la ventana
+    poderes->dibujar(ventana);  // Dibuja los poderes
+
     jugador1.dibujar(ventana);
     jugador1.dibujarVidas(ventana);
 
@@ -107,15 +99,6 @@ void Nivel3::mostrar() {
     musicaNivel3.reproducir();
 }
 void Nivel3::verificarColisiones() {
-    if (jugador1.getSprite().getGlobalBounds().intersects(jugador2.getSprite().getGlobalBounds())) {
-        jugador2.reducirVida();
-        if (jugador2.getVidas() <= 0) {
-            jugador1.mostrarVentanaGanador(ventana, 1); // Jugador 1 ganó
-        }
-        jugador1.setPosicionInicial();
-        jugador2.setPosicionInicial();
-    }
-
     // Verificar colisiones de jugador2 con las bolitas
     if (pelotas->verificarColision(jugador2.getSprite())) {
         jugador2.aumentarPuntaje(10);  // Aumentar puntaje en 10
@@ -125,8 +108,32 @@ void Nivel3::verificarColisiones() {
             jugador2.mostrarVentanaGanador(ventana, 2); // Jugador 2 (Pacman) ganó
         }
     }
-}
 
+    // Verificar colisiones de jugador2 con los poderes
+    if (poderes->verificarColision(jugador2.getSprite())) {
+        // Poder activado
+    }
+
+    // Verificar colisiones entre jugador1 y jugador2
+    if (jugador1.getSprite().getGlobalBounds().intersects(jugador2.getSprite().getGlobalBounds())) {
+        if (poderes->estaActivo()) {
+            jugador1.reducirVida();
+            if (jugador1.getVidas() <= 0) {
+                jugador2.mostrarVentanaGanador(ventana, 2); // Jugador 2 ganó
+            }
+            jugador1.setPosicionInicial();
+            jugador2.setPosicionInicial();
+        }
+        else {
+            jugador2.reducirVida();
+            if (jugador2.getVidas() <= 0) {
+                jugador1.mostrarVentanaGanador(ventana, 1); // Jugador 1 ganó
+            }
+            jugador1.setPosicionInicial();
+            jugador2.setPosicionInicial();
+        }
+    }
+}
 
 
 

@@ -72,13 +72,14 @@ bool Jugador1::posicionValida(sf::Vector2f nuevaPosicion, int** mapa, int anchoM
         int columna = static_cast<int>((punto.x - posXInicio) / anchoCelda);
         int fila = static_cast<int>((punto.y - posYInicio) / altoCelda);
 
-        if (fila < 0 || fila >= altoMapa || columna < 0 || columna >= anchoMapa || mapa[fila][columna] != 0) {
+        if (fila < 0 || fila >= altoMapa || columna < 0 || columna >= anchoMapa || (mapa[fila][columna] != 0 && mapa[fila][columna] != 3)) {
             return false;
         }
     }
 
     return true;
 }
+
 
 void Jugador1::mover(sf::Vector2f direccion, int** mapa, int anchoMapa, int altoMapa, float anchoCelda, float altoCelda, float posXInicio, float posYInicio) {
     sf::Vector2f nuevaPosicion = sprite.getPosition() + direccion * velocidad;

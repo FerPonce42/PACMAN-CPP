@@ -6,6 +6,7 @@
 #include "Musica.h"
 #include "Ganador.h"
 #include "Pelotas.h"
+#include "Poderes.h"
 
 class Nivel3 {
 public:
@@ -25,6 +26,7 @@ private:
     Jugador1 jugador1;
     Jugador2 jugador2;
     Pelotas* pelotas;  // Cambiado a puntero
+    Poderes* poderes;  // Añadido poder
     std::vector<sf::Sprite> objetos;
     const int anchoMapa = 30;
     const int altoMapa = 12;

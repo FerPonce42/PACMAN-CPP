@@ -147,6 +147,7 @@
     <ClInclude Include="Jugador.h" />
     <ClInclude Include="Pausa.h" />
     <ClInclude Include="Pelotas.h" />
+    <ClInclude Include="Poderes.h" />
     <ClInclude Include="SeleccionNiveles.h" />
   </ItemGroup>
   <ItemGroup>
@@ -168,6 +169,7 @@
     <ClCompile Include="Jugador.cpp" />
     <ClCompile Include="Pausa.cpp" />
     <ClCompile Include="Pelotas.cpp" />
+    <ClCompile Include="Poderes.cpp" />
     <ClCompile Include="SeleccionNiveles.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

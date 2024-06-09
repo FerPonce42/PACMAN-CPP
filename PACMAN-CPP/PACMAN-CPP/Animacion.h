@@ -1,4 +1,7 @@
+// Animacion.h
+
 #pragma once
+
 #include <SFML/Graphics.hpp>
 #include <vector>
 #include <string>
@@ -8,6 +11,7 @@ public:
     Animacion(float frameTime, bool loop = true);
 
     void agregarFrame(const std::string& archivoTextura);
+    void limpiarFrames(); // Método para limpiar los frames existentes
     void actualizar(float deltaTime);
     void aplicarA(sf::Sprite& sprite);
 

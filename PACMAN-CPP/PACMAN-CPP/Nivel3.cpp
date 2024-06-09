@@ -198,6 +198,12 @@ void Nivel3::actualizar() {
     jugador2.mover(jugador2.getDireccion(), mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio);
     jugador2.actualizarAnimacion(deltaTime);
 
+    if (poderes->estaActivo()) {
+        // Limpiar los frames existentes antes de agregar nuevos frames
+        jugador1.cambiarTexturaPorPoder();
+        // Resto del código...
+    }
+
     verificarColisiones();//COLISIONES ENTRE (JUGADOR1)FANTASMA Y (JUGADOR2)PACMAN Y BOLITAS
 }
 

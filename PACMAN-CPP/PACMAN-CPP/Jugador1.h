@@ -19,6 +19,7 @@ public:
     void setPosicionInicial(); 
     sf::Sprite& getSprite(); 
     void mostrarVentanaGanador(sf::RenderWindow& mainWindow, int ganador);
+    void cambiarTexturaPorPoder();
 
 private:
     sf::Sprite sprite;

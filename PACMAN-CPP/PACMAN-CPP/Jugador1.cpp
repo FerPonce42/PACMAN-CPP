@@ -43,6 +43,15 @@ sf::Sprite& Jugador1::getSprite() {
     return sprite;
 }
 
+void Jugador1::cambiarTexturaPorPoder() {
+    // Cambiar la textura del jugador 1 cuando el jugador 2 consume un poder
+    animacion->limpiarFrames();
+    animacion->agregarFrame("Nivel3/Jugador1/perseguido1.png");
+    animacion->agregarFrame("Nivel3/Jugador1/perseguido2.png");
+    animacion->agregarFrame("Nivel3/Jugador1/perseguido3.png");
+    // Puedes agregar más lógica aquí si necesitas hacer alguna acción especial cuando se active el poder
+}//vas a caerrr animaciones DIOS, DAME FUERZAS
+
 void Jugador1::mostrarVentanaGanador(sf::RenderWindow& mainWindow, int ganador) {
     Ganador ventanaGanador(mainWindow, ganador);
     int opcion = ventanaGanador.mostrar();

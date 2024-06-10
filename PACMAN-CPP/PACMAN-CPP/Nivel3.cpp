@@ -26,7 +26,7 @@ Nivel3::Nivel3(sf::RenderWindow& ventana, float ancho, float alto)
     textoContador.setFont(font);
     textoContador.setCharacterSize(40);
     textoContador.setFillColor(sf::Color::White);
-    textoContador.setPosition(250, 900);
+    textoContador.setPosition(290, 900);
 
     musicaNivel3.cargarMusicaNivel3();
 }
@@ -88,7 +88,7 @@ void Nivel3::mostrar() {
             if (mapa[i][j] == 1) {
                 sf::RectangleShape celda(sf::Vector2f(anchoCelda, altoCelda));
                 celda.setPosition(posXInicio + j * anchoCelda, posYInicio + i * altoCelda);
-                celda.setFillColor(sf::Color::Magenta);
+                celda.setFillColor(sf::Color(244, 28, 77));
                 ventana.draw(celda);
             }
         }

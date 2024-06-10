@@ -23,6 +23,7 @@ public:
     void aumentarPuntaje(int puntos);
     int getPuntaje() const;
     void dibujarPuntaje(sf::RenderWindow& ventana);
+    void activarPoder(bool activado); // Nuevo
 
 private:
     sf::Sprite sprite;
@@ -33,6 +34,7 @@ private:
     int vidas;
     sf::Vector2f posicionInicial;
     int puntaje;
+    bool poderActivo; // Nueva variable
 
     bool posicionValida(sf::Vector2f nuevaPosicion, int** mapa, int anchoMapa, int altoMapa, float anchoCelda, float altoCelda, float posXInicio, float posYInicio);
 

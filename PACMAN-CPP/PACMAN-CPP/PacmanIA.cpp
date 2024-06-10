@@ -4,7 +4,7 @@
 #include <ctime>
 
 PacmanIA::PacmanIA(float x, float y, float velocidad)
-    : velocidad(velocidad), direccion(0, 0), direccionActual(1, 0), vidas(3), posicionInicial(x, y), puntaje(0) {
+    : velocidad(velocidad), direccion(0, 0), direccionActual(1, 0), vidas(3), posicionInicial(x, y), puntaje(0), poderActivo(false) {
     animacion = new Animacion(0.1f);
     // Agregar los frames en el constructor
     animacion->agregarFrame("Nivel2/PacmanIA/derecha1.png");
@@ -16,11 +16,27 @@ PacmanIA::PacmanIA(float x, float y, float velocidad)
     srand(static_cast<unsigned>(time(0)));
 }
 
+void PacmanIA::activarPoder(bool activado) {
+    poderActivo = activado;
+}
 void PacmanIA::moverAI(int** mapa, int anchoMapa, int altoMapa, float anchoCelda, float altoCelda, float posXInicio, float posYInicio, sf::Vector2f ghostPosition, bool powerActive) {
-    if (powerActive) {
+    // Si el poder está activo, actualizar la variable poderActivo
+    if (powerActive && !poderActivo) {
+        activarPoder(true);
+    }
+    else if (!powerActive && poderActivo) {
+        activarPoder(false);
+    }
+
+    // Si el poder está activo, mover hacia el FantasmaJugador
+    if (powerActive && poderActivo) {
         chaseGhost(ghostPosition, mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio);
+        // Mover PacmanIA hacia el FantasmaJugador
+        mover(direccionActual, mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio);
     }
     else {
+        // Si el poder no está activo, realizar el movimiento normal
+        poderActivo = false;
         avoidGhost(ghostPosition, mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio);
         if (!posicionValida(sprite.getPosition() + direccionActual * velocidad, mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio)) {
             seleccionarNuevaDireccion(mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio);
@@ -28,6 +44,7 @@ void PacmanIA::moverAI(int** mapa, int anchoMapa, int altoMapa, float anchoCelda
         mover(direccionActual, mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio);
     }
 }
+
 
 void PacmanIA::moveRandomly(int** mapa, int anchoMapa, int altoMapa, float anchoCelda, float altoCelda, float posXInicio, float posYInicio) {
     seleccionarNuevaDireccion(mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio);
@@ -55,20 +72,27 @@ void PacmanIA::avoidGhost(sf::Vector2f ghostPosition, int** mapa, int anchoMapa,
 void PacmanIA::chaseGhost(sf::Vector2f ghostPosition, int** mapa, int anchoMapa, int altoMapa, float anchoCelda, float altoCelda, float posXInicio, float posYInicio) {
     sf::Vector2f currentPosition = getPosicion();
 
-    if (ghostPosition.x < currentPosition.x && posicionValida({ currentPosition.x - velocidad, currentPosition.y }, mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio)) {
-        direccionActual = { -1, 0 };
-    }
-    else if (ghostPosition.x > currentPosition.x && posicionValida({ currentPosition.x + velocidad, currentPosition.y }, mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio)) {
-        direccionActual = { 1, 0 };
-    }
+    float distanciaX = ghostPosition.x - currentPosition.x;
+    float distanciaY = ghostPosition.y - currentPosition.y;
 
-    if (ghostPosition.y < currentPosition.y && posicionValida({ currentPosition.x, currentPosition.y - velocidad }, mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio)) {
-        direccionActual = { 0, -1 };
+    if (std::abs(distanciaX) > std::abs(distanciaY)) {
+        if (distanciaX < 0 && posicionValida({ currentPosition.x - velocidad, currentPosition.y }, mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio)) {
+            direccionActual = { -1, 0 };
+        }
+        else if (distanciaX > 0 && posicionValida({ currentPosition.x + velocidad, currentPosition.y }, mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio)) {
+            direccionActual = { 1, 0 };
+        }
     }
-    else if (ghostPosition.y > currentPosition.y && posicionValida({ currentPosition.x, currentPosition.y + velocidad }, mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio)) {
-        direccionActual = { 0, 1 };
+    else {
+        if (distanciaY < 0 && posicionValida({ currentPosition.x, currentPosition.y - velocidad }, mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio)) {
+            direccionActual = { 0, -1 };
+        }
+        else if (distanciaY > 0 && posicionValida({ currentPosition.x, currentPosition.y + velocidad }, mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio)) {
+            direccionActual = { 0, 1 };
+        }
     }
 }
+
 
 void PacmanIA::seleccionarNuevaDireccion(int** mapa, int anchoMapa, int altoMapa, float anchoCelda, float altoCelda, float posXInicio, float posYInicio) {
     std::vector<sf::Vector2f> direccionesValidas;

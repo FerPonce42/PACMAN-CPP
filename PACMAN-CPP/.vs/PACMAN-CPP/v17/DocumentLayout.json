@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|solutionrelative:PACMAN-CPP\\PacmanIA.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Nivel2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|solutionrelative:PACMAN-CPP\\Nivel2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\PacmanIA.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|solutionrelative:PACMAN-CPP\\PacmanIA.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Nivel2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|solutionrelative:PACMAN-CPP\\Nivel2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Nivel3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -190,13 +190,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "PacmanIA.h",
               "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\PacmanIA.h",
               "RelativeDocumentMoniker": "PACMAN-CPP\\PacmanIA.h",
               "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\PacmanIA.h",
               "RelativeToolTip": "PACMAN-CPP\\PacmanIA.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAIAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-06-09T22:25:09.634Z"
             },
@@ -226,7 +226,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Nivel2.cpp",
               "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\Nivel2.cpp",
               "RelativeDocumentMoniker": "PACMAN-CPP\\Nivel2.cpp",
@@ -292,7 +292,7 @@
               "RelativeDocumentMoniker": "PACMAN-CPP\\PacmanIA.cpp",
               "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\PacmanIA.cpp",
               "RelativeToolTip": "PACMAN-CPP\\PacmanIA.cpp",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAUwC0AAAABAAAA",
+              "ViewState": "AQIAAEcAAAAAAAAAAAAAAF4AAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-06-09T22:43:55.171Z",
               "EditorCaption": ""

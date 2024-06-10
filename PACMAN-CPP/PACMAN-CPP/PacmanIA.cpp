@@ -1,4 +1,4 @@
-#include "PacmanIA.h"
+ï»¿#include "PacmanIA.h"
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
@@ -20,7 +20,7 @@ void PacmanIA::activarPoder(bool activado) {
     poderActivo = activado;
 }
 void PacmanIA::moverAI(int** mapa, int anchoMapa, int altoMapa, float anchoCelda, float altoCelda, float posXInicio, float posYInicio, sf::Vector2f ghostPosition, bool powerActive) {
-    // Si el poder está activo, actualizar la variable poderActivo
+    // Si el poder estï¿½ activo, actualizar la variable poderActivo
     if (powerActive && !poderActivo) {
         activarPoder(true);
     }
@@ -28,14 +28,14 @@ void PacmanIA::moverAI(int** mapa, int anchoMapa, int altoMapa, float anchoCelda
         activarPoder(false);
     }
 
-    // Si el poder está activo, mover hacia el FantasmaJugador
+    // Si el poder estï¿½ activo, mover hacia el FantasmaJugador
     if (powerActive && poderActivo) {
         chaseGhost(ghostPosition, mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio);
         // Mover PacmanIA hacia el FantasmaJugador
         mover(direccionActual, mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio);
     }
     else {
-        // Si el poder no está activo, realizar el movimiento normal
+        // Si el poder no estï¿½ activo, realizar el movimiento normal
         poderActivo = false;
         avoidGhost(ghostPosition, mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio);
         if (!posicionValida(sprite.getPosition() + direccionActual * velocidad, mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio)) {
@@ -75,23 +75,32 @@ void PacmanIA::chaseGhost(sf::Vector2f ghostPosition, int** mapa, int anchoMapa,
     float distanciaX = ghostPosition.x - currentPosition.x;
     float distanciaY = ghostPosition.y - currentPosition.y;
 
+    sf::Vector2f nuevaDireccion = direccionActual;
+
     if (std::abs(distanciaX) > std::abs(distanciaY)) {
         if (distanciaX < 0 && posicionValida({ currentPosition.x - velocidad, currentPosition.y }, mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio)) {
-            direccionActual = { -1, 0 };
+            nuevaDireccion = { -1, 0 };
         }
         else if (distanciaX > 0 && posicionValida({ currentPosition.x + velocidad, currentPosition.y }, mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio)) {
-            direccionActual = { 1, 0 };
+            nuevaDireccion = { 1, 0 };
         }
     }
     else {
         if (distanciaY < 0 && posicionValida({ currentPosition.x, currentPosition.y - velocidad }, mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio)) {
-            direccionActual = { 0, -1 };
+            nuevaDireccion = { 0, -1 };
         }
         else if (distanciaY > 0 && posicionValida({ currentPosition.x, currentPosition.y + velocidad }, mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio)) {
-            direccionActual = { 0, 1 };
+            nuevaDireccion = { 0, 1 };
         }
     }
+
+    // Solo actualizamos la direcciÃ³n si la nueva direcciÃ³n es diferente de la actual
+    if (nuevaDireccion != direccionActual) {
+        direccionActual = nuevaDireccion;
+        setDireccion(direccionActual);
+    }
 }
+
 
 
 void PacmanIA::seleccionarNuevaDireccion(int** mapa, int anchoMapa, int altoMapa, float anchoCelda, float altoCelda, float posXInicio, float posYInicio) {
@@ -115,7 +124,7 @@ void PacmanIA::seleccionarNuevaDireccion(int** mapa, int anchoMapa, int altoMapa
         direccionActual = direccionesValidas[indiceAleatorio];
     }
 
-    // Actualizar la animación basada en la dirección seleccionada
+    // Actualizar la animaciï¿½n basada en la direcciï¿½n seleccionada
     setDireccion(direccionActual);
 }
 
@@ -175,7 +184,7 @@ void PacmanIA::dibujarPuntaje(sf::RenderWindow& ventana) {
     textoPuntaje.setString(std::to_string(puntaje));
     textoPuntaje.setCharacterSize(50);
     textoPuntaje.setFillColor(sf::Color::White);
-    textoPuntaje.setPosition(250, 85); // Ajusta la posición según tus necesidades
+    textoPuntaje.setPosition(250, 85); // Ajusta la posiciï¿½n segï¿½n tus necesidades
 
     ventana.draw(textoPuntaje);
 }
@@ -227,7 +236,7 @@ void PacmanIA::dibujar(sf::RenderWindow& ventana) {
 void PacmanIA::setDireccion(sf::Vector2f nuevaDireccion) {
     direccion = nuevaDireccion;
 
-    // Actualizar los frames de la animación basándose en la dirección
+    // Actualizar los frames de la animaciï¿½n basï¿½ndose en la direcciï¿½n
     animacion->limpiarFrames(); // Limpiar todos los frames actuales
 
     if (direccion.x > 0) {

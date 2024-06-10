@@ -6,6 +6,7 @@
 PacmanIA::PacmanIA(float x, float y, float velocidad)
     : velocidad(velocidad), direccion(0, 0), direccionActual(1, 0), vidas(3), posicionInicial(x, y), puntaje(0) {
     animacion = new Animacion(0.1f);
+    // Agregar los frames en el constructor
     animacion->agregarFrame("Nivel2/PacmanIA/derecha1.png");
     animacion->agregarFrame("Nivel2/PacmanIA/derecha2.png");
     animacion->agregarFrame("Nivel2/PacmanIA/derecha3.png");
@@ -77,7 +78,10 @@ void PacmanIA::seleccionarNuevaDireccion(int** mapa, int anchoMapa, int altoMapa
     };
 
     for (auto& dir : posiblesDirecciones) {
-        if (posicionValida(sprite.getPosition() + dir * velocidad, mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio)) {
+        sf::Vector2f nuevaPosicion = sprite.getPosition() + dir * velocidad;
+        if (posicionValida(nuevaPosicion, mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio) &&
+            (mapa[static_cast<int>((nuevaPosicion.y - posYInicio) / altoCelda)][static_cast<int>((nuevaPosicion.x - posXInicio) / anchoCelda)] == 0 ||
+                direccionActual != -dir)) {
             direccionesValidas.push_back(dir);
         }
     }
@@ -86,7 +90,12 @@ void PacmanIA::seleccionarNuevaDireccion(int** mapa, int anchoMapa, int altoMapa
         int indiceAleatorio = rand() % direccionesValidas.size();
         direccionActual = direccionesValidas[indiceAleatorio];
     }
+
+    // Actualizar la animación basada en la dirección seleccionada
+    setDireccion(direccionActual);
 }
+
+
 
 void PacmanIA::aumentarPuntaje(int puntos) {
     puntaje += puntos;
@@ -193,9 +202,9 @@ void PacmanIA::dibujar(sf::RenderWindow& ventana) {
 
 void PacmanIA::setDireccion(sf::Vector2f nuevaDireccion) {
     direccion = nuevaDireccion;
-    // Cambiar animaciones basadas en la dirección
-    delete animacion;
-    animacion = new Animacion(0.1f);  // Tiempo entre frames
+
+    // Actualizar los frames de la animación basándose en la dirección
+    animacion->limpiarFrames(); // Limpiar todos los frames actuales
 
     if (direccion.x > 0) {
         animacion->agregarFrame("Nivel2/PacmanIA/derecha1.png");

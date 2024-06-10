@@ -11,7 +11,7 @@
 class Nivel2 {
 public:
     Nivel2(sf::RenderWindow& ventana, float ancho, float alto);
-    ~Nivel2();  
+    ~Nivel2();
     void mostrar();
     void actualizar();
     void manejarEventos();
@@ -25,8 +25,8 @@ private:
     sf::Sprite fondoSprite;
     FantasmaJugador fantasmaJugador;
     PacmanIA pacmanIA;
-    Pelotas* pelotas; 
-    Poderes* poderes;  
+    Pelotas* pelotas;
+    Poderes* poderes;
     std::vector<sf::Sprite> objetos;
     const int anchoMapa = 32;
     const int altoMapa = 13;
@@ -38,7 +38,7 @@ private:
 
     sf::Font font;
     sf::Text textoContador;
-    sf::Clock relojContador; // Añadido para el temporizador del poder
+    sf::Clock relojContador;
 
     void inicializarMapa();
 };

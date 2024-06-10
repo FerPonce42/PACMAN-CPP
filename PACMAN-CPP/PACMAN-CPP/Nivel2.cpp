@@ -181,24 +181,14 @@ void Nivel2::actualizar() {
         fantasmaJugador.setDireccion(sf::Vector2f(1, 0));
     }
 
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
-        pacmanIA.setDireccion(sf::Vector2f(0, -1));
-    }
-    else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
-        pacmanIA.setDireccion(sf::Vector2f(0, 1));
-    }
-    else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
-        pacmanIA.setDireccion(sf::Vector2f(-1, 0));
-    }
-    else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
-        pacmanIA.setDireccion(sf::Vector2f(1, 0));
-    }
+    sf::Vector2f ghostPosition = fantasmaJugador.getSprite().getPosition();
+    bool powerActive = poderes->estaActivo();
+
+    pacmanIA.moverAI(mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio, ghostPosition, powerActive);
+    pacmanIA.actualizarAnimacion(deltaTime);
 
     fantasmaJugador.mover(fantasmaJugador.getDireccion(), mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio);
     fantasmaJugador.actualizarAnimacion(deltaTime);
-
-    pacmanIA.mover(pacmanIA.getDireccion(), mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio);
-    pacmanIA.actualizarAnimacion(deltaTime);
 
     if (poderes->estaActivo()) {
         // Limpiar los frames existentes antes de agregar nuevos frames

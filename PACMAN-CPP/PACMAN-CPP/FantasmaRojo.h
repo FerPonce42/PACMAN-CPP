@@ -1,27 +1,33 @@
 ﻿#pragma once
-
 #include <SFML/Graphics.hpp>
+#include "Animacion.h"
+#include "Ganador.h"
 
 class FantasmaRojo {
 public:
-    // Constructor de la clase FantasmaRojo que recibe la ruta de la textura, la posici�n inicial y la velocidad
-    FantasmaRojo(const std::string& rutaTextura, float posX, float posY, float velocidad);
+    FantasmaRojo(float x, float y, float velocidad);
 
-    // M�todo para dibujar al fantasma en la ventana
+    void mover(sf::Vector2f direccion, int** mapa, int anchoMapa, int altoMapa, float anchoCelda, float altoCelda, float posXInicio, float posYInicio);
     void dibujar(sf::RenderWindow& ventana);
-
-    // M�todo para mover al fantasma basado en el mapa, la posici�n del jugador y otros par�metros
-    void mover(int** mapa, int anchoMapa, int altoMapa, float anchoCelda, float altoCelda, float posXInicio, float posYInicio, sf::Vector2f posJugador);
-
-    // M�todo para obtener la posici�n actual del fantasma
+    void setDireccion(sf::Vector2f nuevaDireccion);
     sf::Vector2f getPosicion() const;
+    sf::Vector2f getDireccion() const;
+    void actualizarAnimacion(float deltaTime);
+    int getVidas() const;
+    void dibujarVidas(sf::RenderWindow& ventana);
+    void reducirVida();
+    void setPosicionInicial();
+    sf::Sprite& getSprite();
+    void mostrarVentanaGanador(sf::RenderWindow& mainWindow, int ganador);
+    void cambiarTexturaPorPoder();
 
 private:
-    sf::Texture textura; // Textura del fantasma
-    sf::Sprite sprite; // Sprite del fantasma
-    float velocidad; // Velocidad del fantasma
-    sf::Vector2f direccion; // Direcci�n actual del fantasma
+    sf::Sprite sprite;
+    float velocidad;
+    sf::Vector2f direccion;
+    Animacion* animacion;
+    int vidas;
+    sf::Vector2f posicionInicial;
 
-    // M�todo para determinar si una posici�n es v�lida en el mapa
-    bool posicionValida(sf::Vector2f posicion, int** mapa, int anchoMapa, int altoMapa, float anchoCelda, float altoCelda, float posXInicio, float posYInicio);
+    bool posicionValida(sf::Vector2f nuevaPosicion, int** mapa, int anchoMapa, int altoMapa, float anchoCelda, float altoCelda, float posXInicio, float posYInicio);
 };

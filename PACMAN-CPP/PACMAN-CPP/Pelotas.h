@@ -8,7 +8,7 @@ public:
 
     void dibujar(sf::RenderWindow& ventana);
     bool verificarColision(sf::Sprite& sprite);
-    int getCantidadPelotas(); // Nuevo método
+    int getCantidadPelotas(); 
 
 private:
     std::vector<sf::CircleShape> bolitas;

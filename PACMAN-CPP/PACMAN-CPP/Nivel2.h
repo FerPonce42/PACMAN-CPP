@@ -11,7 +11,7 @@
 class Nivel2 {
 public:
     Nivel2(sf::RenderWindow& ventana, float ancho, float alto);
-    ~Nivel2();  // Destructor para liberar memoria
+    ~Nivel2();  
     void mostrar();
     void actualizar();
     void manejarEventos();
@@ -25,8 +25,8 @@ private:
     sf::Sprite fondoSprite;
     FantasmaJugador fantasmaJugador;
     PacmanIA pacmanIA;
-    Pelotas* pelotas;  // Cambiado a puntero
-    Poderes* poderes;  // Añadido poder
+    Pelotas* pelotas; 
+    Poderes* poderes;  
     std::vector<sf::Sprite> objetos;
     const int anchoMapa = 32;
     const int altoMapa = 13;

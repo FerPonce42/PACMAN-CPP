@@ -15,7 +15,7 @@ void Animacion::agregarFrame(const std::string& archivoTextura) {
 }
 
 void Animacion::limpiarFrames() {
-    texturas.clear(); // Limpiar frames existentes
+    texturas.clear(); 
 }
 
 void Animacion::actualizar(float deltaTime) {

@@ -1,83 +1,144 @@
 ﻿#include "FantasmaRojo.h"
 #include <iostream>
-#include <cmath>
 
-// Constructor de la clase FantasmaRojo que inicializa la textura, el sprite y la velocidad del fantasmaAAA
-FantasmaRojo::FantasmaRojo(const std::string& rutaTextura, float posX, float posY, float velocidad)
-    : velocidad(velocidad) {
-    if (!textura.loadFromFile("Nivel1/fantasmarojo.png")) {
-        std::cerr << "Error al cargar la textura del fantasma." << std::endl;
-    }
-    sprite.setTexture(textura);
-    sprite.setPosition(740, 500);
-    sprite.setScale(0.8f, 0.8f); // Escala el tamaño del fantasma
+FantasmaRojo::FantasmaRojo(float x, float y, float velocidad)
+    : velocidad(velocidad), direccion(0, 0), vidas(42), posicionInicial(x, y) { // Inicializa la posición inicial
+    animacion = new Animacion(0.1f);  // Tiempo entre frames
+    animacion->agregarFrame("Nivel1/Fantasmas/Rojo/derecha1.png");
+    animacion->agregarFrame("Nivel1/Fantasmas/Rojo/derecha2.png");
+    animacion->agregarFrame("Nivel1/Fantasmas/Rojo/derecha3.png");
+
+    sprite.setPosition(755, 480); //FANTASMA ROJO
+    sprite.setScale(0.8f, 0.8f);
 }
 
-// Método para dibujar al fantasma en la ventana
-void FantasmaRojo::dibujar(sf::RenderWindow& ventana) {
-    ventana.draw(sprite);
+int FantasmaRojo::getVidas() const {
+    return vidas;
 }
 
-void FantasmaRojo::mover(int** mapa, int anchoMapa, int altoMapa, float anchoCelda, float altoCelda, float posXInicio, float posYInicio, sf::Vector2f posJugador) {
-    sf::Vector2f posicionActual = sprite.getPosition();
+void FantasmaRojo::dibujarVidas(sf::RenderWindow& ventana) {
+    sf::Font font;
+    if (!font.loadFromFile("Nivel1/fuentenivel1.ttf")) {
 
-    // Calcular la dirección hacia el jugador
-    sf::Vector2f direccionJugador = posJugador - posicionActual;
-    float distancia = std::sqrt(direccionJugador.x * direccionJugador.x + direccionJugador.y * direccionJugador.y);
-    if (distancia != 0) {
-        direccion = direccionJugador / distancia; // Normalizar la dirección
     }
-    else {
-        direccion = sf::Vector2f(0, 0);
+    sf::Text textoVidas;
+    textoVidas.setFont(font);
+    textoVidas.setString(std::to_string(vidas));
+    textoVidas.setCharacterSize(40);
+    textoVidas.setFillColor(sf::Color::White);
+    textoVidas.setPosition(190, 825);
+
+    ventana.draw(textoVidas);
+}
+
+void FantasmaRojo::reducirVida() {
+    vidas--;
+}
+
+void FantasmaRojo::setPosicionInicial() {
+    sprite.setPosition(750, 480);
+}
+
+sf::Sprite& FantasmaRojo::getSprite() {
+    return sprite;
+}
+
+void FantasmaRojo::cambiarTexturaPorPoder() {
+    // Cambiar la textura del FantasmaRojo cuando el Jugador consume un poder
+    animacion->limpiarFrames();
+    animacion->agregarFrame("Nivel1/Fantasmas/perseguido1.png");
+    animacion->agregarFrame("Nivel1/Fantasmas/perseguido2.png");
+    animacion->agregarFrame("Nivel1/Fantasmas/perseguido3.png");
+    // Puedes agregar más lógica aquí si necesitas hacer alguna acción especial cuando se active el poder
+}//vas a caerrr animaciones DIOS, DAME FUERZAS
+
+void FantasmaRojo::mostrarVentanaGanador(sf::RenderWindow& mainWindow, int ganador) {
+    Ganador ventanaGanador(mainWindow, ganador);
+    int opcion = ventanaGanador.mostrar();
+
+}
+
+bool FantasmaRojo::posicionValida(sf::Vector2f nuevaPosicion, int** mapa, int anchoMapa, int altoMapa, float anchoCelda, float altoCelda, float posXInicio, float posYInicio) {
+    float jugadorAncho = sprite.getGlobalBounds().width;
+    float jugadorAlto = sprite.getGlobalBounds().height;
+    std::vector<sf::Vector2f> puntos;
+
+    puntos.push_back(nuevaPosicion);
+    puntos.push_back({ nuevaPosicion.x + jugadorAncho, nuevaPosicion.y });
+    puntos.push_back({ nuevaPosicion.x, nuevaPosicion.y + jugadorAlto });
+    puntos.push_back({ nuevaPosicion.x + jugadorAncho, nuevaPosicion.y + jugadorAlto });
+
+    for (float x = nuevaPosicion.x + 1; x < nuevaPosicion.x + jugadorAncho; x += anchoCelda / 2) {
+        puntos.push_back({ x, nuevaPosicion.y });
+        puntos.push_back({ x, nuevaPosicion.y + jugadorAlto });
+    }
+    for (float y = nuevaPosicion.y + 1; y < nuevaPosicion.y + jugadorAlto; y += altoCelda / 2) {
+        puntos.push_back({ nuevaPosicion.x, y });
+        puntos.push_back({ nuevaPosicion.x + jugadorAncho, y });
     }
 
-    // Calcular la nueva posición del fantasma
-    sf::Vector2f nuevaPosicion = posicionActual + direccion * velocidad;
+    for (auto& punto : puntos) {
+        int columna = static_cast<int>((punto.x - posXInicio) / anchoCelda);
+        int fila = static_cast<int>((punto.y - posYInicio) / altoCelda);
 
-    // Verificar si la nueva posición es válida en el mapa
+        if (fila < 0 || fila >= altoMapa || columna < 0 || columna >= anchoMapa || (mapa[fila][columna] != 0 && mapa[fila][columna] != 3)) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+
+void FantasmaRojo::mover(sf::Vector2f direccion, int** mapa, int anchoMapa, int altoMapa, float anchoCelda, float altoCelda, float posXInicio, float posYInicio) {
+    sf::Vector2f nuevaPosicion = sprite.getPosition() + direccion * velocidad;
+
     if (posicionValida(nuevaPosicion, mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio)) {
         sprite.setPosition(nuevaPosicion);
     }
 }
 
-// Método para obtener la posición actual del fantasma
+void FantasmaRojo::dibujar(sf::RenderWindow& ventana) {
+    animacion->aplicarA(sprite);
+    ventana.draw(sprite);
+}
+
+void FantasmaRojo::setDireccion(sf::Vector2f nuevaDireccion) {
+    direccion = nuevaDireccion;
+    // Cambiar animaciones basadas en la dirección
+    delete animacion;
+    animacion = new Animacion(0.1f);  // Tiempo entre frames
+
+    if (direccion.x > 0) {
+        animacion->agregarFrame("Nivel1/Fantasmas/Rojo/derecha1.png");
+        animacion->agregarFrame("Nivel1/Fantasmas/Rojo/derecha2.png");
+        animacion->agregarFrame("Nivel1/Fantasmas/Rojo/derecha3.png");
+    }
+    else if (direccion.x < 0) {
+        animacion->agregarFrame("Nivel1/Fantasmas/Rojo/izquierda1.png");
+        animacion->agregarFrame("Nivel1/Fantasmas/Rojo/izquierda2.png");
+        animacion->agregarFrame("Nivel1/Fantasmas/Rojo/izquierda3.png");
+    }
+    else if (direccion.y > 0) {
+        animacion->agregarFrame("Nivel1/Fantasmas/Rojo/abajo1.png");
+        animacion->agregarFrame("Nivel1/Fantasmas/Rojo/abajo2.png");
+        animacion->agregarFrame("Nivel1/Fantasmas/Rojo/abajo3.png");
+    }
+    else if (direccion.y < 0) {
+        animacion->agregarFrame("Nivel1/Fantasmas/Rojo/arriba1.png");
+        animacion->agregarFrame("Nivel1/Fantasmas/Rojo/arriba2.png");
+        animacion->agregarFrame("Nivel1/Fantasmas/Rojo/arriba3.png");
+    }
+}
+
 sf::Vector2f FantasmaRojo::getPosicion() const {
     return sprite.getPosition();
 }
 
-// Método para determinar si una posición es válida en el mapa
-bool FantasmaRojo::posicionValida(sf::Vector2f posicion, int** mapa, int anchoMapa, int altoMapa, float anchoCelda, float altoCelda, float posXInicio, float posYInicio) {
-    float fantasmaAncho = sprite.getGlobalBounds().width; // Ancho del sprite del fantasma
-    float fantasmaAlto = sprite.getGlobalBounds().height; // Alto del sprite del fantasma
+sf::Vector2f FantasmaRojo::getDireccion() const {
+    return direccion;
+}
 
-    std::vector<sf::Vector2f> puntos; // Vector para almacenar puntos de colisión
-
-    // Esquinas del fantasma
-    puntos.push_back(posicion);
-    puntos.push_back({ posicion.x + fantasmaAncho, posicion.y });
-    puntos.push_back({ posicion.x, posicion.y + fantasmaAlto });
-    puntos.push_back({ posicion.x + fantasmaAncho, posicion.y + fantasmaAlto });
-
-    // Puntos intermedios en los lados del fantasma
-    for (float x = posicion.x + 1; x < posicion.x + fantasmaAncho; x += anchoCelda / 2) {
-        puntos.push_back({ x, posicion.y });
-        puntos.push_back({ x, posicion.y + fantasmaAlto });
-    }
-    for (float y = posicion.y + 1; y < posicion.y + fantasmaAlto; y += altoCelda / 2) {
-        puntos.push_back({ posicion.x, y });
-        puntos.push_back({ posicion.x + fantasmaAncho, y });
-    }
-
-    // Verificar cada punto en el mapa
-    for (auto& punto : puntos) {
-        int columna = static_cast<int>((punto.x - posXInicio) / anchoCelda); // Columna en el mapa
-        int fila = static_cast<int>((punto.y - posYInicio) / altoCelda); // Fila en el mapa
-
-        // Verifica si el punto está fuera de los límites del mapa o colisiona con un obstáculo
-        if (fila < 0 || fila >= altoMapa || columna < 0 || columna >= anchoMapa || mapa[fila][columna] != 0) {
-            return false; // La posición no es válida
-        }
-    }
-
-    return true; // La posición es válida
+void FantasmaRojo::actualizarAnimacion(float deltaTime) {
+    animacion->actualizar(deltaTime);
 }

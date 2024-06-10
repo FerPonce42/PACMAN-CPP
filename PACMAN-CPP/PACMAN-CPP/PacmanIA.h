@@ -19,8 +19,8 @@ public:
     void setPosicionInicial();
     sf::Sprite& getSprite();
     void mostrarVentanaGanador(sf::RenderWindow& mainWindow, int ganador);
-    void aumentarPuntaje(int puntos);  // Nuevo método
-    int getPuntaje() const;  // Nuevo método
+    void aumentarPuntaje(int puntos);  
+    int getPuntaje() const; 
     void dibujarPuntaje(sf::RenderWindow& ventana);
 
 private:
@@ -30,7 +30,7 @@ private:
     Animacion* animacion;
     int vidas;
     sf::Vector2f posicionInicial;
-    int puntaje;  // Nueva variable
+    int puntaje;  
 
     bool posicionValida(sf::Vector2f nuevaPosicion, int** mapa, int anchoMapa, int altoMapa, float anchoCelda, float altoCelda, float posXInicio, float posYInicio);
 };

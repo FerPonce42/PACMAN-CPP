@@ -3,12 +3,12 @@
 
 class Pausa {
 public:
-    Pausa(sf::RenderWindow& mainWindow); // Constructor
-    int mostrar(); // Método para mostrar la pantalla de pausa
-    void MoveUp(); // Método para mover la selección hacia arriba
-    void MoveDown(); // Método para mover la selección hacia abajo
-    int getSelectedOption(); // Método para obtener la opción seleccionada
-    bool shouldReturnToMenu(); // Método para verificar si se debe regresar al menú principal
+    Pausa(sf::RenderWindow& mainWindow); 
+    int mostrar(); 
+    void MoveUp(); 
+    void MoveDown(); 
+    int getSelectedOption(); 
+    bool shouldReturnToMenu();
 
 private:
     sf::RenderWindow& window;

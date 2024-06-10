@@ -2,15 +2,76 @@
 #include <iostream>
 
 Jugador::Jugador(float x, float y, float velocidad)
-    : velocidad(velocidad), direccion(0, 0) {
+    : velocidad(velocidad), direccion(0, 0), vidas(3), posicionInicial(x, y), puntaje(0) { // Inicializa la posición inicial
     animacion = new Animacion(0.1f);  // Tiempo entre frames
-    animacion->agregarFrame("Nivel1/derecha1.png");
-    animacion->agregarFrame("Nivel1/derecha2.png");
-    animacion->agregarFrame("Nivel1/derecha3.png");
+    animacion->agregarFrame("Nivel1/Jugador/derecha1.png");
+    animacion->agregarFrame("Nivel1/Jugador/derecha2.png");
+    animacion->agregarFrame("Nivel1/Jugador/derecha3.png");
 
-    sprite.setPosition(x, y);
+    sprite.setPosition(1040, 475); //JUGADOR  PACMAN
     sprite.setScale(0.8f, 0.8f);
 }
+
+void Jugador::aumentarPuntaje(int puntos) {
+    puntaje += puntos;
+}
+
+int Jugador::getPuntaje() const {
+    return puntaje;
+}
+
+
+int Jugador::getVidas() const {
+    return vidas;
+}
+
+void Jugador::dibujarVidas(sf::RenderWindow& ventana) {
+    sf::Font font;
+    if (!font.loadFromFile("Nivel1/fuentenivel1.ttf")) {
+
+    }
+    sf::Text textoVidas;
+    textoVidas.setFont(font);
+    textoVidas.setString(std::to_string(vidas));
+    textoVidas.setCharacterSize(40);
+    textoVidas.setFillColor(sf::Color::White);
+    textoVidas.setPosition(200, 900);
+
+    ventana.draw(textoVidas);
+}
+
+void Jugador::reducirVida() {
+    vidas--;
+}
+
+void Jugador::setPosicionInicial() {
+    sprite.setPosition(1040, 475);
+}
+
+sf::Sprite& Jugador::getSprite() {
+    return sprite;
+}
+
+void Jugador::mostrarVentanaGanador(sf::RenderWindow& mainWindow, int ganador) {
+    Ganador ventanaGanador(mainWindow, ganador);
+    int opcion = ventanaGanador.mostrar();
+
+}
+void Jugador::dibujarPuntaje(sf::RenderWindow& ventana) {
+    sf::Font font;
+    if (!font.loadFromFile("Nivel1/fuentenivel1.ttf")) {
+        // Manejo de errores
+    }
+    sf::Text textoPuntaje;
+    textoPuntaje.setFont(font);
+    textoPuntaje.setString(std::to_string(puntaje));
+    textoPuntaje.setCharacterSize(50);
+    textoPuntaje.setFillColor(sf::Color::White);
+    textoPuntaje.setPosition(250, 85); // Ajusta la posición según tus necesidades
+
+    ventana.draw(textoPuntaje);
+}
+
 
 bool Jugador::posicionValida(sf::Vector2f nuevaPosicion, int** mapa, int anchoMapa, int altoMapa, float anchoCelda, float altoCelda, float posXInicio, float posYInicio) {
     float jugadorAncho = sprite.getGlobalBounds().width;
@@ -35,13 +96,14 @@ bool Jugador::posicionValida(sf::Vector2f nuevaPosicion, int** mapa, int anchoMa
         int columna = static_cast<int>((punto.x - posXInicio) / anchoCelda);
         int fila = static_cast<int>((punto.y - posYInicio) / altoCelda);
 
-        if (fila < 0 || fila >= altoMapa || columna < 0 || columna >= anchoMapa || mapa[fila][columna] != 0) {
+        if (fila < 0 || fila >= altoMapa || columna < 0 || columna >= anchoMapa || (mapa[fila][columna] != 0 && mapa[fila][columna] != 3)) {
             return false;
         }
     }
 
     return true;
 }
+
 
 void Jugador::mover(sf::Vector2f direccion, int** mapa, int anchoMapa, int altoMapa, float anchoCelda, float altoCelda, float posXInicio, float posYInicio) {
     sf::Vector2f nuevaPosicion = sprite.getPosition() + direccion * velocidad;
@@ -63,24 +125,24 @@ void Jugador::setDireccion(sf::Vector2f nuevaDireccion) {
     animacion = new Animacion(0.1f);  // Tiempo entre frames
 
     if (direccion.x > 0) {
-        animacion->agregarFrame("Nivel1/derecha1.png");
-        animacion->agregarFrame("Nivel1/derecha2.png");
-        animacion->agregarFrame("Nivel1/derecha3.png");
+        animacion->agregarFrame("Nivel1/Jugador/derecha1.png");
+        animacion->agregarFrame("Nivel1/Jugador/derecha2.png");
+        animacion->agregarFrame("Nivel1/Jugador/derecha3.png");
     }
     else if (direccion.x < 0) {
-        animacion->agregarFrame("Nivel1/izquierda1.png");
-        animacion->agregarFrame("Nivel1/izquierda2.png");
-        animacion->agregarFrame("Nivel1/izquierda3.png");
+        animacion->agregarFrame("Nivel1/Jugador/izquierda1.png");
+        animacion->agregarFrame("Nivel1/Jugador/izquierda2.png");
+        animacion->agregarFrame("Nivel1/Jugador/izquierda3.png");
     }
     else if (direccion.y > 0) {
-        animacion->agregarFrame("Nivel1/abajo1.png");
-        animacion->agregarFrame("Nivel1/abajo2.png");
-        animacion->agregarFrame("Nivel1/abajo3.png");
+        animacion->agregarFrame("Nivel1/Jugador/abajo1.png");
+        animacion->agregarFrame("Nivel1/Jugador/abajo2.png");
+        animacion->agregarFrame("Nivel1/Jugador/abajo3.png");
     }
     else if (direccion.y < 0) {
-        animacion->agregarFrame("Nivel1/arriba1.png");
-        animacion->agregarFrame("Nivel1/arriba2.png");
-        animacion->agregarFrame("Nivel1/arriba3.png");
+        animacion->agregarFrame("Nivel1/Jugador/arriba1.png");
+        animacion->agregarFrame("Nivel1/Jugador/arriba2.png");
+        animacion->agregarFrame("Nivel1/Jugador/arriba3.png");
     }
 }
 

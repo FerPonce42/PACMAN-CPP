@@ -15,5 +15,5 @@ private:
     std::vector<sf::CircleShape> poderes;
     float radioPoder;
     bool poderActivo;
-    sf::Clock relojPoder; // Para medir el tiempo de activación
+    sf::Clock relojPoder; 
 };

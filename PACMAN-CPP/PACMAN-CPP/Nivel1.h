@@ -11,7 +11,7 @@
 class Nivel1 {
 public:
     Nivel1(sf::RenderWindow& ventana, float ancho, float alto);
-    ~Nivel1();  
+    ~Nivel1();
     void mostrar();
     void actualizar();
     void manejarEventos();
@@ -25,8 +25,8 @@ private:
     sf::Sprite fondoSprite;
     FantasmaRojo fantasmaRojo;
     Jugador jugador;
-    Pelotas* pelotas;  
-    Poderes* poderes;  
+    Pelotas* pelotas;
+    Poderes* poderes;
     std::vector<sf::Sprite> objetos;
     const int anchoMapa = 30;
     const int altoMapa = 12;
@@ -38,7 +38,7 @@ private:
 
     sf::Font font;
     sf::Text textoContador;
-    sf::Clock relojContador; 
+    sf::Clock relojContador;
 
     void inicializarMapa();
 };

@@ -135,7 +135,7 @@
     <ClInclude Include="FantasmaNaranja.h" />
     <ClInclude Include="FantasmaRojo.h" />
     <ClInclude Include="FantasmaRosa.h" />
-    <ClInclude Include="FantasmasCeleste.h" />
+    <ClInclude Include="FantasmaCeleste.h" />
     <ClInclude Include="Ganador.h" />
     <ClInclude Include="Jugador1.h" />
     <ClInclude Include="Jugador2.h" />

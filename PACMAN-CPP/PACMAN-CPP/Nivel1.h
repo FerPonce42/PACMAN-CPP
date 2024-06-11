@@ -2,6 +2,9 @@
 
 #include <SFML/Graphics.hpp>
 #include "FantasmaRojo.h"
+#include "FantasmaCeleste.h"
+#include "FantasmaRosa.h"
+#include "FantasmaNaranja.h"
 #include "Jugador.h"
 #include "Musica.h"
 #include "Ganador.h"
@@ -24,6 +27,9 @@ private:
     sf::Texture fondoTextura;
     sf::Sprite fondoSprite;
     FantasmaRojo fantasmaRojo;
+    FantasmaCeleste fantasmaCeleste; // Añadido fantasma celeste
+    FantasmaRosa fantasmaRosa;
+    FantasmaNaranja fantasmaNaranja;
     Jugador jugador;
     Pelotas* pelotas;
     Poderes* poderes;

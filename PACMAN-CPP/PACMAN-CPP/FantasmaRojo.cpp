@@ -47,12 +47,10 @@ sf::Sprite& FantasmaRojo::getSprite() {
 }
 
 void FantasmaRojo::cambiarTexturaPorPoder() {
-    // Cambiar la textura del FantasmaRojo cuando el Jugador consume un poder
     animacion->limpiarFrames();
     animacion->agregarFrame("Nivel1/Fantasmas/perseguido1.png");
     animacion->agregarFrame("Nivel1/Fantasmas/perseguido2.png");
     animacion->agregarFrame("Nivel1/Fantasmas/perseguido3.png");
-    // Puedes agregar más lógica aquí si necesitas hacer alguna acción especial cuando se active el poder
 }
 
 void FantasmaRojo::mostrarVentanaGanador(sf::RenderWindow& mainWindow, int ganador) {
@@ -106,7 +104,6 @@ void FantasmaRojo::moverAI(int** mapa, int anchoMapa, int altoMapa, float anchoC
     }
     else if (!powerActive && poderActivo) {
         poderActivo = false;
-        // Reset animation to default
         animacion->limpiarFrames();
         animacion->agregarFrame("Nivel1/Fantasmas/Rojo/derecha1.png");
         animacion->agregarFrame("Nivel1/Fantasmas/Rojo/derecha2.png");
@@ -182,7 +179,6 @@ void FantasmaRojo::seleccionarNuevaDireccion(int** mapa, int anchoMapa, int alto
         direccionActual = direccionesValidas[indiceAleatorio];
     }
 
-    // Actualizar la animación basada en la dirección seleccionada
     setDireccion(direccionActual);
 }
 
@@ -194,8 +190,7 @@ void FantasmaRojo::dibujar(sf::RenderWindow& ventana) {
 void FantasmaRojo::setDireccion(sf::Vector2f nuevaDireccion) {
     direccion = nuevaDireccion;
 
-    // Actualizar los frames de la animación basándose en la dirección
-    animacion->limpiarFrames(); // Limpiar todos los frames actuales
+    animacion->limpiarFrames();
 
     if (direccion.x > 0) {
         animacion->agregarFrame("Nivel1/Fantasmas/Rojo/derecha1.png");
@@ -230,4 +225,3 @@ sf::Vector2f FantasmaRojo::getDireccion() const {
 void FantasmaRojo::actualizarAnimacion(float deltaTime) {
     animacion->actualizar(deltaTime);
 }
-

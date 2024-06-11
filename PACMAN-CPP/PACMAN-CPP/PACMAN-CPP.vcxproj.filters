@@ -36,7 +36,7 @@
     <ClInclude Include="Jugador.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="FantasmasCeleste.h">
+    <ClInclude Include="FantasmaCeleste.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="FantasmaRojo.h">

@@ -1,4 +1,7 @@
-﻿  FantasmaRojo.cpp
+﻿  FantasmaNaranja.cpp
+  FantasmaRojo.cpp
+  FantasmaRosa.cpp
+  FantasmasCeleste.cpp
   Nivel1.cpp
 C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\Nivel1.cpp(15,38): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
 C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\Nivel1.cpp(16,37): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos

@@ -2,7 +2,7 @@
 #include <iostream>
 
 Nivel1::Nivel1(sf::RenderWindow& ventana, float ancho, float alto)
-    : ventana(ventana), fantasmaRojo(ancho / 2, alto / 2, 1.8f), jugador(ancho / 2, alto / 2 + 50, 1.8f), pelotas(nullptr), poderes(nullptr) {
+    : ventana(ventana), fantasmaRojo(ancho / 2, alto / 2, 1.8f), fantasmaCeleste(ancho / 2, alto / 2 + 50, 1.8f), fantasmaRosa(ancho / 2, alto / 2 + 100, 1.8f), fantasmaNaranja(ancho / 2, alto / 2 + 150, 1.8f), jugador(ancho / 2, alto / 2 + 200, 1.8f), pelotas(nullptr), poderes(nullptr) {
     if (!fondoTextura.loadFromFile("Nivel1/FondoNivel1.png")) {
         std::cerr << "Error al cargar la imagen de fondo." << std::endl;
     }
@@ -93,6 +93,10 @@ void Nivel1::mostrar() {
     fantasmaRojo.dibujar(ventana);
     fantasmaRojo.dibujarVidas(ventana);
 
+    fantasmaCeleste.dibujar(ventana); // Dibuja el fantasma celeste
+    fantasmaRosa.dibujar(ventana);
+    fantasmaNaranja.dibujar(ventana);
+
     jugador.dibujar(ventana);
     jugador.dibujarVidas(ventana);
     jugador.dibujarPuntaje(ventana);
@@ -143,12 +147,63 @@ void Nivel1::verificarColisiones() {
             jugador.setPosicionInicial();
         }
     }
+
+    if (fantasmaCeleste.getSprite().getGlobalBounds().intersects(jugador.getSprite().getGlobalBounds())) {
+        if (poderes->estaActivo()) {
+            fantasmaCeleste.reducirVida();
+            if (fantasmaCeleste.getVidas() <= 0) {
+                jugador.mostrarVentanaGanador(ventana, 2);
+            }
+            fantasmaCeleste.setPosicionInicial();
+        }
+        else {
+            jugador.reducirVida();
+            if (jugador.getVidas() <= 0) {
+                fantasmaCeleste.mostrarVentanaGanador(ventana, 1);
+            }
+            fantasmaCeleste.setPosicionInicial();
+            jugador.setPosicionInicial();
+        }
+    }
+    if (fantasmaRosa.getSprite().getGlobalBounds().intersects(jugador.getSprite().getGlobalBounds())) {
+        if (poderes->estaActivo()) {
+            fantasmaRosa.reducirVida();
+            if (fantasmaRosa.getVidas() <= 0) {
+                jugador.mostrarVentanaGanador(ventana, 2);
+            }
+            fantasmaRosa.setPosicionInicial();
+        }
+        else {
+            jugador.reducirVida();
+            if (jugador.getVidas() <= 0) {
+                fantasmaRosa.mostrarVentanaGanador(ventana, 1);
+            }
+            fantasmaRosa.setPosicionInicial();
+            jugador.setPosicionInicial();
+        }
+    }
+
+    if (fantasmaNaranja.getSprite().getGlobalBounds().intersects(jugador.getSprite().getGlobalBounds())) {
+        if (poderes->estaActivo()) {
+            fantasmaNaranja.reducirVida();
+            if (fantasmaNaranja.getVidas() <= 0) {
+                jugador.mostrarVentanaGanador(ventana, 2);
+            }
+            fantasmaNaranja.setPosicionInicial();
+        }
+        else {
+            jugador.reducirVida();
+            if (jugador.getVidas() <= 0) {
+                fantasmaNaranja.mostrarVentanaGanador(ventana, 1);
+            }
+            fantasmaNaranja.setPosicionInicial();
+            jugador.setPosicionInicial();
+        }
+    }
 }
 
 void Nivel1::actualizar() {
     float deltaTime = 1.0f / 60.0f;
-
-
 
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
         jugador.setDireccion(sf::Vector2f(0, -1));
@@ -163,9 +218,17 @@ void Nivel1::actualizar() {
         jugador.setDireccion(sf::Vector2f(1, 0));
     }
 
-    // Actualizamos el movimiento del fantasma
     fantasmaRojo.moverAI(mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio, jugador.getPosicion(), poderes->estaActivo());
     fantasmaRojo.actualizarAnimacion(deltaTime);
+
+    fantasmaCeleste.moverAI(mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio, jugador.getPosicion(), poderes->estaActivo());
+    fantasmaCeleste.actualizarAnimacion(deltaTime);
+
+    fantasmaRosa.moverAI(mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio, jugador.getPosicion(), poderes->estaActivo());
+    fantasmaRosa.actualizarAnimacion(deltaTime);
+
+    fantasmaNaranja.moverAI(mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio, jugador.getPosicion(), poderes->estaActivo());
+    fantasmaNaranja.actualizarAnimacion(deltaTime);
 
     jugador.mover(jugador.getDireccion(), mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio);
     jugador.actualizarAnimacion(deltaTime);

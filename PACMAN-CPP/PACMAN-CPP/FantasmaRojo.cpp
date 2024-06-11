@@ -117,11 +117,10 @@ void FantasmaRojo::moverAI(int** mapa, int anchoMapa, int altoMapa, float anchoC
         avoidPlayer(playerPosition, mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio);
     }
     else {
-        if (!posicionValida(sprite.getPosition() + direccionActual * velocidad, mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio)) {
-            seleccionarNuevaDireccion(mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio);
-        }
-        mover(direccionActual, mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio);
+        chasePlayer(playerPosition, mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio);
     }
+
+    mover(direccionActual, mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio);
 }
 
 void FantasmaRojo::avoidPlayer(sf::Vector2f playerPosition, int** mapa, int anchoMapa, int altoMapa, float anchoCelda, float altoCelda, float posXInicio, float posYInicio) {
@@ -139,6 +138,25 @@ void FantasmaRojo::avoidPlayer(sf::Vector2f playerPosition, int** mapa, int anch
         }
         else if (playerPosition.y > currentPosition.y && posicionValida({ currentPosition.x, currentPosition.y - velocidad }, mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio)) {
             direccionActual = { 0, -1 };
+        }
+    }
+}
+
+void FantasmaRojo::chasePlayer(sf::Vector2f playerPosition, int** mapa, int anchoMapa, int altoMapa, float anchoCelda, float altoCelda, float posXInicio, float posYInicio) {
+    sf::Vector2f currentPosition = getPosicion();
+    if (std::hypot(currentPosition.x - playerPosition.x, currentPosition.y - playerPosition.y) > 150) {
+        if (playerPosition.x < currentPosition.x && posicionValida({ currentPosition.x - velocidad, currentPosition.y }, mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio)) {
+            direccionActual = { -1, 0 };
+        }
+        else if (playerPosition.x > currentPosition.x && posicionValida({ currentPosition.x + velocidad, currentPosition.y }, mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio)) {
+            direccionActual = { 1, 0 };
+        }
+
+        if (playerPosition.y < currentPosition.y && posicionValida({ currentPosition.x, currentPosition.y - velocidad }, mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio)) {
+            direccionActual = { 0, -1 };
+        }
+        else if (playerPosition.y > currentPosition.y && posicionValida({ currentPosition.x, currentPosition.y + velocidad }, mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio)) {
+            direccionActual = { 0, 1 };
         }
     }
 }
@@ -212,3 +230,4 @@ sf::Vector2f FantasmaRojo::getDireccion() const {
 void FantasmaRojo::actualizarAnimacion(float deltaTime) {
     animacion->actualizar(deltaTime);
 }
+

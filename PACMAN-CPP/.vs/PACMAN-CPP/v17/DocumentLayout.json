@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\FantasmaRojo.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|solutionrelative:PACMAN-CPP\\FantasmaRojo.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\FantasmaRojo.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|solutionrelative:PACMAN-CPP\\FantasmaRojo.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\FantasmaCeleste.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|solutionrelative:PACMAN-CPP\\FantasmaCeleste.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\FantasmaRojo.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|solutionrelative:PACMAN-CPP\\FantasmaRojo.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\FantasmaCeleste.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|solutionrelative:PACMAN-CPP\\FantasmaCeleste.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\FantasmaRojo.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|solutionrelative:PACMAN-CPP\\FantasmaRojo.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9E622825-A079-40DB-BE93-21349741C92E}|PACMAN-CPP\\PACMAN-CPP.vcxproj|C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -174,8 +174,33 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FantasmaCeleste.cpp",
+              "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\FantasmaCeleste.cpp",
+              "RelativeDocumentMoniker": "PACMAN-CPP\\FantasmaCeleste.cpp",
+              "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\FantasmaCeleste.cpp",
+              "RelativeToolTip": "PACMAN-CPP\\FantasmaCeleste.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-28T22:45:04.087Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FantasmaRojo.cpp",
+              "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\FantasmaRojo.cpp",
+              "RelativeDocumentMoniker": "PACMAN-CPP\\FantasmaRojo.cpp",
+              "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\FantasmaRojo.cpp",
+              "RelativeToolTip": "PACMAN-CPP\\FantasmaRojo.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-28T22:45:00.974Z"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 4,
@@ -186,21 +211,19 @@
               "RelativeToolTip": "PACMAN-CPP\\main.cpp",
               "ViewState": "AQIAAA8AAAAAAAAAAAAAAKkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-03-27T21:41:59.719Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-27T21:41:59.719Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "FantasmaCeleste.h",
               "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\FantasmaCeleste.h",
               "RelativeDocumentMoniker": "PACMAN-CPP\\FantasmaCeleste.h",
               "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\FantasmaCeleste.h",
               "RelativeToolTip": "PACMAN-CPP\\FantasmaCeleste.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAACAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-04-28T22:39:26.307Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-28T22:39:26.307Z"
             },
             {
               "$type": "Document",
@@ -240,29 +263,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FantasmaRojo.cpp",
-              "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\FantasmaRojo.cpp",
-              "RelativeDocumentMoniker": "PACMAN-CPP\\FantasmaRojo.cpp",
-              "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\FantasmaRojo.cpp",
-              "RelativeToolTip": "PACMAN-CPP\\FantasmaRojo.cpp",
-              "ViewState": "AQIAAGoAAAAAAAAAAAAQwIsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-04-28T22:45:00.974Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "FantasmaRojo.h",
               "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\FantasmaRojo.h",
               "RelativeDocumentMoniker": "PACMAN-CPP\\FantasmaRojo.h",
               "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\FantasmaRojo.h",
               "RelativeToolTip": "PACMAN-CPP\\FantasmaRojo.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAxAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-04-28T22:39:33.826Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-28T22:39:33.826Z"
             },
             {
               "$type": "Document",
@@ -275,19 +284,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAJ8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-06-04T01:20:17.73Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FantasmaCeleste.cpp",
-              "DocumentMoniker": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\FantasmaCeleste.cpp",
-              "RelativeDocumentMoniker": "PACMAN-CPP\\FantasmaCeleste.cpp",
-              "ToolTip": "C:\\Users\\Fernando Ponce\\Documents\\PACMAN-CPP\\PACMAN-CPP\\PACMAN-CPP\\FantasmaCeleste.cpp",
-              "RelativeToolTip": "PACMAN-CPP\\FantasmaCeleste.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-04-28T22:45:04.087Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",

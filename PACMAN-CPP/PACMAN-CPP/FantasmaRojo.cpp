@@ -147,6 +147,7 @@ void FantasmaRojo::moverAI(int** mapa, int anchoMapa, int altoMapa, float anchoC
 
 
 
+
 void FantasmaRojo::avoidPlayer(sf::Vector2f playerPosition, int** mapa, int anchoMapa, int altoMapa, float anchoCelda, float altoCelda, float posXInicio, float posYInicio) {
     sf::Vector2f currentPosition = getPosicion();
     if (std::hypot(currentPosition.x - playerPosition.x, currentPosition.y - playerPosition.y) < 150) {

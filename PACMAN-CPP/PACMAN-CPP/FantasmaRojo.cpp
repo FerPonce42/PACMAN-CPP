@@ -98,9 +98,11 @@ void FantasmaRojo::mover(sf::Vector2f direccion, int** mapa, int anchoMapa, int 
 }
 
 void FantasmaRojo::moverAI(int** mapa, int anchoMapa, int altoMapa, float anchoCelda, float altoCelda, float posXInicio, float posYInicio, sf::Vector2f playerPosition, bool powerActive) {
+    // Manejo de cambio de comportamiento cuando se activa/desactiva el poder
     if (powerActive && !poderActivo) {
         poderActivo = true;
         cambiarTexturaPorPoder();
+        direccionActual = -direccionActual; // Cambiar dirección opuesta
     }
     else if (!powerActive && poderActivo) {
         poderActivo = false;
@@ -108,33 +110,58 @@ void FantasmaRojo::moverAI(int** mapa, int anchoMapa, int altoMapa, float anchoC
         animacion->agregarFrame("Nivel1/Fantasmas/Rojo/derecha1.png");
         animacion->agregarFrame("Nivel1/Fantasmas/Rojo/derecha2.png");
         animacion->agregarFrame("Nivel1/Fantasmas/Rojo/derecha3.png");
+        direccionActual = -direccionActual; // Cambiar dirección opuesta
     }
 
-    if (poderActivo) {
-        avoidPlayer(playerPosition, mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio);
-    }
-    else {
-        chasePlayer(playerPosition, mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio);
+    // Lista de posibles direcciones a considerar
+    std::vector<sf::Vector2f> posiblesDirecciones = {
+        {1, 0}, {-1, 0}, {0, 1}, {0, -1}
+    };
+
+    // Evaluar cada dirección y elegir la mejor
+    float mejorDistancia = std::numeric_limits<float>::max();
+    sf::Vector2f mejorDireccion = direccionActual;
+
+    for (const auto& dir : posiblesDirecciones) {
+        sf::Vector2f nuevaPosicion = sprite.getPosition() + dir * velocidad;
+
+        // Verificar si la nueva posición es válida en el mapa
+        if (posicionValida(nuevaPosicion, mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio)) {
+            // Calcular la distancia euclidiana al jugador
+            float distancia = std::hypot(nuevaPosicion.x - playerPosition.x, nuevaPosicion.y - playerPosition.y);
+
+            // Elegir la dirección que minimice la distancia (o maximice la proximidad)
+            if ((powerActive && distancia > 150) || (!powerActive && distancia < mejorDistancia)) {
+                mejorDistancia = distancia;
+                mejorDireccion = dir;
+            }
+        }
     }
 
+    // Establecer la dirección actual del movimiento
+    direccionActual = mejorDireccion;
+
+    // Mover el fantasma en la dirección seleccionada
     mover(direccionActual, mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio);
 }
+
+
 
 void FantasmaRojo::avoidPlayer(sf::Vector2f playerPosition, int** mapa, int anchoMapa, int altoMapa, float anchoCelda, float altoCelda, float posXInicio, float posYInicio) {
     sf::Vector2f currentPosition = getPosicion();
     if (std::hypot(currentPosition.x - playerPosition.x, currentPosition.y - playerPosition.y) < 150) {
-        if (playerPosition.x < currentPosition.x && posicionValida({ currentPosition.x + velocidad, currentPosition.y }, mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio)) {
-            direccionActual = { 1, 0 };
+        if (playerPosition.x < currentPosition.x && posicionValida({ currentPosition.x - velocidad, currentPosition.y }, mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio)) {
+            direccionActual = { -1, 0 }; // Mover a la izquierda
         }
-        else if (playerPosition.x > currentPosition.x && posicionValida({ currentPosition.x - velocidad, currentPosition.y }, mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio)) {
-            direccionActual = { -1, 0 };
+        else if (playerPosition.x > currentPosition.x && posicionValida({ currentPosition.x + velocidad, currentPosition.y }, mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio)) {
+            direccionActual = { 1, 0 }; // Mover a la derecha
         }
 
-        if (playerPosition.y < currentPosition.y && posicionValida({ currentPosition.x, currentPosition.y + velocidad }, mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio)) {
-            direccionActual = { 0, 1 };
+        if (playerPosition.y < currentPosition.y && posicionValida({ currentPosition.x, currentPosition.y - velocidad }, mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio)) {
+            direccionActual = { 0, -1 }; // Mover hacia arriba
         }
-        else if (playerPosition.y > currentPosition.y && posicionValida({ currentPosition.x, currentPosition.y - velocidad }, mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio)) {
-            direccionActual = { 0, -1 };
+        else if (playerPosition.y > currentPosition.y && posicionValida({ currentPosition.x, currentPosition.y + velocidad }, mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio)) {
+            direccionActual = { 0, 1 }; // Mover hacia abajo
         }
     }
 }
@@ -143,20 +170,21 @@ void FantasmaRojo::chasePlayer(sf::Vector2f playerPosition, int** mapa, int anch
     sf::Vector2f currentPosition = getPosicion();
     if (std::hypot(currentPosition.x - playerPosition.x, currentPosition.y - playerPosition.y) > 150) {
         if (playerPosition.x < currentPosition.x && posicionValida({ currentPosition.x - velocidad, currentPosition.y }, mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio)) {
-            direccionActual = { -1, 0 };
+            direccionActual = { -1, 0 }; // Mover a la izquierda
         }
         else if (playerPosition.x > currentPosition.x && posicionValida({ currentPosition.x + velocidad, currentPosition.y }, mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio)) {
-            direccionActual = { 1, 0 };
+            direccionActual = { 1, 0 }; // Mover a la derecha
         }
 
         if (playerPosition.y < currentPosition.y && posicionValida({ currentPosition.x, currentPosition.y - velocidad }, mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio)) {
-            direccionActual = { 0, -1 };
+            direccionActual = { 0, -1 }; // Mover hacia arriba
         }
         else if (playerPosition.y > currentPosition.y && posicionValida({ currentPosition.x, currentPosition.y + velocidad }, mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio)) {
-            direccionActual = { 0, 1 };
+            direccionActual = { 0, 1 }; // Mover hacia abajo
         }
     }
 }
+
 
 void FantasmaRojo::seleccionarNuevaDireccion(int** mapa, int anchoMapa, int altoMapa, float anchoCelda, float altoCelda, float posXInicio, float posYInicio) {
     std::vector<sf::Vector2f> direccionesValidas;

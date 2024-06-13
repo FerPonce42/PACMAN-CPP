@@ -157,7 +157,7 @@
     <ClCompile Include="FantasmaNaranja.cpp" />
     <ClCompile Include="FantasmaRojo.cpp" />
     <ClCompile Include="FantasmaRosa.cpp" />
-    <ClCompile Include="FantasmasCeleste.cpp" />
+    <ClCompile Include="FantasmaCeleste.cpp" />
     <ClCompile Include="Ganador.cpp" />
     <ClCompile Include="Jugador1.cpp" />
     <ClCompile Include="Jugador2.cpp" />

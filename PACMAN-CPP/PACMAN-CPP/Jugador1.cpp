@@ -2,7 +2,7 @@
 #include <iostream>
 
 Jugador1::Jugador1(float x, float y, float velocidad)
-    : velocidad(velocidad), direccion(0, 0), vidas(42), posicionInicial(x, y) { // Inicializa la posición inicial
+    : velocidad(velocidad), direccion(0, 0), vidas(3), posicionInicial(x, y) { // Inicializa la posición inicial
     animacion = new Animacion(0.1f);  // Tiempo entre frames
     animacion->agregarFrame("Nivel3/Jugador1/derecha1.png");
     animacion->agregarFrame("Nivel3/Jugador1/derecha2.png");

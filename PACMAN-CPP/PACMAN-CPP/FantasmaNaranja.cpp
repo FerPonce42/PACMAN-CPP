@@ -1,7 +1,7 @@
 #include "FantasmaNaranja.h"
 
 FantasmaNaranja::FantasmaNaranja(float x, float y, float velocidad)
-    : FantasmaRojo(x, y, velocidad) {
+    : FantasmaRojo(x, y, 1) {
     animacion->limpiarFrames();
     animacion->agregarFrame("Nivel1/Fantasmas/Naranja/derecha1.png");
     animacion->agregarFrame("Nivel1/Fantasmas/Naranja/derecha2.png");

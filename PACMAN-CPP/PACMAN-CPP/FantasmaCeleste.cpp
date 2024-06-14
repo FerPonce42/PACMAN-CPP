@@ -1,7 +1,7 @@
 #include "FantasmaCeleste.h"
 
 FantasmaCeleste::FantasmaCeleste(float x, float y, float velocidad)
-    : FantasmaRojo(x, y, velocidad) {
+    : FantasmaRojo(x, y, 1) {
     animacion->limpiarFrames();
     animacion->agregarFrame("Nivel1/Fantasmas/Celeste/derecha1.png");
     animacion->agregarFrame("Nivel1/Fantasmas/Celeste/derecha2.png");

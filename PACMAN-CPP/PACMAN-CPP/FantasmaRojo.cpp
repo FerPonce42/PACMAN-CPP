@@ -4,7 +4,7 @@
 #include <ctime>
 
 FantasmaRojo::FantasmaRojo(float x, float y, float velocidad)
-    : velocidad(velocidad), direccion(0, 0), direccionActual(1, 0), vidas(42), posicionInicial(x, y), poderActivo(false) {
+    : velocidad(1), direccion(0, 0), direccionActual(1, 0), vidas(99), posicionInicial(x, y), poderActivo(false) {
     animacion = new Animacion(0.1f);  // Tiempo entre frames
     animacion->agregarFrame("Nivel1/Fantasmas/Rojo/derecha1.png");
     animacion->agregarFrame("Nivel1/Fantasmas/Rojo/derecha2.png");

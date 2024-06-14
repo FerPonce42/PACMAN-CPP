@@ -6,21 +6,26 @@ Ganador::Ganador(sf::RenderWindow& mainWindow, int ganador)
         // Manejo del error al cargar la fuente
     }
 
+    // Cargar las texturas de fondo según el ganador
+    cargarTexturas(ganador);
+
     // Configuración del texto de ganador
     textoGanador.setFont(font);
     textoGanador.setCharacterSize(80);
-    textoGanador.setString("GANADOR: JUGADOR " + std::to_string(ganador));
+    textoGanador.setString("GANA EL JUGADOR " + std::to_string(ganador));
     textoGanador.setFillColor(sf::Color::Yellow);
     sf::FloatRect textBounds = textoGanador.getLocalBounds();
     textoGanador.setOrigin(textBounds.width / 2.0f, textBounds.height / 2.0f);
-    textoGanador.setPosition(static_cast<float>(window.getSize().x) / 2.0f,
+    // Ajustar la posición en X para mover a la derecha
+    textoGanador.setPosition(static_cast<float>(window.getSize().x) / 2.0f + 300.0f,
         static_cast<float>(window.getSize().y) / 4.0f);
 
     // Configuración de la opción de reiniciar
     reiniciarTexto.setFont(font);
     reiniciarTexto.setCharacterSize(40);
     reiniciarTexto.setString("Reiniciar Partida");
-    reiniciarTexto.setPosition(static_cast<float>(window.getSize().x) / 2.0f - 200.0f,
+    // Ajustar la posición en X para mover a la derecha
+    reiniciarTexto.setPosition(static_cast<float>(window.getSize().x) / 2.0f - 20.0f,
         static_cast<float>(window.getSize().y) / 2.0f - 25.0f);
     reiniciarTexto.setFillColor(sf::Color::Cyan);  // Reiniciar seleccionado inicialmente
 
@@ -28,15 +33,36 @@ Ganador::Ganador(sf::RenderWindow& mainWindow, int ganador)
     siguienteNivelTexto.setFont(font);
     siguienteNivelTexto.setCharacterSize(40);
     siguienteNivelTexto.setString("Siguiente Nivel");
-    siguienteNivelTexto.setPosition(static_cast<float>(window.getSize().x) / 2.0f - 200.0f,
+    // Ajustar la posición en X para mover a la derecha
+    siguienteNivelTexto.setPosition(static_cast<float>(window.getSize().x) / 2.0f - 20.0f,
         static_cast<float>(window.getSize().y) / 2.0f + 25.0f);
 
     // Configuración de la opción de salir
     salirTexto.setFont(font);
     salirTexto.setCharacterSize(40);
     salirTexto.setString("Salir");
-    salirTexto.setPosition(static_cast<float>(window.getSize().x) / 2.0f - 80.0f,
+    // Ajustar la posición en X para mover a la derecha
+    salirTexto.setPosition(static_cast<float>(window.getSize().x) / 2.0f - 20.0f,
         static_cast<float>(window.getSize().y) / 2.0f + 75.0f);
+}
+
+void Ganador::cargarTexturas(int ganador) {
+    if (ganador == 1) {
+        if (!textureJugador1.loadFromFile("Ganador/Jugador1GANADOR.png")) {
+            // Manejo del error al cargar la textura para jugador 1
+        }
+        fondoSprite.setTexture(textureJugador1);
+    }
+    else if (ganador == 2) {
+        if (!textureJugador2.loadFromFile("Ganador/Jugador2GANADOR.png")) {
+            // Manejo del error al cargar la textura para jugador 2
+        }
+        fondoSprite.setTexture(textureJugador2);
+    }
+
+    // Ajusta el tamaño del sprite para que cubra toda la ventana
+    fondoSprite.setScale(window.getSize().x / fondoSprite.getLocalBounds().width,
+        window.getSize().y / fondoSprite.getLocalBounds().height);
 }
 
 int Ganador::mostrar() {
@@ -62,6 +88,9 @@ int Ganador::mostrar() {
         }
 
         window.clear();
+        // Dibuja el fondo primero
+        window.draw(fondoSprite);
+        // Luego dibuja los textos y opciones
         window.draw(textoGanador);
         window.draw(reiniciarTexto);
         window.draw(siguienteNivelTexto);

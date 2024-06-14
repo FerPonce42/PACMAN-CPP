@@ -4,8 +4,12 @@
 Pausa::Pausa(sf::RenderWindow& mainWindow) : window(mainWindow), selectedItemIndex(0), returnToMenu(false) {
     if (!font.loadFromFile("Pausa/fuentepausa.ttf")) {
         // Manejo de errores si no se puede cargar la fuente.
-        
     }
+
+    if (!backgroundTexture.loadFromFile("Pausa/pausa.png")) {
+        // Manejo de errores si no se puede cargar la imagen.
+    }
+    backgroundSprite.setTexture(backgroundTexture);
 
     float centerX = static_cast<float>(window.getSize().x) / 2;
     float centerY = static_cast<float>(window.getSize().y) / 2;
@@ -35,6 +39,7 @@ int Pausa::mostrar() {
 
     while (!returnToMenu) {
         window.clear();
+        window.draw(backgroundSprite); // Dibujar la imagen de fondo
         window.draw(textoPausa);
         window.draw(reanudarTexto);
         window.draw(salirTexto);

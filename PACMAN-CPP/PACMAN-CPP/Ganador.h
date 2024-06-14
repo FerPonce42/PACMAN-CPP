@@ -18,6 +18,12 @@ private:
     sf::Text siguienteNivelTexto;
     sf::Text salirTexto;
 
+    sf::Texture textureJugador1;  // Textura para jugador 1
+    sf::Texture textureJugador2;  // Textura para jugador 2
+    sf::Sprite fondoSprite;       // Sprite para mostrar la textura de fondo
+
+    void cargarTexturas(int ganador);
+
     //void Reiniciar();   CUANTO ESTEN LISTOS LOS DEMAS NIVELES, HABILITARLOS DESDE EEL MAIN
     //void SiguienteNivel();
     //void Salir();

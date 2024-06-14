@@ -16,7 +16,6 @@ Ganador::Ganador(sf::RenderWindow& mainWindow, int ganador)
     textoGanador.setFillColor(sf::Color::Yellow);
     sf::FloatRect textBounds = textoGanador.getLocalBounds();
     textoGanador.setOrigin(textBounds.width / 2.0f, textBounds.height / 2.0f);
-    // Ajustar la posición en X para mover a la derecha
     textoGanador.setPosition(static_cast<float>(window.getSize().x) / 2.0f + 300.0f,
         static_cast<float>(window.getSize().y) / 4.0f);
 
@@ -24,16 +23,14 @@ Ganador::Ganador(sf::RenderWindow& mainWindow, int ganador)
     reiniciarTexto.setFont(font);
     reiniciarTexto.setCharacterSize(40);
     reiniciarTexto.setString("Reiniciar Partida");
-    // Ajustar la posición en X para mover a la derecha
     reiniciarTexto.setPosition(static_cast<float>(window.getSize().x) / 2.0f - 20.0f,
         static_cast<float>(window.getSize().y) / 2.0f - 25.0f);
-    reiniciarTexto.setFillColor(sf::Color::Cyan);  // Reiniciar seleccionado inicialmente
+    reiniciarTexto.setFillColor(sf::Color::Cyan);
 
     // Configuración de la opción de siguiente nivel
     siguienteNivelTexto.setFont(font);
     siguienteNivelTexto.setCharacterSize(40);
     siguienteNivelTexto.setString("Siguiente Nivel");
-    // Ajustar la posición en X para mover a la derecha
     siguienteNivelTexto.setPosition(static_cast<float>(window.getSize().x) / 2.0f - 20.0f,
         static_cast<float>(window.getSize().y) / 2.0f + 25.0f);
 
@@ -41,7 +38,6 @@ Ganador::Ganador(sf::RenderWindow& mainWindow, int ganador)
     salirTexto.setFont(font);
     salirTexto.setCharacterSize(40);
     salirTexto.setString("Salir");
-    // Ajustar la posición en X para mover a la derecha
     salirTexto.setPosition(static_cast<float>(window.getSize().x) / 2.0f - 20.0f,
         static_cast<float>(window.getSize().y) / 2.0f + 75.0f);
 }
@@ -88,9 +84,7 @@ int Ganador::mostrar() {
         }
 
         window.clear();
-        // Dibuja el fondo primero
         window.draw(fondoSprite);
-        // Luego dibuja los textos y opciones
         window.draw(textoGanador);
         window.draw(reiniciarTexto);
         window.draw(siguienteNivelTexto);

@@ -24,7 +24,7 @@ private:
 
     void cargarTexturas(int ganador);
 
-    //void Reiniciar();   CUANTO ESTEN LISTOS LOS DEMAS NIVELES, HABILITARLOS DESDE EEL MAIN
-    //void SiguienteNivel();
-    //void Salir();
+    void Reiniciar();
+    void SiguienteNivel();
+    void Salir();
 };

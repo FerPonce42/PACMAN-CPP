@@ -31,13 +31,13 @@ MenuPrincipal::MenuPrincipal(float ancho, float alto) {
 
     textoMenu[2].setFont(fuente);
     textoMenu[2].setFillColor(sf::Color::White);
-    textoMenu[2].setString("Opciones");
+    textoMenu[2].setString("Creditos");
     textoMenu[2].setCharacterSize(40);
     textoMenu[2].setPosition(sf::Vector2f(textoX + offsetX, alto / 2 - 50));
 
     textoMenu[3].setFont(fuente);
     textoMenu[3].setFillColor(sf::Color::White);
-    textoMenu[3].setString("Creditos");
+    textoMenu[3].setString("----------");
     textoMenu[3].setCharacterSize(40);
     textoMenu[3].setPosition(sf::Vector2f(textoX + offsetX, alto / 2));
 

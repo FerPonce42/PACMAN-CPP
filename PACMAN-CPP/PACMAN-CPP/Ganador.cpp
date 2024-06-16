@@ -3,13 +3,13 @@
 Ganador::Ganador(sf::RenderWindow& mainWindow, int ganador)
     : window(mainWindow), selectedItemIndex(0) {
     if (!font.loadFromFile("Ganador/fuenteganador.ttf")) {
-        // Manejo del error al cargar la fuente
+        
     }
 
-    // Cargar las texturas de fondo según el ganador
+   
     cargarTexturas(ganador);
 
-    // Configuración del texto de ganador
+   
     textoGanador.setFont(font);
     textoGanador.setCharacterSize(80);
     textoGanador.setString("GANA EL JUGADOR " + std::to_string(ganador));
@@ -19,7 +19,7 @@ Ganador::Ganador(sf::RenderWindow& mainWindow, int ganador)
     textoGanador.setPosition(static_cast<float>(window.getSize().x) / 2.0f + 300.0f,
         static_cast<float>(window.getSize().y) / 4.0f);
 
-    // Configuración de la opción de reiniciar
+ 
     reiniciarTexto.setFont(font);
     reiniciarTexto.setCharacterSize(40);
     reiniciarTexto.setString("Reiniciar Partida");
@@ -27,14 +27,14 @@ Ganador::Ganador(sf::RenderWindow& mainWindow, int ganador)
         static_cast<float>(window.getSize().y) / 2.0f - 25.0f);
     reiniciarTexto.setFillColor(sf::Color::Cyan);
 
-    // Configuración de la opción de siguiente nivel
+   
     siguienteNivelTexto.setFont(font);
     siguienteNivelTexto.setCharacterSize(40);
     siguienteNivelTexto.setString("Siguiente Nivel");
     siguienteNivelTexto.setPosition(static_cast<float>(window.getSize().x) / 2.0f - 20.0f,
         static_cast<float>(window.getSize().y) / 2.0f + 25.0f);
 
-    // Configuración de la opción de salir
+   
     salirTexto.setFont(font);
     salirTexto.setCharacterSize(40);
     salirTexto.setString("Salir");
@@ -45,18 +45,18 @@ Ganador::Ganador(sf::RenderWindow& mainWindow, int ganador)
 void Ganador::cargarTexturas(int ganador) {
     if (ganador == 1) {
         if (!textureJugador1.loadFromFile("Ganador/Jugador1GANADOR.png")) {
-            // Manejo del error al cargar la textura para jugador 1
+            
         }
         fondoSprite.setTexture(textureJugador1);
     }
     else if (ganador == 2) {
         if (!textureJugador2.loadFromFile("Ganador/Jugador2GANADOR.png")) {
-            // Manejo del error al cargar la textura para jugador 2
+            
         }
         fondoSprite.setTexture(textureJugador2);
     }
 
-    // Ajusta el tamaño del sprite para que cubra toda la ventana
+   
     fondoSprite.setScale(window.getSize().x / fondoSprite.getLocalBounds().width,
         window.getSize().y / fondoSprite.getLocalBounds().height);
 }

@@ -6,7 +6,7 @@
 PacmanIA::PacmanIA(float x, float y, float velocidad)
     : velocidad(velocidad), direccion(0, 0), direccionActual(1, 0), vidas(3), posicionInicial(x, y), puntaje(0), poderActivo(false) {
     animacion = new Animacion(0.1f);
-    // Agregar los frames en el constructor
+    
     animacion->agregarFrame("Nivel2/PacmanIA/derecha1.png");
     animacion->agregarFrame("Nivel2/PacmanIA/derecha2.png");
     animacion->agregarFrame("Nivel2/PacmanIA/derecha3.png");
@@ -20,7 +20,7 @@ void PacmanIA::activarPoder(bool activado) {
     poderActivo = activado;
 }
 void PacmanIA::moverAI(int** mapa, int anchoMapa, int altoMapa, float anchoCelda, float altoCelda, float posXInicio, float posYInicio, sf::Vector2f ghostPosition, bool powerActive) {
-    // Si el poder est� activo, actualizar la variable poderActivo
+  
     if (powerActive && !poderActivo) {
         activarPoder(true);
     }
@@ -28,14 +28,14 @@ void PacmanIA::moverAI(int** mapa, int anchoMapa, int altoMapa, float anchoCelda
         activarPoder(false);
     }
 
-    // Si el poder est� activo, mover hacia el FantasmaJugador
+  
     if (powerActive && poderActivo) {
         chaseGhost(ghostPosition, mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio);
-        // Mover PacmanIA hacia el FantasmaJugador
+        
         mover(direccionActual, mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio);
     }
     else {
-        // Si el poder no est� activo, realizar el movimiento normal
+       
         poderActivo = false;
         avoidGhost(ghostPosition, mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio);
         if (!posicionValida(sprite.getPosition() + direccionActual * velocidad, mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio)) {
@@ -94,7 +94,7 @@ void PacmanIA::chaseGhost(sf::Vector2f ghostPosition, int** mapa, int anchoMapa,
         }
     }
 
-    // Solo actualizamos la dirección si la nueva dirección es diferente de la actual
+  
     if (nuevaDireccion != direccionActual) {
         direccionActual = nuevaDireccion;
         setDireccion(direccionActual);
@@ -124,7 +124,7 @@ void PacmanIA::seleccionarNuevaDireccion(int** mapa, int anchoMapa, int altoMapa
         direccionActual = direccionesValidas[indiceAleatorio];
     }
 
-    // Actualizar la animaci�n basada en la direcci�n seleccionada
+  
     setDireccion(direccionActual);
 }
 
@@ -177,14 +177,14 @@ void PacmanIA::mostrarVentanaGanador(sf::RenderWindow& mainWindow, int ganador) 
 void PacmanIA::dibujarPuntaje(sf::RenderWindow& ventana) {
     sf::Font font;
     if (!font.loadFromFile("Nivel2/fuentenivel2.ttf")) {
-        // Manejo de errores
+        
     }
     sf::Text textoPuntaje;
     textoPuntaje.setFont(font);
     textoPuntaje.setString(std::to_string(puntaje));
     textoPuntaje.setCharacterSize(50);
     textoPuntaje.setFillColor(sf::Color::White);
-    textoPuntaje.setPosition(250, 85); // Ajusta la posici�n seg�n tus necesidades
+    textoPuntaje.setPosition(250, 85); 
 
     ventana.draw(textoPuntaje);
 }
@@ -236,8 +236,8 @@ void PacmanIA::dibujar(sf::RenderWindow& ventana) {
 void PacmanIA::setDireccion(sf::Vector2f nuevaDireccion) {
     direccion = nuevaDireccion;
 
-    // Actualizar los frames de la animaci�n bas�ndose en la direcci�n
-    animacion->limpiarFrames(); // Limpiar todos los frames actuales
+    
+    animacion->limpiarFrames(); 
 
     if (direccion.x > 0) {
         animacion->agregarFrame("Nivel2/PacmanIA/derecha1.png");

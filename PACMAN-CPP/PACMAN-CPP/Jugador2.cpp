@@ -2,13 +2,13 @@
 #include <iostream>
 
 Jugador2::Jugador2(float x, float y, float velocidad)
-    : velocidad(velocidad), direccion(0, 0), vidas(3), posicionInicial(x, y), puntaje(0) { // Inicializa la posición inicial
-    animacion = new Animacion(0.1f);  // Tiempo entre frames
+    : velocidad(velocidad), direccion(0, 0), vidas(3), posicionInicial(x, y), puntaje(0) { 
+    animacion = new Animacion(0.1f); 
     animacion->agregarFrame("Nivel3/Jugador2/derecha1.png");
     animacion->agregarFrame("Nivel3/Jugador2/derecha2.png");
     animacion->agregarFrame("Nivel3/Jugador2/derecha3.png");
 
-    sprite.setPosition(1140, 550); //JUGADOR 2 PACMAN
+    sprite.setPosition(1140, 550); 
     sprite.setScale(0.8f, 0.8f);
 }
 
@@ -60,14 +60,14 @@ void Jugador2::mostrarVentanaGanador(sf::RenderWindow& mainWindow, int ganador) 
 void Jugador2::dibujarPuntaje(sf::RenderWindow& ventana) {
     sf::Font font;
     if (!font.loadFromFile("Nivel3/fuentenivel3.ttf")) {
-        // Manejo de errores
+        
     }
     sf::Text textoPuntaje;
     textoPuntaje.setFont(font);
     textoPuntaje.setString(std::to_string(puntaje));
     textoPuntaje.setCharacterSize(50);
     textoPuntaje.setFillColor(sf::Color::White);
-    textoPuntaje.setPosition(250, 85); // Ajusta la posición según tus necesidades
+    textoPuntaje.setPosition(250, 85); 
 
     ventana.draw(textoPuntaje);
 }
@@ -120,9 +120,9 @@ void Jugador2::dibujar(sf::RenderWindow& ventana) {
 
 void Jugador2::setDireccion(sf::Vector2f nuevaDireccion) {
     direccion = nuevaDireccion;
-    // Cambiar animaciones basadas en la dirección
+    
     delete animacion;
-    animacion = new Animacion(0.1f);  // Tiempo entre frames
+    animacion = new Animacion(0.1f); 
 
     if (direccion.x > 0) {
         animacion->agregarFrame("Nivel3/Jugador2/derecha1.png");

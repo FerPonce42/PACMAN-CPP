@@ -19,7 +19,7 @@ SeleccionNiveles::SeleccionNiveles(float ancho, float alto) {
     textoNivel[0].setString("Modos de Juego");
     textoNivel[0].setCharacterSize(80);
     textoNivel[0].setPosition(sf::Vector2f(640, 200));
-                                          //x,   y
+                                         
     textoNivel[1].setFont(fuente);
     textoNivel[1].setFillColor(sf::Color::White);
     textoNivel[1].setString("1. Clasico");

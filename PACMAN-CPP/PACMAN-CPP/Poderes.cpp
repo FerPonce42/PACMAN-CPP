@@ -7,7 +7,7 @@ Poderes::Poderes(int** mapa, int anchoMapa, int altoMapa, float anchoCelda, floa
 
     for (int i = 0; i < altoMapa; ++i) {
         for (int j = 0; j < anchoMapa; ++j) {
-            if (mapa[i][j] == 3) {  // Dibujar pelotas celestes en los 3 del mapa
+            if (mapa[i][j] == 3) {  
                 sf::CircleShape poder(radioPoder);
                 poder.setFillColor(sf::Color::Cyan);
                 poder.setPosition(posXInicio + j * anchoCelda + anchoCelda / 2 - radioPoder, posYInicio + i * altoCelda + altoCelda / 2 - radioPoder);
@@ -36,7 +36,7 @@ bool Poderes::verificarColision(sf::Sprite& sprite) {
 
 void Poderes::activarPoder() {
     poderActivo = true;
-    relojPoder.restart(); // Reiniciar el reloj cuando se activa el poder
+    relojPoder.restart();
 }
 
 bool Poderes::estaActivo() const {

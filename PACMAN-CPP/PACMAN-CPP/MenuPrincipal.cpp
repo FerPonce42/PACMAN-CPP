@@ -16,13 +16,13 @@ MenuPrincipal::MenuPrincipal(float ancho, float alto) {
     textoMenu[0].setFillColor(sf::Color::Yellow);
     textoMenu[0].setString("PACMAN-CPP");
     textoMenu[0].setCharacterSize(120);
-    // Calcular la posición X centrada
+    
     float textoX = (ancho - textoMenu[0].getGlobalBounds().width) / 2;
     textoMenu[0].setPosition(sf::Vector2f(textoX, alto / 5));
-    // Desplazamiento adicional hacia la derecha
+    
     float offsetX = 290;
 
-    // Resto de los textos
+    
     textoMenu[1].setFont(fuente);
     textoMenu[1].setFillColor(sf::Color::Cyan);
     textoMenu[1].setString("Jugar");
@@ -66,20 +66,20 @@ void MenuPrincipal::moverArriba() {
     }
     else if (indiceItemSeleccionado == 1) {
         textoMenu[indiceItemSeleccionado].setFillColor(sf::Color::White);
-        indiceItemSeleccionado = 4; // Avanza a la última opción ("SALIR")
+        indiceItemSeleccionado = 4;
         textoMenu[indiceItemSeleccionado].setFillColor(sf::Color::Cyan);
     }
 }
 
 void MenuPrincipal::moverAbajo() {
-    if (indiceItemSeleccionado < 4) { // Ajusta el número al total de opciones menos 1
+    if (indiceItemSeleccionado < 4) { 
         textoMenu[indiceItemSeleccionado].setFillColor(sf::Color::White);
         indiceItemSeleccionado++;
         textoMenu[indiceItemSeleccionado].setFillColor(sf::Color::Cyan);
     }
-    else if (indiceItemSeleccionado == 4) { // Ajusta el número al total de opciones menos 1
+    else if (indiceItemSeleccionado == 4) { 
         textoMenu[indiceItemSeleccionado].setFillColor(sf::Color::White);
-        indiceItemSeleccionado = 1; // Retrocede a la segunda opción ("JUGAR")
+        indiceItemSeleccionado = 1; 
         textoMenu[indiceItemSeleccionado].setFillColor(sf::Color::Cyan);
     }
 }

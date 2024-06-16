@@ -2,13 +2,13 @@
 #include <iostream>
 
 Jugador1::Jugador1(float x, float y, float velocidad)
-    : velocidad(velocidad), direccion(0, 0), vidas(3), posicionInicial(x, y) { // Inicializa la posición inicial
-    animacion = new Animacion(0.1f);  // Tiempo entre frames
+    : velocidad(velocidad), direccion(0, 0), vidas(3), posicionInicial(x, y) { 
+    animacion = new Animacion(0.1f); 
     animacion->agregarFrame("Nivel3/Jugador1/derecha1.png");
     animacion->agregarFrame("Nivel3/Jugador1/derecha2.png");
     animacion->agregarFrame("Nivel3/Jugador1/derecha3.png");
 
-    sprite.setPosition(860, 510); //JUGADOR 1 FANTASMA
+    sprite.setPosition(860, 510); 
     sprite.setScale(0.8f, 0.8f);
 }
 
@@ -44,13 +44,13 @@ sf::Sprite& Jugador1::getSprite() {
 }
 
 void Jugador1::cambiarTexturaPorPoder() {
-    // Cambiar la textura del jugador 1 cuando el jugador 2 consume un poder
+    
     animacion->limpiarFrames();
     animacion->agregarFrame("Nivel3/Jugador1/perseguido1.png");
     animacion->agregarFrame("Nivel3/Jugador1/perseguido2.png");
     animacion->agregarFrame("Nivel3/Jugador1/perseguido3.png");
-    // Puedes agregar más lógica aquí si necesitas hacer alguna acción especial cuando se active el poder
-}//vas a caerrr animaciones DIOS, DAME FUERZAS
+    
+}
 
 void Jugador1::mostrarVentanaGanador(sf::RenderWindow& mainWindow, int ganador) {
     Ganador ventanaGanador(mainWindow, ganador);
@@ -105,9 +105,9 @@ void Jugador1::dibujar(sf::RenderWindow& ventana) {
 
 void Jugador1::setDireccion(sf::Vector2f nuevaDireccion) {
     direccion = nuevaDireccion;
-    // Cambiar animaciones basadas en la direcci�n
+   
     delete animacion;
-    animacion = new Animacion(0.1f);  // Tiempo entre frames
+    animacion = new Animacion(0.1f); 
 
     if (direccion.x > 0) {
         animacion->agregarFrame("Nivel3/Jugador1/derecha1.png");

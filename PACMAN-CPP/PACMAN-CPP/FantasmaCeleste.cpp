@@ -7,7 +7,7 @@ FantasmaCeleste::FantasmaCeleste(float x, float y, float velocidad)
     animacion->agregarFrame("Nivel1/Fantasmas/Celeste/derecha2.png");
     animacion->agregarFrame("Nivel1/Fantasmas/Celeste/derecha3.png");
 
-    sprite.setPosition(755, 520); // FANTASMA CELESTE
+    sprite.setPosition(755, 520); 
     sprite.setScale(0.8f, 0.8f);
 }
 
@@ -16,11 +16,11 @@ void FantasmaCeleste::setPosicionInicial() {
 }
 
 void FantasmaCeleste::moverAI(int** mapa, int anchoMapa, int altoMapa, float anchoCelda, float altoCelda, float posXInicio, float posYInicio, sf::Vector2f playerPosition, bool powerActive) {
-    // Manejo de cambio de comportamiento cuando se activa/desactiva el poder
+    
     if (powerActive && !poderActivo) {
         poderActivo = true;
         cambiarTexturaPorPoder();
-        direccionActual = -direccionActual; // Cambiar dirección opuesta
+        direccionActual = -direccionActual; 
     }
     else if (!powerActive && poderActivo) {
         poderActivo = false;
@@ -28,22 +28,22 @@ void FantasmaCeleste::moverAI(int** mapa, int anchoMapa, int altoMapa, float anc
         animacion->agregarFrame("Nivel1/Fantasmas/Celeste/derecha1.png");
         animacion->agregarFrame("Nivel1/Fantasmas/Celeste/derecha2.png");
         animacion->agregarFrame("Nivel1/Fantasmas/Celeste/derecha3.png");
-        direccionActual = -direccionActual; // Cambiar dirección opuesta
+        direccionActual = -direccionActual; 
     }
 
-    // Obtener la posición actual del fantasma
+    
     sf::Vector2f posicionActual = sprite.getPosition();
 
-    // Lista de posibles direcciones a considerar
+
     std::vector<sf::Vector2f> posiblesDirecciones = {
         {1, 0}, {-1, 0}, {0, 1}, {0, -1}
     };
 
-    // Determinar si Pacman está cerca
+ 
     bool enRango = std::hypot(posicionActual.x - playerPosition.x, posicionActual.y - playerPosition.y) < 150;
 
     if (enRango && !powerActive) {
-        // Calcular la distancia euclidiana al jugador
+        
         float mejorDistancia = std::numeric_limits<float>::max();
         sf::Vector2f mejorDireccion = direccionActual;
 
@@ -60,10 +60,10 @@ void FantasmaCeleste::moverAI(int** mapa, int anchoMapa, int altoMapa, float anc
         direccionActual = mejorDireccion;
     }
     else {
-        // Verificar si la dirección actual sigue siendo válida
+       
         sf::Vector2f nuevaPosicion = posicionActual + direccionActual * velocidad;
         if (!posicionValida(nuevaPosicion, mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio)) {
-            // Elegir una nueva dirección aleatoria válida
+           
             std::vector<sf::Vector2f> direccionesValidas;
 
             for (const auto& dir : posiblesDirecciones) {
@@ -73,7 +73,7 @@ void FantasmaCeleste::moverAI(int** mapa, int anchoMapa, int altoMapa, float anc
                 }
             }
 
-            // Si hay direcciones válidas, elegir una aleatoriamente
+           
             if (!direccionesValidas.empty()) {
                 int indiceAleatorio = rand() % direccionesValidas.size();
                 direccionActual = direccionesValidas[indiceAleatorio];
@@ -81,7 +81,7 @@ void FantasmaCeleste::moverAI(int** mapa, int anchoMapa, int altoMapa, float anc
         }
     }
 
-    // Mover el fantasma en la dirección seleccionada
+    
     mover(direccionActual, mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio);
 }
 

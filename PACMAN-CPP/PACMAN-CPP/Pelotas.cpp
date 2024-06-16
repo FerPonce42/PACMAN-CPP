@@ -34,5 +34,5 @@ bool Pelotas::verificarColision(sf::Sprite& sprite) {
 }
 
 int Pelotas::getCantidadPelotas() {
-    return bolitas.size(); // Devuelve la cantidad de bolitas que quedan en el juego
+    return bolitas.size(); 
 }

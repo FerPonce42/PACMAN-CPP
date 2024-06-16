@@ -2,18 +2,18 @@
 #include <iostream>
 
 Creditos::Creditos(sf::RenderWindow& mainWindow) : window(mainWindow), returnToMenu(false) {
-    // Cargar la textura de fondo
+    
     if (!backgroundTexture.loadFromFile("Creditos/creditos.png")) {
-        // Manejo de errores si no se puede cargar la imagen.
+        
     }
     backgroundSprite.setTexture(backgroundTexture);
 
-    // Cargar la fuente
+  
     if (!font.loadFromFile("Creditos/fuentecreditos.ttf")) {
-        // Manejo de errores si no se puede cargar la fuente.
+       
     }
 
-    // Configurar el texto del botón de regresar
+   
     regresarTexto.setFont(font);
     regresarTexto.setString("Regresar al menu");
     regresarTexto.setCharacterSize(24);
@@ -26,8 +26,8 @@ int Creditos::mostrar() {
 
     while (window.isOpen() && !returnToMenu) {
         window.clear();
-        window.draw(backgroundSprite);  // Dibujar la imagen de fondo
-        window.draw(regresarTexto);     // Dibujar el texto de regresar
+        window.draw(backgroundSprite);  
+        window.draw(regresarTexto);     
         window.display();
 
         handleInput();

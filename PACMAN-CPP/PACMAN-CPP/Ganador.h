@@ -18,9 +18,9 @@ private:
     sf::Text siguienteNivelTexto;
     sf::Text salirTexto;
 
-    sf::Texture textureJugador1;  // Textura para jugador 1
-    sf::Texture textureJugador2;  // Textura para jugador 2
-    sf::Sprite fondoSprite;       // Sprite para mostrar la textura de fondo
+    sf::Texture textureJugador1; 
+    sf::Texture textureJugador2;
+    sf::Sprite fondoSprite;     
 
     void cargarTexturas(int ganador);
 

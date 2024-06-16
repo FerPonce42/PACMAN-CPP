@@ -23,22 +23,22 @@ public:
     void aumentarPuntaje(int puntos);
     int getPuntaje() const;
     void dibujarPuntaje(sf::RenderWindow& ventana);
-    void activarPoder(bool activado); // Nuevo
+    void activarPoder(bool activado); 
 
 private:
     sf::Sprite sprite;
     float velocidad;
     sf::Vector2f direccion;
-    sf::Vector2f direccionActual; // Nueva variable
+    sf::Vector2f direccionActual; 
     Animacion* animacion;
     int vidas;
     sf::Vector2f posicionInicial;
     int puntaje;
-    bool poderActivo; // Nueva variable
+    bool poderActivo; 
 
     bool posicionValida(sf::Vector2f nuevaPosicion, int** mapa, int anchoMapa, int altoMapa, float anchoCelda, float altoCelda, float posXInicio, float posYInicio);
 
-    // Métodos y variables adicionales para la IA
+   
     void moveRandomly(int** mapa, int anchoMapa, int altoMapa, float anchoCelda, float altoCelda, float posXInicio, float posYInicio);
     void avoidGhost(sf::Vector2f ghostPosition, int** mapa, int anchoMapa, int altoMapa, float anchoCelda, float altoCelda, float posXInicio, float posYInicio);
     void chaseGhost(sf::Vector2f ghostPosition, int** mapa, int anchoMapa, int altoMapa, float anchoCelda, float altoCelda, float posXInicio, float posYInicio);

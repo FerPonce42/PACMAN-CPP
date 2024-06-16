@@ -27,7 +27,7 @@ private:
     sf::Texture fondoTextura;
     sf::Sprite fondoSprite;
     FantasmaRojo fantasmaRojo;
-    FantasmaCeleste fantasmaCeleste; // Añadido fantasma celeste
+    FantasmaCeleste fantasmaCeleste; 
     FantasmaRosa fantasmaRosa;
     FantasmaNaranja fantasmaNaranja;
     Jugador jugador;

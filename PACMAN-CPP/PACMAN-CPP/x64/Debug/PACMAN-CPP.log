@@ -1,4 +1,6 @@
-﻿  Creditos.cpp
+﻿  Animacion.cpp
+C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\Animacion.cpp(33,48): warning C4267: '=': conversión de 'size_t' a 'int'; posible pérdida de datos
+  Creditos.cpp
 C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\Creditos.cpp(21,137): warning C4244: 'argumento': conversión de 'T' a 'T'; posible pérdida de datos
 C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\Creditos.cpp(21,137): warning C4244:         with
 C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\Creditos.cpp(21,137): warning C4244:         [
@@ -18,6 +20,7 @@ C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\Creditos.cpp(
 C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\Jugador.cpp(5,16): warning C4305: 'inicializando': truncamiento de 'double' a 'float'
   Jugador1.cpp
   Jugador2.cpp
+  MenuPrincipal.cpp
   Nivel1.cpp
 C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\Nivel1.cpp(15,38): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
 C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\Nivel1.cpp(16,37): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
@@ -34,6 +37,13 @@ C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\Nivel3.cpp(16
 C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\Nivel3.cpp(77,38): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
 C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\Nivel3.cpp(78,37): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
   PacmanIA.cpp
+  Pausa.cpp
+  Pelotas.cpp
+C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\Pelotas.cpp(37,24): warning C4267: 'return': conversión de 'size_t' a 'int'; posible pérdida de datos
+  Poderes.cpp
+  SeleccionNiveles.cpp
+  Generando código...
+  Compilando...
   main.cpp
 C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(14,62): warning C4244: 'argumento': conversión de 'T' a 'float'; posible pérdida de datos
 C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(14,62): warning C4244:         with
@@ -86,4 +96,5 @@ C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(18,4
 C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(18,45): warning C4244:             T=unsigned int
 C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\PACMAN-CPP\main.cpp(18,45): warning C4244:         ]
   Generando código...
+  LINK : no se encontró C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\x64\Debug\PACMAN-CPP.exe o no lo generó el último vínculo incremental; ejecutando vínculo completo
   PACMAN-CPP.vcxproj -> C:\Users\Fernando Ponce\Documents\PACMAN-CPP\PACMAN-CPP\x64\Debug\PACMAN-CPP.exe

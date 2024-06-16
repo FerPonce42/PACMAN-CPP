@@ -6,7 +6,7 @@
 #include "Nivel2.h"
 #include "Nivel3.h"
 #include "Pausa.h"
-#include "Creditos.h"  // Incluir la cabecera de Creditos
+#include "Creditos.h"  
 
 int main() {
     sf::RenderWindow ventana(sf::VideoMode(1920, 1080), "PACMAN-CPP");
@@ -17,8 +17,8 @@ int main() {
     Nivel2 nivel2(ventana, ventana.getSize().x, ventana.getSize().y);
     Nivel3 nivel3(ventana, ventana.getSize().x, ventana.getSize().y);
 
-    Pausa pausa(ventana);  // Instancia de Pausa
-    Creditos creditos(ventana);  // Instancia de Creditos
+    Pausa pausa(ventana); 
+    Creditos creditos(ventana); 
 
     Musica musica;
     musica.cargarMusicaMenu();
@@ -31,7 +31,7 @@ int main() {
     bool enNivel1 = false;
     bool enNivel2 = false;
     bool enNivel3 = false;
-    bool enCreditos = false;  // Añadimos una bandera para la pantalla de créditos
+    bool enCreditos = false;  
 
     while (ventana.isOpen()) {
         sf::Event evento;
@@ -78,13 +78,13 @@ int main() {
                             enNivel2 = false;
                             enNivel3 = false;
                         }
-                        else if (opcionSeleccionada == 2) {  // Asumiendo que la opción 2 es para créditos
+                        else if (opcionSeleccionada == 2) {  
                             enMenu = false;
                             enMenuNiveles = false;
                             enNivel1 = false;
                             enNivel2 = false;
                             enNivel3 = false;
-                            enCreditos = true;  // Activamos la bandera de créditos
+                            enCreditos = true; 
                         }
                         else if (opcionSeleccionada == 4) {
                             ventana.close();
@@ -136,7 +136,7 @@ int main() {
                     if (enNivel1 || enNivel2 || enNivel3) {
                         int resultadoPausa = pausa.mostrar();
                         if (resultadoPausa == 1) {
-                            // Opción de regresar al menú principal
+                           
                             enMenu = true;
                             enMenuNiveles = false;
                             enNivel1 = false;
@@ -161,7 +161,7 @@ int main() {
             menuNiveles.dibujar(ventana);
         }
         else if (enCreditos) {
-            creditos.mostrar();  // Mostrar la pantalla de créditos
+            creditos.mostrar();  
             if (creditos.shouldReturnToMenu()) {
                 enCreditos = false;
                 enMenu = true;

@@ -93,7 +93,7 @@ void Nivel1::mostrar() {
     fantasmaRojo.dibujar(ventana);
     fantasmaRojo.dibujarVidas(ventana);
 
-    fantasmaCeleste.dibujar(ventana); // Dibuja el fantasma celeste
+    fantasmaCeleste.dibujar(ventana);
     fantasmaRosa.dibujar(ventana);
     fantasmaNaranja.dibujar(ventana);
 
@@ -127,7 +127,7 @@ void Nivel1::verificarColisiones() {
     }
 
     if (poderes->verificarColision(jugador.getSprite())) {
-        // Poder activado
+        
     }
 
     if (fantasmaRojo.getSprite().getGlobalBounds().intersects(jugador.getSprite().getGlobalBounds())) {

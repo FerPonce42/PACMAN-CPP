@@ -1,3 +1,10 @@
+//PACMAN-CPP 2024-1 Ciencia de la Computacion UCSP
+/*
+Fernando Ponce
+Maricielo Luna
+Nicol Rocha
+Fabricio Stelman
+*/
 #include <SFML/Graphics.hpp>
 #include "MenuPrincipal.h"
 #include "SeleccionNiveles.h"

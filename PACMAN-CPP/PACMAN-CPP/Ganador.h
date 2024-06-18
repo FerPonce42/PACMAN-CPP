@@ -23,8 +23,8 @@ private:
     sf::Sprite fondoSprite;     
 
     void cargarTexturas(int ganador);
-
     void Reiniciar();
     void SiguienteNivel();
     void Salir();
+
 };

@@ -7,7 +7,6 @@ Animacion::Animacion(float frameTime, bool loop)
 void Animacion::agregarFrame(const std::string& archivoTextura) {
     sf::Texture textura;
     if (!textura.loadFromFile(archivoTextura)) {
-        std::cerr << "Error al cargar la textura: " << archivoTextura << std::endl;
     }
     else {
         texturas.push_back(textura);

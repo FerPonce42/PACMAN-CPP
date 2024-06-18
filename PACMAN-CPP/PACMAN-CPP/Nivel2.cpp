@@ -4,7 +4,6 @@
 Nivel2::Nivel2(sf::RenderWindow& ventana, float ancho, float alto)
     : ventana(ventana), fantasmaJugador(ancho / 2, alto / 2, 1.8f), pacmanIA(ancho / 2, alto / 2 + 50, 1.8f), pelotas(nullptr), poderes(nullptr) {
     if (!fondoTextura.loadFromFile("Nivel2/FondoNivel2.png")) {
-        std::cerr << "Error al cargar la imagen de fondo." << std::endl;
     }
 
     fondoSprite.setTexture(fondoTextura);
@@ -21,7 +20,6 @@ Nivel2::Nivel2(sf::RenderWindow& ventana, float ancho, float alto)
     poderes = new Poderes(mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio);
 
     if (!font.loadFromFile("Nivel2/fuentenivel2.ttf")) {
-        std::cerr << "Error al cargar la fuente." << std::endl;
     }
     textoContador.setFont(font);
     textoContador.setCharacterSize(40);

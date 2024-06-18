@@ -7,25 +7,21 @@ Musica::Musica() {
 
 void Musica::cargarMusicaMenu() {
     if (!musica.openFromFile("TexturasParaMenuPrincipal/musicamenu.mp3")) {
-        std::cerr << "Error al cargar la música del menú." << std::endl;
     }
 }
 
 void Musica::cargarMusicaNivel1() {
     if (!musica.openFromFile("Nivel1/musicanivel1.mp3")) {
-        std::cerr << "Error al cargar la música del nivel 1." << std::endl;
     }
 }
 
 void Musica::cargarMusicaNivel2() {
     if (!musica.openFromFile("Nivel2/musicanivel2.mp3")) {
-        std::cerr << "Error al cargar la música del nivel 2." << std::endl;
     }
 }
 
 void Musica::cargarMusicaNivel3() {
     if (!musica.openFromFile("Nivel3/musicanivel3.mp3")) {
-        std::cerr << "Error al cargar la música del nivel 3." << std::endl;
     }
 }
 

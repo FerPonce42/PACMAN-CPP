@@ -3,10 +3,8 @@
 
 SeleccionNiveles::SeleccionNiveles(float ancho, float alto) {
     if (!fuente.loadFromFile("TexturasParaMenuPrincipal/fuentemenuprincipal.ttf")) {
-        
     }
-
-    
+ 
     if (!texturaFondo.loadFromFile("TexturasParaMenuPrincipal/Fondo.png")) {
         
     }

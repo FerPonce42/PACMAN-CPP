@@ -4,7 +4,6 @@
 Nivel1::Nivel1(sf::RenderWindow& ventana, float ancho, float alto)
     : ventana(ventana), fantasmaRojo(ancho / 2, alto / 2, 1.8f), fantasmaCeleste(ancho / 2, alto / 2 + 50, 1.8f), fantasmaRosa(ancho / 2, alto / 2 + 100, 1.8f), fantasmaNaranja(ancho / 2, alto / 2 + 150, 1.8f), jugador(ancho / 2, alto / 2 + 200, 1.8f), pelotas(nullptr), poderes(nullptr) {
     if (!fondoTextura.loadFromFile("Nivel1/FondoNivel1.png")) {
-        std::cerr << "Error al cargar la imagen de fondo." << std::endl;
     }
 
     fondoSprite.setTexture(fondoTextura);
@@ -21,7 +20,6 @@ Nivel1::Nivel1(sf::RenderWindow& ventana, float ancho, float alto)
     poderes = new Poderes(mapa, anchoMapa, altoMapa, anchoCelda, altoCelda, posXInicio, posYInicio);
 
     if (!font.loadFromFile("Nivel1/fuentenivel1.ttf")) {
-        std::cerr << "Error al cargar la fuente." << std::endl;
     }
     textoContador.setFont(font);
     textoContador.setCharacterSize(40);
